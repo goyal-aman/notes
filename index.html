@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Static Website</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: row;
+            margin: 0;
+            height: 100vh;
+        }
+        .navigation {
+            flex: 0 0 12; /* Fixed width of 25% */
+            background-color: #f4f4f4; /* Optional background color */
+            overflow: auto; /* Scroll if content is too large */
+        }
+        .detail {
+            flex: 1; /* Takes remaining space */
+            background-color: #fff; /* Optional background color */
+            overflow: auto; /* Scroll if content is too large */
+        }
+        @media (max-width: 768px) {
+            body {
+                flex-direction: column; /* Stack on small screens */
+            }
+            .navigation {
+                flex: 0 0 50%; /* Adjust width on mobile */
+            }
+            .detail {
+                flex: 1; /* Takes remaining space */
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="navigation">
+        <iframe name="navigation" src="navigation.html" style="width: 100%; height: 100%; border: none;"></iframe>
+    </div>
+    <div class="detail">
+        <iframe name="detail" src="Notes/Load%20Balancer%20vs.%20API%20Gateway.html" style="width: 100%; height: 100%; border: none;"></iframe>
+    </div>
+</body>
+</html>
