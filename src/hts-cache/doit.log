@@ -1,0 +1,8 @@
+-v http://192.168.1.100:8082/share/ -O /app MyWebsite_2 -%P *.* -r5 -s0 -d
+File generated automatically on Mon, 21 Oct 2024 18:37:50, do NOT edit
+
+To update a mirror, just launch httrack without any parameters
+The existing cache will be used (and modified)
+To have other options, retype all parameters and launch HTTrack
+To continue an interrupted mirror, just launch httrack without any parameters
+

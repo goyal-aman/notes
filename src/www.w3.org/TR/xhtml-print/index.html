@@ -1,0 +1,3925 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet href="http://www.w3.org/StyleSheets/TR/W3C-REC.css" type="text/css"?>
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML+RDFa 1.0//EN' 'http://www.w3.org/MarkUp/DTD/xhtml-rdfa-1.dtd'>
+<html xml:lang="en" dir="ltr" about="" property="dc:language" content="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:dc='http://purl.org/dc/terms/' xmlns:bibo='http://purl.org/ontology/bibo/'
+xmlns:foaf='http://xmlns.com/foaf/0.1/' xmlns:xsd='http://www.w3.org/2001/XMLSchema#'>
+
+<!-- Mirrored from www.w3.org/TR/xhtml-print/ by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 21 Oct 2024 18:38:30 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+<meta name="generator" content="HTML Tidy, see www.w3.org" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>XHTML-Print - Second Edition</title>
+<style type="text/css">
+        span.entity { color: red; }
+        span.element { color: green; }
+
+        .del {display : none; }  
+
+        *.RequiredAttribute      { color: inherit; background-color: aqua }
+        *.AttributeNotRequired   { color: inherit; background-color: white }
+
+        .code {
+        border-right: 1px solid; 
+        padding-right: 4px; 
+        border-top: 1px solid; 
+        padding-left: 4px; 
+        padding-bottom: 1px; 
+        border-left: 1px solid; 
+        padding-top: 1px; 
+        border-bottom: 1px solid;
+        }
+        table.keys    {border: none; border-collapse: separate; border-spacing: 5px}
+    table.keys td {border: none; padding: 5px; }
+    table.keys th {border-bottom: solid black 1px; }
+    table.memberlist td {border:none}
+    table         {border-collapse:collapse; border: none; width: 100%; empty-cells:show;}
+    th            {border-bottom:none}
+        td            {border: solid #ccc 1px; padding:5px 2px 5px 5px; }
+        td.key { font-weight: bold; vertical-align: top}
+
+        .editorial { display: block; font-family: arial, helvetica, sans-serif;  
+                 font-size: 80%;
+                     margin-left: .5in; margin-right: 1in ; padding: 0.125in;
+             color: inherit; background-color: #FFFFDD }
+
+    .tableNotes { font-size: 8pt; font-style: italic;  margin-bottom: 0in; padding-bottom: 0px;}
+        .aTableNote { font-size: 8pt;  margin:0;margin-left: .125in; padding: 0px;}
+      .RFC2119 { text-transform: lowercase; font-style: italic }
+      em em.RFC2119 { text-transform: lowercase; font-style: normal }
+   
+</style>
+
+<link rel="stylesheet" type="text/css" href="https://www.w3.org/StyleSheets/TR/W3C-REC.css" />
+<link rel="stylesheet" type="text/css" href="https://www.w3.org/TR/xhtml-print/superseded.css" />
+</head>
+<body>
+<div class="head">
+<p><a href="../../index.html"><img height="48" width="72" alt="W3C" src="https://www.w3.org/Icons/w3c_home" /></a></p>
+
+<h1 property='dc:title' datatype="" id="title"><abbr title="Extensible HyperText Markup Language for Printing">XHTML-Print</abbr> - Second Edition</h1>
+
+<h2 id="draft-type" property="dc:issued" datatype='xsd:dateTime' content="2010-11-23T00:00:00+0000">W3C Recommendation 23 November 2010<br>
+superseded 27 March 2018</h2>
+
+<dl>
+<dt>This version:</dt>
+
+<dd><a href="https://www.w3.org/TR/2018/SPSD-xhtml-print-20180327/">http://www.w3.org/TR/2018/SPSD-xhtml-print-20180327/</a></dd>
+
+<dt>Latest version:</dt>
+
+<dd><a href="https://www.w3.org/TR/xhtml-print">http://www.w3.org/TR/xhtml-print</a></dd>
+
+<dt>Previous version:</dt>
+
+<dd><a href="https://www.w3.org/TR/2010/REC-xhtml-print-20101123/">http://www.w3.org/TR/2010/REC-xhtml-print-20101123/</a></dd>
+
+<dt>Previous recommendation:</dt>
+
+<dd><a rel='dc:replaces' href="https://www.w3.org/TR/2006/REC-xhtml-print-20060920/">http://www.w3.org/TR/2006/REC-xhtml-print-20060920/</a></dd>
+
+<dt>Editor:</dt>
+
+<dd rel="bibo:editor"><span typeof="foaf:Person"><a href="http://blog.halindrome.com/" content="Shane McCarron" property="foaf:name" rel="foaf:homepage">Shane McCarron</a>, <a href= 
+"http://www.aptest.com/" rel="foaf:workplaceHomepage">Applied Testing and Technology, Inc.</a> <a href="mailto:shane@aptest.com" rel="foaf:mbox">shane@aptest.com</a></span></dd>
+
+<dt>Version 1.0 Editors:</dt>
+
+<dd>Melinda Grant, Hewlett-Packard Co.</dd>
+
+<dd>Jim Bigelow, Hewlett-Packard Co.</dd>
+</dl>
+
+<p>Please refer to the <a href="https://www.w3.org/MarkUp/2010/xhtml-print-2nd-edition-errata.html"><strong>errata</strong></a> for this document, which may include some normative corrections. See
+also <a href="https://www.w3.org/2003/03/Translations/byTechnology?technology=xhtml-print">translations</a>.</p>
+
+<p>See also <a href="http://www.w3.org/2003/03/Translations/byTechnology?technology=xhtml-print"> <strong>translations</strong></a>.</p>
+
+<p class="copyright"><a href="https://www.w3.org/Consortium/Legal/ipr-notice#Copyright">Copyright</a> &#169; 2006-2010 <a href="../../index.html"><acronym title="World Wide Web Consortium">
+W3C</acronym></a><sup>&#174;</sup> (<a href="http://www.csail.mit.edu/"><acronym title="Massachusetts Institute of Technology">MIT</acronym></a>, <a href="http://www.ercim.org/"><acronym title= 
+"European Research Consortium for Informatics and Mathematics">ERCIM</acronym></a>, <a href="http://www.keio.ac.jp/">Keio</a>), All Rights Reserved. W3C <a href="https://www.w3.org/Consortium/Legal/ipr-notice#Legal_Disclaimer">liability</a>, <a href="https://www.w3.org/Consortium/Legal/ipr-notice#W3C_Trademarks">trademark</a> and <a href="https://www.w3.org/Consortium/Legal/copyright-documents">document use</a> rules apply.</p>
+</div>
+
+<!-- end of the div head -->
+<hr />
+<h2 id="abstract">Abstract</h2>
+
+<p property='dc:abstract'>XHTML-Print is a member of the family of XHTML languages defined by the <cite>Modularization of <abbr title="Extensible HyperText Markup Language">XHTML</abbr></cite> [<a
+href="#ref_xhtmlmod">XHTMLMOD</a>]. It is designed to be appropriate for printing from mobile devices to low-cost printers that might not have a full-page buffer and that generally print from
+top-to-bottom and left-to-right with the paper in a portrait orientation. XHTML-Print is also targeted at printing in environments where it is not feasible or desirable to install a printer-specific
+driver and where some variability in the formatting of the output is acceptable.</p>
+
+<h2 id="status">Status of This Document</h2>
+
+<p><em>This section describes the status of this document at the time of its publication. Other documents may supersede this document. A list of current W3C publications and the latest revision of
+this technical report can be found in the <a href="https://www.w3.org/TR/">W3C technical reports index</a> at https://www.w3.org/TR/.</em></p>
+
+<p>This specification is a <a href="https://www.w3.org/2018/Process-20180201/#rec-rescind">Superseded Recommendation</a>.
+    A newer
+specification exists that is recommended for new adoption in place of
+this specification. </p>
+
+
+<p>All sections of this document are normative unless noted as informative.</p>
+
+<p>This document also supercedes the <a href="https://www.w3.org/TR/2006/REC-xhtml-print-20060920">previous version</a>.</p>
+
+<p>This document has been reviewed by W3C Members, by software developers, and by other W3C groups and interested parties, and is endorsed by the Director as a W3C Recommendation.</p>
+
+<p>This document has been produced by the <a href="https://www.w3.org/MarkUp/"><acronym title="World Wide Web Consortium">W3C</acronym> <acronym title="HyperText Markup Language">XHTML2</acronym>
+Working Group</a> as part of the <a href="https://www.w3.org/MarkUp/Activity"><acronym title="World Wide Web Consortium">W3C</acronym> <acronym title="HyperText Markup Language">HTML</acronym>
+Activity</a>.</p>
+
+<p>
+    For purposes of the W3C Patent Policy, this Superseded Recommendation
+has the same status as an active Recommendation; it retains licensing
+commitments and remains available as a reference for old -- and
+possibly still deployed -- implementations, but is not recommended for
+ future implementation. New implementations should follow the <a href="https://www.w3.org/TR/html/">latest version</a>
+ of the HTML specification.
+</p>
+
+<h2 id="contents">Table of Contents</h2>
+
+<div class="toc">
+<ul class="toc">
+<li>1. <a href="#s_intro">Introduction</a> 
+
+<ul class="toc">
+<li>1.1. <a href="#s1.1"><abbr title="Extensible HyperText Markup Language">XHTML</abbr> for Printing</a></li>
+
+<li>1.2. <a href="#s1.2">Terminology</a></li>
+
+<li>1.3. <a href="#s1.3">Design Rationale</a></li>
+</ul>
+</li>
+
+<li>2. <a href="#s_conformance">Conformance</a> 
+
+<ul class="toc">
+<li>2.1. <a href="#s2.1">Document Conformance</a></li>
+
+<li>2.2. <a href="#s2.2">Client Conformance</a></li>
+
+<li>2.3. <a href="#s2.3">Printer Conformance</a></li>
+</ul>
+</li>
+
+<li>3. <a href="#s_xhtmlmodules">The <abbr title="Extensible HyperText Markup Language for Printing">XHTML-Print</abbr> Document Type</a> 
+
+<ul class="toc">
+<li>3.1. <a href="#s3.1">Attributes and Attribute Collections</a></li>
+
+<li>3.2. <a href="#s3.2">Structure Module</a></li>
+
+<li>3.3. <a href="#s3.3">Text Module</a></li>
+
+<li>3.4. <a href="#s3.4">Hypertext Module</a></li>
+
+<li>3.5. <a href="#s3.5">List Module</a></li>
+
+<li>3.6. <a href="#s3.6">Presentation Module</a></li>
+
+<li>3.7. <a href="#s3.7">Basic Forms Module</a></li>
+
+<li>3.8. <a href="#s3.8">Basic Tables Module</a></li>
+
+<li>3.9. <a href="#s3.9">Image Module</a></li>
+
+<li>3.10. <a href="#s3.10">Object Module</a></li>
+
+<li>3.11. <a href="#s3.11">Metainformation Module</a></li>
+
+<li>3.12. <a href="#s3.12">Scripting Module</a></li>
+
+<li>3.13. <a href="#s3.13">Style Sheet Module</a></li>
+
+<li>3.14. <a href="#s3.14">Style Sheet Attribute Module</a></li>
+
+<li>3.15. <a href="#s3.15">Link Module</a></li>
+
+<li>3.16. <a href="#s3.16">Base Module</a></li>
+
+<li>3.17. <a href="#s_charentities">Character Entities</a></li>
+</ul>
+</li>
+
+<li>4. <a href="#s_howtouse">How to Use <abbr title="Extensible HyperText Markup Language for Printing">XHTML-Print</abbr></a> 
+
+<ul class="toc">
+<li>4.1. <a href="#s.4.1">Images</a></li>
+
+<li>4.2. <a href="#s.4.2">Style Sheets</a></li>
+
+<li>4.3. <a href="#s.4.3">Forms Usage</a></li>
+</ul>
+</li>
+
+<li>5. <a href="#s_acknowledgements">Acknowledgements</a></li>
+
+<li>A. <a href="#a_jpeg">JPEG Decoder Requirements</a> 
+
+<ul class="toc">
+<li>A.1. <a href="#a_jpeg.1">Introduction</a></li>
+
+<li>A.2. <a href="#a_jpeg.2">Printer Behaviors</a></li>
+</ul>
+</li>
+
+<li>B. <a href="#a_dtd"><abbr title="Extensible HyperText Markup Language for Printing">XHTML-Print</abbr> DTD and Modules</a> 
+
+<ul class="toc">
+<li>B.1. <a href="#a_dtdDriver">XHTML-Print 1.0 DTD</a></li>
+
+<li>B.2. <a href="#a_dtdModel"><abbr title="Extensible HyperText Markup Language for Printing">XHTML-Print</abbr> 1.0 Document Model Module</a></li>
+</ul>
+</li>
+
+<li>C. <a href="#a_schema"><abbr title="Extensible HyperText Markup Language for Printing">XHTML-Print</abbr> XML Schema and Modules</a> 
+
+<ul class="toc">
+<li>C.1. <a href="#a_schemaDriver">XHTML-Print 1.0 XML Schema</a></li>
+
+<li>C.2. <a href="#a_schemaModel"><abbr title="Extensible HyperText Markup Language for Printing">XHTML-Print</abbr> 1.0 XML Schema Content Model Module</a></li>
+
+<li>C.3. <a href="#a_schemaModules">XHTML-Print 1.0 XML Schema Modules</a></li>
+</ul>
+</li>
+
+<li>D. <a href="#a_refs">References</a> 
+
+<ul class="toc">
+<li>D.1. <a href="#a_normrefs">Normative References</a></li>
+
+<li>D.2. <a href="#a_inforefs">Informative References</a></li>
+</ul>
+</li>
+</ul>
+</div>
+
+<!--OddPage-->
+<h1 typeof="bibo:Chapter" about="#s_intro" id="s_intro">1. Introduction</h1>
+
+<p>All sections of this document are normative unless noted as informative.</p>
+
+<h2 typeof='bibo:Chapter' about='#s1.1' id='s1.1'>1.1. <abbr title="Extensible HyperText Markup Language">XHTML</abbr> for Printing</h2>
+
+<p>This section is informative.</p>
+
+<p>This document specifies a simple XHTML based data stream suitable for printing as well as display. It is based on <cite>XHTML Basic</cite> [<a href="#ref_xhtmlbasic">XHTMLBASIC</a>]. Its targeted
+usage is for printing in environments where it is not feasible or desirable to install a printer-specific driver and where some variability in the formatting of the output is acceptable. Throughout
+this document this data stream is called "XHTML-Print."</p>
+
+<p>XHTML-Print is designed to be appropriate for low-cost printers that might not have a full-page buffer and that generally print from top-to-bottom and left-to-right with the paper in a portrait
+orientation. For other printers (i.e., those that print in another direction or orientation) a full-page buffer could be needed.</p>
+
+<p>XHTML-Print is not appropriate when strict layout consistency and repeatability across printers are needed. The design objective of XHTML-Print is to provide a relatively simple, broadly
+supportable page description format where content preservation and reproduction are the goal, i.e. "Content is King." Traditional printer page description formats such as PostScript or PCL are more
+suitable when strict layout control is needed. XHTML-Print does not utilize bi-directional communications with the printer either for capabilities or status inquiries.</p>
+
+<p>This document creates a set of conformance criteria for XHTML-Print. It provides a strong basis for consistent printing results without a detailed understanding of each individual printer's
+characteristics.</p>
+
+<p>The document type definition for <abbr title="Extensible HyperText Markup Language for Printing">XHTML-Print</abbr> is implemented based on the <abbr title="Extensible HyperText Markup Language">
+XHTML</abbr> modules defined in <cite>Modularization of <abbr title="Extensible HyperText Markup Language">XHTML</abbr></cite> [<a href="#ref_xhtmlmod">XHTMLMOD</a>].</p>
+
+<h2 typeof='bibo:Chapter' about='#s1.2' id='s1.2'>1.2. Terminology</h2>
+
+<p>The keywords "<em title="MUST in RFC 2119 context" class="RFC2119">MUST</em>", "<em title="SHALL in RFC 2119 context" class="RFC2119">SHALL</em>", "<em title="MUST NOT in RFC 2119 context" class= 
+"RFC2119">MUST NOT</em>", "<em title="SHALL NOT in RFC 2119 context" class="RFC2119">SHALL NOT</em>", "<em title="REQUIRED in RFC 2119 context" class="RFC2119">REQUIRED</em>", "<em title="SHOULD in 
+RFC 2119 context" class="RFC2119">SHOULD</em>", "<em title="SHOULD NOT in RFC 2119 context" class="RFC2119">SHOULD NOT</em>", "<em title="RECOMMENDED in RFC 2119 context" class=
+"RFC2119">RECOMMENDED</em>", "<em title="MAY in RFC 2119 context" class="RFC2119">MAY</em>", and "<em title="OPTIONAL in RFC 2119 context" class="RFC2119">OPTIONAL</em>" when used in this document
+are to be interpreted as described in <cite>RFC 2119</cite> [<a href="#ref_rfc2119">RFC2119</a>]. However, for readability, these words might not appear in all uppercase letters in this
+specification.</p>
+
+<h2 typeof='bibo:Chapter' about='#s1.3' id='s1.3'>1.3. Design Rationale</h2>
+
+<p>This section explains why certain <abbr title="HyperText Markup Language">HTML</abbr> features are not part of <abbr title="Extensible HyperText Markup Language for Printing">XHTML-Print</abbr>
+and any special circumstances concerning a module and printing.</p>
+
+<h3 typeof='bibo:Chapter' about='#s1.3.1' id='s1.3.1'>1.3.1. Script and Events</h3>
+
+<p>Scripts, as programs that are executed in conjunction with a document, are not relevant to the printed page. However, documents can provide information as an alternative to a script. Therefore,
+the script module is part of XHTML-Print. Scripts <em title="MUST NOT in RFC 2119 context" class="RFC2119">MUST NOT</em> be executed and their results <em title="MUST NOT in RFC 2119 context" class= 
+"RFC2119">MUST NOT</em> be printed. If a <code>noscript</code> element is present, it contains alternate content that <em title="MUST in RFC 2119 context" class="RFC2119">MUST</em> be printed in
+place of the content of the <code>script</code> element.</p>
+
+<p>Events are not applicable to static, printed versions of a document. Therefore, the Intrinsic Events module is not part of XHTML-Print.</p>
+
+<h3 typeof='bibo:Chapter' about='#s1.3.2' id='s1.3.2'>1.3.2. Presentation</h3>
+
+<p>Many simple printers cannot print a wider variety of fonts than generic serif, sans serif and monospace. It is <em title="RECOMMENDED in RFC 2119 context" class="RFC2119">RECOMMENDED</em> that
+style sheets be used to create a presentation that is appropriate for a particular category of printer. How printers are categorized, what those categories are, how a printer identifies itself as a
+member of a category, and how style sheets are selectively applied based on category, is outside the scope of this document.</p>
+
+<p>The <a href="https://www.w3.org/TR/xhtml-modularization/abstract_modules.html#s_presentationmodule">Presentation module</a> ([<a href="#ref_xhtmlmod">XHTMLMOD</a>], section 5.4.1) is supported to
+provide simple control over basic font variants and rules.</p>
+
+<h3 typeof='bibo:Chapter' about='#s1.3.3' id='s1.3.3'>1.3.3. Forms</h3>
+
+<p><a href="https://www.w3.org/TR/xhtml-modularization/abstract_modules.html#s_sformsmodule">Basic <abbr title="Extensible HyperText Markup Language">XHTML</abbr> forms</a> ([<a href=
+"#ref_xhtmlmod">XHTMLMOD</a>], section 5.5.1) are supported. Content developers <em title="SHOULD in RFC 2119 context" class="RFC2119">SHOULD</em> keep in mind that users might not be able to input
+many characters from some devices (<abbr title="exempli gratia" xml:lang="lt">e.g.</abbr> from a mobile phone). Furthermore, developers are cautioned that a printer prints a static version of a form,
+and the visual appearance of a form depends heavily on the implementation.</p>
+
+<h3 typeof='bibo:Chapter' about='#s1.3.4' id='s1.3.4'>1.3.4. Tables</h3>
+
+<p><a href="https://www.w3.org/TR/xhtml-modularization/abstract_modules.html#s_simpletablemodule">Basic <abbr title="Extensible HyperText Markup Language">XHTML</abbr> tables</a> ([<a href= 
+"#ref_xhtmlmod">XHTMLMOD</a>], section 5.6.1) are supported, but tables can be difficult to format on very low resource devices. Furthermore, content developers are cautioned that in the Basic Tables
+Module, nesting of tables is prohibited.</p>
+
+<h3 typeof='bibo:Chapter' about='#s1.3.5' id='s1.3.5'>1.3.5. Frames</h3>
+
+<p>Frames are not supported. Frames depend on a screen interface and therefore are not applicable to printers.</p>
+
+<h3 typeof='bibo:Chapter' about='#s1.3.6' id='s1.3.6'>1.3.6. Attributes</h3>
+
+<p><abbr title="Extensible HyperText Markup Language for Printing">XHTML-Print</abbr> is a member of the family of XHTML languages defined by <cite>Modularization of XHTML</cite> [<a href= 
+"#ref_xhtmlmod">XHTMLMOD</a>]. Therefore, the elements and attributes in the modules that make up <abbr title="Extensible HyperText Markup Language for Printing">XHTML-Print</abbr> are all valid
+constructs of the language. However, not all the attributes are applicable to a rendering of an XHTML-Print document in printed media, especially those that are integral to a dynamic display of the
+document in a browser and the submission of a form. Furthermore, special attention is given to simple printers and some attributes are deemed too complex for a such a printer to render. These
+attributes are treated as discretionary in that a conforming printer is not <em title="REQUIRED in RFC 2119 context" class="RFC2119">REQUIRED</em> to support them, but if a printer wishes to provide
+that support, there are requirements stated for consistency in the implementation of extensions.</p>
+
+<h3 typeof='bibo:Chapter' about='#s.1.3.7' id='s.1.3.7'>1.3.7 Character Model</h3>
+
+<p>The W3C architectural specification <cite>Character Model for the World Wide Web 1.0</cite> [<a href="#ref_charmod">CHARMOD</a>] gives the <em title="RECOMMENDED in RFC 2119 context" class=
+"RFC2119">RECOMMENDED</em> representation of characters in XHTML-Print. Authors of XHTML-Print producing applications should be aware that low cost printers might be limited in both processing power
+and memory and therefore, that normalized utf-8 encoded documents could print more quickly than documents in other forms and encodings.</p>
+
+<!--OddPage-->
+<h1 typeof='bibo:Chapter' about='#s_conformance' id="s_conformance">2. Conformance</h1>
+
+<h2 typeof='bibo:Chapter' about='#s2.1' id='s2.1'>2.1. Document Conformance</h2>
+
+<p>A conforming XHTML-Print document is a document that requires only the facilities described as mandatory in this specification. Such a document <em title="SHALL in RFC 2119 context" class=
+"RFC2119">SHALL</em> meet all of the following criteria:</p>
+
+<ol>
+<li>The document <em title="SHALL in RFC 2119 context" class="RFC2119">SHALL</em> conform to the constraints expressed in the DTD found in <a href="#a_dtd">Appendix B</a> and the XML Schema found in
+<a href="#a_schema">Appendix B</a> and conform to the constraints expressed in <a href="#s1.3">Design Rationale</a>.</li>
+
+<li>The root element of the document <em title="MUST in RFC 2119 context" class="RFC2119">MUST</em> be <code>html</code>.</li>
+
+<li>The name of the default namespace on the root element <em title="SHALL in RFC 2119 context" class="RFC2119">SHALL</em> be the XHTML namespace name, <code>http://www.w3.org/1999/xhtml</code>. 
+
+<p>The start tag <em class="RFC2119" title="MAY in RFC 2119 context">MAY</em> also contain the declaration of the XML Schema Instance Namespace and an XML Schema Instance <code>schemaLocation</code>
+attribute [<a href="#ref_xmlschema">XMLSCHEMA</a>]. Such an attribute would associate the XHTML namespace <code>http://www.w3.org/1999/xhtml</code> with the XML Schema at the URI <code>
+http://www.w3.org/MarkUp/SCHEMA/xhtml-print10.xsd</code>.</p>
+</li>
+
+<li>There <em title="SHALL in RFC 2119 context" class="RFC2119">SHALL</em> be a DOCTYPE declaration in the document prior to the root element. If present, the public identifier included in the
+DOCTYPE declaration <em title="SHALL in RFC 2119 context" class="RFC2119">SHALL</em> reference the DTD found in <a href="#a_dtd">Appendix B</a> of this specification, using its Formal Public
+Identifier. The system identifier <em title="MAY in RFC 2119 context" class="RFC2119">MAY</em> be modified appropriately. 
+
+<div class="code " style="BORDER: 1px solid; MARGIN: 10px; PADDING-RIGHT: 40px; PADDING-LEFT: 40px; PADDING-BOTTOM: 20px; PADDING-TOP: 1px;"><br />
+ &lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML-Print 1.0//EN"<br />
+ "http://www.w3.org/MarkUp/DTD/xhtml-print10.dtd"&gt;<br />
+</div>
+</li>
+
+<li>The DTD subset <em title="MUST NOT in RFC 2119 context" class="RFC2119">MUST NOT</em> be used to override any parameter entities in the DTD.</li>
+</ol>
+
+<p>The MIME type used to refer to a conforming XHTML-Print document <em title="SHALL in RFC 2119 context" class="RFC2119">SHALL</em> be "application/xhtml+xml" with an <em title="OPTIONAL in RFC 2119 
+context" class="RFC2119">OPTIONAL</em> "profile" parameter of 'http://www.w3.org/Markup/Profile/Print'. An <em title="OPTIONAL in RFC 2119 context" class="RFC2119">OPTIONAL</em> "charset" parameter
+<em title="MAY in RFC 2119 context" class="RFC2119">MAY</em> be provided with the MIME type. Invalid values <em title="MUST in RFC 2119 context" class="RFC2119">MUST</em> be ignored and the result be
+as if the value were "utf-8". Usage of the <em title="OPTIONAL in RFC 2119 context" class="RFC2119">OPTIONAL</em> "charset" parameter is as described in Section 3.2 of <cite>RFC3023 - XML Media
+Types</cite> [<a href="#ref_rfc3023">RFC3023</a>]. Usage of the <em title="OPTIONAL in RFC 2119 context" class="RFC2119">OPTIONAL</em> "profile" parameter is as described in Section 8 of <cite>
+RFC3236 - The 'application/xhtml+xml' Media Type</cite> <a href="#ref_rfc3236">RFC3236</a>].</p>
+
+<h2 typeof='bibo:Chapter' about='#s2.2' id='s2.2'>2.2. Client Conformance</h2>
+
+<ol>
+<li>Clients <em title="SHALL in RFC 2119 context" class="RFC2119">SHALL</em> produce a well-formed XHTML-Print document as defined in XHTML 1.0 [<a href="#ref_xhtml1">XHTML1</a>] and in <a href=
+"#s2.1">Document Conformance</a>.</li>
+
+<li>Beyond number 1 above, clients are not <em title="REQUIRED in RFC 2119 context" class="RFC2119">REQUIRED</em> to use more of the XHTML-Print elements or style sheet attributes than necessary to
+get the desired output.</li>
+</ol>
+
+<h2 typeof='bibo:Chapter' about='#s2.3' id='s2.3'>2.3 Printer Conformance</h2>
+
+<h3 typeof='bibo:Chapter' about='#s2.3.1' id='s2.3.1'>2.3.1 Formatting/Rendering Rules</h3>
+
+<!-- ************************************* --><!-- Printer Conformance Statement --><!-- ************************************* -->
+<p>A printer user agent <em title="MUST in RFC 2119 context" class="RFC2119">MUST</em> conform to the <a href="https://www.w3.org/TR/2001/REC-xhtml-modularization-20010410/conformance.html#s_conform_user_agent">XHTML Family User Agent Conformance</a> section of the <cite>Modularization of <abbr title= 
+"Extensible HyperText Markup Language">XHTML</abbr></cite> specification ([<a href="#ref_xhtmlmod">XHTMLMOD</a>], section 3.5) with the following exceptions and additions:</p>
+
+<ol>
+<li id="s2.3.1.images">Images: 
+
+<ul>
+<li>If a printer encounters an image in a format it does not support, it <em title="SHALL in RFC 2119 context" class="RFC2119">SHALL</em> render any alternate content provided, and <em title="SHOULD 
+in RFC 2119 context" class="RFC2119">SHOULD</em> reserve the space specified by the <code>height</code> and <code>width</code> attributes and <em title="MAY in RFC 2119 Context" class="RFC2119">
+MAY</em> optionally draw a box around this space of the size specified for the image.</li>
+
+<li>If the image format is not supported and no alternate content is provided, the image is omitted and space <em title="SHOULD NOT in RFC 2119 Context" class="RFC2119">SHOULD NOT</em> be
+reserved.</li>
+
+<li>If the image format is supported and the <code>height</code> and <code>width</code> attributes are not provided, the printer <em title="MUST in RFC 2119 context" class="RFC2119">MUST</em> attempt
+to print the image at its intrinsic size. If the image data contain no size information, this specification does not define the size at which the image will be rendered.</li>
+
+<li>A printer <em title="MUST in RFC 2119 context" class="RFC2119">MUST</em> support images referenced by a URI <a href="#ref_rfc3986">[RFC3986]</a> utilizing an http <a href="#ref_rfc2616">
+[RFC2616]</a> scheme. Support for other schemes is <em title="OPTIONAL in RFC 2119 context" class="RFC2119">OPTIONAL</em>.</li>
+</ul>
+</li>
+
+<li>Printers that do not support the <code>xml:lang</code> attribute are not <em title="REQUIRED in RFC 2119 context" class="RFC2119">REQUIRED</em> to adhere to the rules for language specific white
+space handling.</li>
+</ol>
+
+<!-- * End of Statement ****************** -->
+<h3 typeof='bibo:Chapter' about='#s2.3.2' id='s2.3.2'>2.3.2 XHTML Requirements</h3>
+
+<ol>
+<li>A conforming printer <em title="SHALL in RFC 2119 context" class="RFC2119">SHALL</em> support all XHTML Modules listed in <a href="#s_xhtmlmodules">The XHTML-Print Document Type</a>.</li>
+
+<li>A conforming printer <em title="SHALL in RFC 2119 context" class="RFC2119">SHALL</em> print a static version of a form using default and selected values as specified in the form.</li>
+
+<li>A conforming printer <em title="SHALL in RFC 2119 context" class="RFC2119">SHALL</em> identify this datastream by the exact string: "XHTML-Print" (without the quotation marks) in all service
+discovery records and protocols, device identification records and protocols, and in other cases where a list of supported datastreams is to be presented by the printer. Where such datastreams are
+identified by a MIME media type, the identifier "application/xhtml+xml" <em title="SHALL in RFC 2119 context" class="RFC2119">SHALL</em> be used in combination with a "profile" parameter of
+"http://www.w3.org/Markup/Profile/Print"; <em>e.g.,</em> 
+
+<div class="code" style="MARGIN: 10px; TEXT-ALIGN: center; PADDING: 10px;">application/xhtml+xml; profile="http://www.w3.org/Markup/Profile/Print"</div>
+</li>
+</ol>
+
+<!--OddPage-->
+<h1 typeof='bibo:Chapter' about='#s_xhtmlmodules' id="s_xhtmlmodules">3. The <abbr title="Extensible HyperText Markup Language for Printing">XHTML-Print</abbr> Document Type</h1>
+
+<p>The <abbr title="Extensible HyperText Markup Language for Printing">XHTML-Print</abbr> document type is defined as a set of <abbr title="Extensible HyperText Markup Language">XHTML</abbr> modules.
+All <abbr title="Extensible HyperText Markup Language">XHTML</abbr> modules are defined in the <cite>Modularization of <abbr title="Extensible HyperText Markup Language">XHTML</abbr></cite>
+specification [<a href="#ref_xhtmlmod">XHTMLMOD</a>].</p>
+
+<p><abbr title="Extensible HyperText Markup Language for Printing">XHTML-Print</abbr> consists of the following <abbr title="Extensible HyperText Markup Language">XHTML</abbr> modules:</p>
+
+<dl>
+<dt>Structure Module*</dt>
+
+<dd><code>body, head, html, title</code></dd>
+
+<dt>Text Module*</dt>
+
+<dd><code>abbr, acronym, address, blockquote, br, cite, code, dfn, div, em, h1, h2, h3, h4, h5, h6, kbd, p, pre, q, samp, span, strong, var</code></dd>
+
+<dt>Hypertext Module*</dt>
+
+<dd><code>a</code></dd>
+
+<dt>List Module*</dt>
+
+<dd><code>dl, dt, dd, ol, ul, li</code></dd>
+
+<dt>Text Extension Module - Presentation**</dt>
+
+<dd><code>b, big, hr, i, small, sub, sup, tt</code></dd>
+
+<dt>Basic Forms Module</dt>
+
+<dd><code>form, input, label, select, option, textarea</code></dd>
+
+<dt>Basic Tables Module</dt>
+
+<dd><code>caption, table, td, th, tr</code></dd>
+
+<dt>Image Module</dt>
+
+<dd><code>img</code></dd>
+
+<dt>Object Module</dt>
+
+<dd><code>object, param</code></dd>
+
+<dt>Metainformation Module</dt>
+
+<dd><code>meta</code></dd>
+
+<dt>Scripting Module**</dt>
+
+<dd><code>noscript</code>, <code>script</code></dd>
+
+<dt>Style Sheet Module**</dt>
+
+<dd><code>style</code></dd>
+
+<dt>Style Attribute Module**</dt>
+
+<dd><code>style</code> attribute</dd>
+
+<dt>Link Module</dt>
+
+<dd><code>link</code></dd>
+
+<dt>Base Module</dt>
+
+<dd><code>base</code></dd>
+</dl>
+
+<p><em>(*) = This module is a <em title="REQUIRED in RFC 2119 context" class="RFC2119">REQUIRED</em> <a href="https://www.w3.org/TR/xhtml-modularization/conformance.html#s_conform_document_type">XHTML
+Host Language</a> module.<br />
+(**) = These modules are not a part of XHTML Basic but are <em title="REQUIRED in RFC 2119 context" class="RFC2119">REQUIRED</em> for XHTML-Print.</em></p>
+
+<p>An <abbr title="Extensible Markup Language">XML</abbr> 1.0 <abbr title="Document Type Definition">DTD</abbr> is available in <a href="#a_dtd">Appendix B.</a> An XML Schema implementation is
+available in <a href="#a_schema">Appendix C.</a></p>
+
+<h2 typeof='bibo:Chapter' about='#s3.1' id='s3.1'>3.1 Attributes and Attribute Collections</h2>
+
+<p>Some of the attributes defined in the <cite>Modularization of <abbr title="Extensible HyperText Markup Language">XHTML</abbr></cite> [<a href="#ref_xhtmlmod">XHTMLMOD</a>] are not applicable to
+the printed page or are not relevant due to the exclusion of their module from XHTML-Print. Other attributes are not <em title="REQUIRED in RFC 2119 context" class="RFC2119">REQUIRED</em> but if
+supported by a printer, support <em title="SHOULD in RFC 2119 context" class="RFC2119">SHOULD</em> be provided in the <em title="RECOMMENDED in RFC 2119 context" class="RFC2119">RECOMMENDED</em>
+manner.</p>
+
+<p>Each attribute in the following sections is annotated with one of the following keywords indicating support options for a conforming printer:</p>
+
+<table border="1" class="keys" summary="Description of Keys: Must means mandatory support, May means optional support, N/A means does not apply">
+<tbody>
+<tr>
+<th>Key</th>
+<th>Description</th>
+</tr>
+
+<tr>
+<td class="key" id="Y_key"><em title="MUST In RFC 2119 Context" class="RFC2119">MUST</em></td>
+<td>Support is mandatory; a conforming printer <em title="MUST in RFC 2119 context" class="RFC2119">MUST</em> implement this attribute. (However, the inability of a printer to implement part of this
+specification due to the limitations of a particular device does not imply non-conformance. <em>E.g.,</em> the fact that a monochrome printer user agent cannot render colors does not preclude its
+conformance to this specification.)</td>
+</tr>
+
+<tr>
+<td class="key" id="Should_Key"><em title="SHOULD In RFC 2119 Context" class="RFC2119">SHOULD</em></td>
+<td>Support for the attribute is <em title="RECOMMENDED in RFC 2119 Context" class="RFC2119">RECOMMENDED,</em> but not <em title="REQUIRED in RFC 2119 Context" class="RFC2119">REQUIRED</em>.</td>
+</tr>
+
+<tr>
+<td class="key" id="May_key"><em title="MAY In RFC 2119 Context" class="RFC2119">MAY</em></td>
+<td>The attribute's functionality is entirely <em title="OPTIONAL in RFC 2119 Context" class="RFC2119">OPTIONAL</em>.</td>
+</tr>
+
+<tr>
+<td class="key" id="NA_key">N/A</td>
+<td>The attribute does Not Apply to the printed page; a conforming printer <em title="MAY in RFC 2119 context" class="RFC2119">MAY</em> ignore this attribute for one of the following reasons, but <em
+title="MUST NOT in RFC 2119 context" class="RFC2119">MUST NOT</em> treat it as an error: 
+
+<ul>
+<li>The attribute applies to a user interface which is not represented on a printed page. For example, the <code>accesskey</code> attribute is irrelevant.</li>
+
+<li>The attribute applies to form submission which is not performed by the printer, the <code>method</code> attribute of the form element for example.</li>
+
+<li>The attribute, such as <code>title</code>, describes data which is not represented on a printed page</li>
+
+<li>The attribute applies to objects other than JPEG images, such as Java applets.</li>
+
+<li>The attribute does not apply since links specified by the anchor element are not followed.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+
+<p>The <cite>Modularization of <abbr title="Extensible HyperText Markup Language">XHTML</abbr></cite> ([<a href="#ref_xhtmlmod">XHTMLMOD</a>], section 5.1) contains a set of attribute collections for
+ease of presentation. This specification continues this practice with the same conditions, that is, that the collections below are informative and their contents normative.</p>
+
+<table border="1" summary="Definitions of Attribute Collections">
+<thead>
+<tr>
+<th abbr="Collection">Collection Name</th>
+<th abbr="Attributes">Attributes in Collection</th>
+<th abbr="Processing"><em title="REQUIRED In RFC 2119 Context" class="RFC2119">REQUIRED</em> Processing</th>
+</tr>
+</thead>
+
+<tbody>
+<tr class="RequiredAttribute">
+<td><a id="s_core_collection">Core</a></td>
+<td class="RequiredAttribute">class (<span class="datatype"><a href="https://www.w3.org/TR/2001/REC-xhtml-modularization-20010410/abstraction.html#dt_NMTOKENS">NMTOKENS</a><a href=
+"#tn0">&#8224;</a></span> )</td>
+<td class="RequiredAttribute"><a href="#Y_key"><em title="MUST In RFC 2119 Context" class="RFC2119">MUST</em></a></td>
+</tr>
+
+<tr class="RequiredAttribute">
+<td>Core</td>
+<td class="RequiredAttribute">id (<span class="datatype"><a href="https://www.w3.org/TR/2001/REC-xhtml-modularization-20010410/abstraction.html#dt_ID">ID</a><a href="#tn0">&#8224;</a></span> )</td>
+<td class="RequiredAttribute"><a href="#Y_key"><em title="MUST In RFC 2119 Context" class="RFC2119">MUST</em></a></td>
+</tr>
+
+<tr>
+<td>Core</td>
+<td class="AttributeNotRequired">title (<span class="datatype"><a href="https://www.w3.org/TR/2001/REC-xhtml-modularization-20010410/abstraction.html#dt_CDATA">CDATA</a><a href=
+"#tn0">&#8224;</a></span> )</td>
+<td class="AttributeNotRequired"><a href="#NA_key">N/A</a></td>
+</tr>
+
+<tr>
+<td><a id="s_i18n_collection">I18N</a></td>
+<td class="AttributeNotRequired">xml:lang (<span class="datatype"><a href="https://www.w3.org/TR/2001/REC-xhtml-modularization-20010410/abstraction.html#dt_NMTOKEN">NMTOKEN</a><a href=
+"#tn0">&#8224;</a></span> )</td>
+<td class="AttributeNotRequired"><a href="#May_key"><em title="MAY In RFC 2119 Context" class="RFC2119">MAY</em></a></td>
+</tr>
+
+<tr class="RequiredAttribute">
+<td><a id="s_style_collection">Style</a></td>
+<td class="RequiredAttribute">style (<span class="datatype"><a href="https://www.w3.org/TR/2001/REC-xhtml-modularization-20010410/abstraction.html#dt_CDATA">CDATA</a><a href="#tn0">&#8224;</a></span>
+)</td>
+<td class="RequiredAttribute"><a href="#Y_key"><em title="MUST In RFC 2119 Context" class="RFC2119">MUST</em></a></td>
+</tr>
+
+<tr>
+<td><a id="s_common_collection">Common</a></td>
+<td><span class="collection"><a href="#s_core_collection">Core</a></span> + <span class="collection"><a href="#s_i18n_collection">I18N</a></span> + <span class="collection"><a href= 
+"#s_style_collection">Style</a></span></td>
+<td>See Collections</td>
+</tr>
+</tbody>
+</table>
+
+<p class="tableNotes">Table Note:</p>
+
+<p class="aTableNote" id="tn0">&#8224; See <cite>Modularization of <abbr title="Extensible HyperText Markup Language">XHTML</abbr></cite> ( [<a href="#ref_xhtmlmod">XHTMLMOD</a>], section 4.3 )</p>
+
+<p>Note that the <code>title</code> attribute of the Core collection is not applicable to the printed page since there is no place to display such supplementary information.</p>
+
+<p> A printer <em title="MAY in RFC 2119 context" class="RFC2119">MAY</em> support special processing based on the natural language of the document, such as the use of guillemets for quotation marks
+in French text. If a printer implements processing based on the natural language of the document, that processing <em title="SHALL in RFC 2119 context" class="RFC2119">SHALL</em> be controlled by the
+<code>xml:lang</code> attribute.</p>
+
+<p>A printer <em title="SHOULD in RFC 2119 context" class="RFC2119">SHOULD</em> support CSS style sheets, as noted in section <a href="#s1.3.2">1.3.2 Presentation</a>, within the limits of its
+capabilities.</p>
+
+<h2 typeof='bibo:Chapter' about='#s3.2' id='s3.2'>3.2 Structure Module</h2>
+
+<table border="1" width="100%" summary="Elements and Attributes for Structure Module">
+<thead>
+<tr>
+<th>Elements</th>
+<th>Attributes</th>
+<th><em title="REQUIRED In RFC 2119 Context" class="RFC2119">REQUIRED</em> Processing</th>
+</tr>
+</thead>
+
+<tbody>
+<tr class="RequiredAttribute">
+<td>body</td>
+<td><span class="collection"><a href="#s_common_collection">Common</a></span></td>
+<td>See Collection</td>
+</tr>
+
+<tr>
+<td>head</td>
+<td><span class="collection"><a href="#s_i18n_collection">I18N</a></span>,</td>
+<td>See Collection</td>
+</tr>
+
+<tr>
+<td>head</td>
+<td class="AttributeNotRequired">profile (<span class="datatype"><a href="https://www.w3.org/TR/2001/REC-xhtml-modularization-20010410/abstraction.html#dt_URI">URI</a><a href="#tn1">&#8224;</a></span>
+)</td>
+<td class="AttributeNotRequired"><a href="#May_key"><em title="MAY In RFC 2119 Context" class="RFC2119">MAY</em></a></td>
+</tr>
+
+<tr>
+<td>html</td>
+<td><span class="collection"><a href="#s_i18n_collection">I18N</a></span>,</td>
+<td>See Collection</td>
+</tr>
+
+<tr>
+<td>html</td>
+<td class="AttributeNotRequired">version (<span class="datatype"><a href="https://www.w3.org/TR/2001/REC-xhtml-modularization-20010410/abstraction.html#dt_CDATA">CDATA</a><a href=
+"#tn1">&#8224;</a></span> ),</td>
+<td class="AttributeNotRequired"><a href="#NA_key">N/A</a></td>
+</tr>
+
+<tr class="RequiredAttribute">
+<td>html</td>
+<td class="RequiredAttribute">xmlns (<span class="datatype"><a href="https://www.w3.org/TR/2001/REC-xhtml-modularization-20010410/abstraction.html#dt_URI">URI</a><a href="#tn1">&#8224;</a></span> =
+"http://www.w3.org/1999/xhtml")</td>
+<td class="RequiredAttribute"><a href="#Y_key"><em title="MUST In RFC 2119 Context" class="RFC2119">MUST</em></a></td>
+</tr>
+
+<tr>
+<td>title</td>
+<td><span class="collection"><a href="#s_i18n_collection">I18N</a></span></td>
+<td>See Collection</td>
+</tr>
+</tbody>
+</table>
+
+<p class="tableNotes">Table Note:</p>
+
+<p class="aTableNote" id="tn1">&#8224; See <cite>Modularization of <abbr title="Extensible HyperText Markup Language">XHTML</abbr></cite> ( [<a href="#ref_xhtmlmod">XHTMLMOD</a>], section 4.3 )</p>
+
+<p>If a printer implements support for meta data then it <em title="MUST in RFC 2119 context" class="RFC2119">MUST</em> support the <code>profile</code> attribute of the <code>head</code>
+element.</p>
+
+<p>The <code>version</code> attribute is not applicable for printing since it was deprecated in the <cite>HTML 4.01 Specification</cite> [<a href="#ref_html4">HTML4</a>] in favor of version
+information within the DTD.</p>
+
+<p>A printer <em title="MAY in RFC 2119 context" class="RFC2119">MAY</em> ignore the content of the <code>title</code> element since it is not part of the document's body.</p>
+
+<h2 typeof='bibo:Chapter' about='#s3.3' id='s3.3'>3.3 Text Module</h2>
+
+<table border="1" width="100%" summary="Elements and Attributes in Text Module">
+<thead>
+<tr>
+<th>Elements</th>
+<th>Attributes</th>
+<th><em title="REQUIRED In RFC 2119 Context" class="RFC2119">REQUIRED</em> Processing</th>
+</tr>
+</thead>
+
+<tbody>
+<tr class="RequiredAttribute">
+<td>abbr, acronym, address</td>
+<td><span class="collection"><a href="#s_common_collection">Common</a></span></td>
+<td>See Collection</td>
+</tr>
+
+<tr class="RequiredAttribute">
+<td>blockquote</td>
+<td><span class="collection"><a href="#s_common_collection">Common</a></span>,</td>
+<td>See Collection</td>
+</tr>
+
+<tr>
+<td>blockquote</td>
+<td class="AttributeNotRequired">cite (<span class="datatype"><a href="https://www.w3.org/TR/2001/REC-xhtml-modularization-20010410/abstraction.html#dt_URI">URI</a><a href="#tn2">&#8224;</a></span>
+)</td>
+<td class="AttributeNotRequired"><a href="#NA_key">N/A</a></td>
+</tr>
+
+<tr class="RequiredAttribute">
+<td>br</td>
+<td><span class="collection"><a href="#s_core_collection">Core</a></span></td>
+<td>See Collection</td>
+</tr>
+
+<tr class="RequiredAttribute">
+<td>cite, code, dfn, div, em, h1, h2, h3, h4, h5, h6, kbd, p</td>
+<td><span class="collection"><a href="#s_common_collection">Common</a></span></td>
+<td>See Collection</td>
+</tr>
+
+<tr class="RequiredAttribute">
+<td>pre</td>
+<td><span class="collection"><a href="#s_common_collection">Common</a></span>,</td>
+<td>See Collection</td>
+</tr>
+
+<tr class="RequiredAttribute">
+<td>pre</td>
+<td class="RequiredAttribute">xml:space="preserve"</td>
+<td class="RequiredAttribute"><a href="#Y_key"><em title="MUST In RFC 2119 Context" class="RFC2119">MUST</em></a></td>
+</tr>
+
+<tr class="RequiredAttribute">
+<td>q</td>
+<td><span class="collection"><a href="#s_common_collection">Common</a></span>,</td>
+<td>See Collection</td>
+</tr>
+
+<tr>
+<td>q</td>
+<td class="AttributeNotRequired">cite (<span class="datatype"><a href="https://www.w3.org/TR/2001/REC-xhtml-modularization-20010410/abstraction.html#dt_URI">URI</a><a href="#tn2">&#8224;</a></span>
+)</td>
+<td class="AttributeNotRequired"><a href="#NA_key">N/A</a></td>
+</tr>
+
+<tr class="RequiredAttribute">
+<td>samp, span, strong, var</td>
+<td><span class="collection"><a href="#s_common_collection">Common</a></span></td>
+<td>See Collection</td>
+</tr>
+</tbody>
+</table>
+
+<p class="tableNotes">Table Note:</p>
+
+<p class="aTableNote" id="tn2">&#8224; See <cite>Modularization of <abbr title="Extensible HyperText Markup Language">XHTML</abbr></cite> ( [<a href="#ref_xhtmlmod">XHTMLMOD</a>], section 4.3 )</p>
+
+<h2 typeof='bibo:Chapter' about='#s3.4' id='s3.4'>3.4 Hypertext Module</h2>
+
+<table border="1" width="100%" summary="The A element and its attributes">
+<thead>
+<tr>
+<th>Element</th>
+<th>Attributes</th>
+<th><em title="REQUIRED In RFC 2119 Context" class="RFC2119">REQUIRED</em> Processing</th>
+</tr>
+</thead>
+
+<tbody>
+<tr class="RequiredAttribute">
+<td>a</td>
+<td><span class="collection"><a href="#s_common_collection">Common</a></span>,</td>
+<td>See Collection</td>
+</tr>
+
+<tr>
+<td>a</td>
+<td class="AttributeNotRequired">accesskey (<span class="datatype"><a href="https://www.w3.org/TR/2001/REC-xhtml-modularization-20010410/abstraction.html#dt_Character">Character</a><a href=
+"#tn3">&#8224;</a></span> ),</td>
+<td class="AttributeNotRequired"><a href="#NA_key">N/A</a></td>
+</tr>
+
+<tr>
+<td>a</td>
+<td class="AttributeNotRequired">charset (<span class="datatype"><a href="https://www.w3.org/TR/2001/REC-xhtml-modularization-20010410/abstraction.html#dt_Charset">Charset</a><a href=
+"#tn3">&#8224;</a></span> ),</td>
+<td class="AttributeNotRequired"><a href="#NA_key">N/A</a></td>
+</tr>
+
+<tr>
+<td>a</td>
+<td class="AttributeNotRequired">href (<span class="datatype"><a href="https://www.w3.org/TR/2001/REC-xhtml-modularization-20010410/abstraction.html#dt_URI">URI</a><a href="#tn3">&#8224;</a></span>
+),</td>
+<td class="AttributeNotRequired"><a href="#NA_key">N/A</a></td>
+</tr>
+
+<tr>
+<td>a</td>
+<td class="AttributeNotRequired">hreflang (<span class="datatype"><a href="https://www.w3.org/TR/2001/REC-xhtml-modularization-20010410/abstraction.html#dt_LanguageCode">LanguageCode</a><a href=
+"#tn3">&#8224;</a></span> ),</td>
+<td class="AttributeNotRequired"><a href="#NA_key">N/A</a></td>
+</tr>
+
+<tr>
+<td>a</td>
+<td class="AttributeNotRequired">rel (<span class="datatype"><a href="https://www.w3.org/TR/2001/REC-xhtml-modularization-20010410/abstraction.html#dt_LinkTypes">LinkTypes</a><a href=
+"#tn3">&#8224;</a></span> ),</td>
+<td class="AttributeNotRequired"><a href="#NA_key">N/A</a></td>
+</tr>
+
+<tr>
+<td>a</td>
+<td class="AttributeNotRequired">rev (<span class="datatype"><a href="https://www.w3.org/TR/2001/REC-xhtml-modularization-20010410/abstraction.html#dt_LinkTypes">LinkTypes</a><a href=
+"#tn3">&#8224;</a></span> ),</td>
+<td class="AttributeNotRequired"><a href="#NA_key">N/A</a></td>
+</tr>
+
+<tr>
+<td>a</td>
+<td class="AttributeNotRequired">tabindex (<span class="datatype"><a href="https://www.w3.org/TR/2001/REC-xhtml-modularization-20010410/abstraction.html#dt_Number">Number</a><a href=
+"#tn3">&#8224;</a></span> ),</td>
+<td class="AttributeNotRequired"><a href="#NA_key">N/A</a></td>
+</tr>
+
+<tr>
+<td>a</td>
+<td class="AttributeNotRequired">type (<span class="datatype"><a href="https://www.w3.org/TR/2001/REC-xhtml-modularization-20010410/abstraction.html#dt_ContentType">ContentType</a><a href=
+"#tn3">&#8224;</a></span> )</td>
+<td class="AttributeNotRequired"><a href="#NA_key">N/A</a></td>
+</tr>
+</tbody>
+</table>
+
+<p class="tableNotes">Table Note:</p>
+
+<p class="aTableNote" id="tn3">&#8224; See <cite>Modularization of <abbr title="Extensible HyperText Markup Language">XHTML</abbr></cite> ( [<a href="#ref_xhtmlmod">XHTMLMOD</a>], section 4.3 )</p>
+
+<h2 typeof='bibo:Chapter' about='#s3.5' id='s3.5'>3.5 List Module</h2>
+
+<table border="1" width="100%" summary="Elements and Attributes of the List Module">
+<thead>
+<tr>
+<th>Elements</th>
+<th>Attributes</th>
+<th><em title="REQUIRED In RFC 2119 Context" class="RFC2119">REQUIRED</em> Processing</th>
+</tr>
+</thead>
+
+<tbody>
+<tr class="RequiredAttribute">
+<td>dl, dt, dd, ol, ul, li</td>
+<td><span class="collection"><a href="#s_common_collection">Common</a></span></td>
+<td>See Collection</td>
+</tr>
+</tbody>
+</table>
+
+<h2 typeof='bibo:Chapter' about='#s3.6' id='s3.6'>3.6 Presentation Module</h2>
+
+<table border="1" width="100%" summary="Elements and Attributes in Presentation Module">
+<thead>
+<tr>
+<th>Elements</th>
+<th>Attributes</th>
+<th><em title="REQUIRED In RFC 2119 Context" class="RFC2119">REQUIRED</em> Processing</th>
+</tr>
+</thead>
+
+<tbody>
+<tr class="RequiredAttribute">
+<td>b, big, hr, i, small, sub, sup, tt</td>
+<td><span class="collection"><a href="#s_common_collection">Common</a></span></td>
+<td>See Collection</td>
+</tr>
+</tbody>
+</table>
+
+<h2 typeof='bibo:Chapter' about='#s3.7' id='s3.7'>3.7 Basic Forms Module</h2>
+
+<table border="1" width="100%" summary="Elements and Attributes for Basic Forms Module">
+<thead>
+<tr>
+<th>Elements</th>
+<th>Attributes</th>
+<th><em title="REQUIRED In RFC 2119 Context" class="RFC2119">REQUIRED</em> Processing</th>
+</tr>
+</thead>
+
+<tbody>
+<tr class="RequiredAttribute">
+<td>form</td>
+<td><span class="collection"><a href="#s_common_collection">Common</a></span>,</td>
+<td>See Collection</td>
+</tr>
+
+<tr>
+<td>form</td>
+<td class="AttributeNotRequired">action<a href="#attr_req1">*</a> (<span class="datatype"><a href="https://www.w3.org/TR/2001/REC-xhtml-modularization-20010410/abstraction.html#dt_URI">URI</a><a href= 
+"#tn4">&#8224;</a></span> ),</td>
+<td class="AttributeNotRequired"><a href="#NA_key">N/A</a></td>
+</tr>
+
+<tr>
+<td>form</td>
+<td class="AttributeNotRequired">method ("get"<a href="#def_val1">**</a> | "post"),</td>
+<td class="AttributeNotRequired"><a href="#NA_key">N/A</a></td>
+</tr>
+
+<tr>
+<td>form</td>
+<td class="AttributeNotRequired">enctype (<span class="datatype"><a href="https://www.w3.org/TR/2001/REC-xhtml-modularization-20010410/abstraction.html#dt_ContentType">ContentType</a><a href=
+"#tn4">&#8224;</a></span> )</td>
+<td class="AttributeNotRequired"><a href="#NA_key">N/A</a></td>
+</tr>
+
+<tr class="RequiredAttribute">
+<td>input</td>
+<td><span class="collection"><a href="#s_common_collection">Common</a></span>,</td>
+<td>See Collection</td>
+</tr>
+
+<tr>
+<td>input</td>
+<td class="AttributeNotRequired">accesskey (<span class="datatype"><a href="https://www.w3.org/TR/2001/REC-xhtml-modularization-20010410/abstraction.html#dt_Character">Character</a><a href=
+"#tn4">&#8224;</a></span> ),</td>
+<td class="AttributeNotRequired"><a href="#NA_key">N/A</a></td>
+</tr>
+
+<tr class="RequiredAttribute">
+<td>input</td>
+<td class="RequiredAttribute">checked ("checked"),</td>
+<td class="RequiredAttribute"><a href="#Y_key"><em title="MUST In RFC 2119 Context" class="RFC2119">MUST</em></a></td>
+</tr>
+
+<tr>
+<td>input</td>
+<td class="AttributeNotRequired">maxlength (<span class="datatype"><a href="https://www.w3.org/TR/2001/REC-xhtml-modularization-20010410/abstraction.html#dt_Number">Number</a><a href=
+"#tn4">&#8224;</a></span> ),</td>
+<td class="AttributeNotRequired"><a href="#NA_key">N/A</a></td>
+</tr>
+
+<tr>
+<td>input</td>
+<td class="AttributeNotRequired">name (<span class="datatype"><a href="https://www.w3.org/TR/2001/REC-xhtml-modularization-20010410/abstraction.html#dt_CDATA">CDATA</a><a href=
+"#tn4">&#8224;</a></span> ),</td>
+<td class="AttributeNotRequired"><a href="#NA_key">N/A</a></td>
+</tr>
+
+<tr class="RequiredAttribute">
+<td>input</td>
+<td class="RequiredAttribute">size (<span class="datatype"><a href="https://www.w3.org/TR/2001/REC-xhtml-modularization-20010410/abstraction.html#dt_Number">Number</a><a href="#tn4">&#8224;</a></span>
+),</td>
+<td class="RequiredAttribute"><a href="#Y_key"><em title="MUST In RFC 2119 Context" class="RFC2119">MUST</em></a></td>
+</tr>
+
+<tr>
+<td>input</td>
+<td class="AttributeNotRequired">src (<span class="datatype"><a href="https://www.w3.org/TR/2001/REC-xhtml-modularization-20010410/abstraction.html#dt_URI">URI</a><a href="#tn4">&#8224;</a></span>
+),</td>
+<td class="AttributeNotRequired"><a href="#NA_key">N/A</a></td>
+</tr>
+
+<tr>
+<td>input</td>
+<td class="AttributeNotRequired">tabindex (<span class="datatype"><a href="https://www.w3.org/TR/2001/REC-xhtml-modularization-20010410/abstraction.html#dt_Number">Number</a><a href=
+"#tn4">&#8224;</a></span> ),</td>
+<td class="AttributeNotRequired"><a href="#NA_key">N/A</a></td>
+</tr>
+
+<tr class="RequiredAttribute">
+<td>input</td>
+<td class="RequiredAttribute" style="vertical-align:top">type("text"<a href="#def_val1">**</a> )</td>
+<td class="RequiredAttribute"><a href="#Y_key"><em title="MUST In RFC 2119 Context" class="RFC2119">MUST</em></a></td>
+</tr>
+
+<tr class="RequiredAttribute">
+<td>input</td>
+<td class="RequiredAttribute" style="vertical-align:top">type("password" )</td>
+<td class="RequiredAttribute"><a href="#Y_key"><em title="MUST In RFC 2119 Context" class="RFC2119">MUST</em></a></td>
+</tr>
+
+<tr class="RequiredAttribute">
+<td>input</td>
+<td class="RequiredAttribute" style="vertical-align:top">type("checkbox" )</td>
+<td class="RequiredAttribute"><a href="#Y_key"><em title="MUST In RFC 2119 Context" class="RFC2119">MUST</em></a></td>
+</tr>
+
+<tr class="RequiredAttribute">
+<td>input</td>
+<td class="RequiredAttribute" style="vertical-align:top">type("radio" )</td>
+<td class="RequiredAttribute"><a href="#Y_key"><em title="MUST In RFC 2119 Context" class="RFC2119">MUST</em></a></td>
+</tr>
+
+<tr class="RequiredAttribute">
+<td>input</td>
+<td class="RequiredAttribute" style="vertical-align:top">type("submit")</td>
+<td class="RequiredAttribute"><a href="#Y_key"><em title="MUST In RFC 2119 Context" class="RFC2119">MUST</em></a></td>
+</tr>
+
+<tr class="RequiredAttribute">
+<td>input</td>
+<td class="RequiredAttribute" style="vertical-align:top">type("reset" )</td>
+<td class="RequiredAttribute"><a href="#Y_key"><em title="MUST In RFC 2119 Context" class="RFC2119">MUST</em></a></td>
+</tr>
+
+<tr class="RequiredAttribute">
+<td>input</td>
+<td class="RequiredAttribute" style="vertical-align:top">type("hidden" )</td>
+<td class="RequiredAttribute"><a href="#Y_key"><em title="MUST In RFC 2119 Context" class="RFC2119">MUST</em></a></td>
+</tr>
+
+<tr class="RequiredAttribute">
+<td>input</td>
+<td class="RequiredAttribute">value (<span class="datatype"><a href="https://www.w3.org/TR/2001/REC-xhtml-modularization-20010410/abstraction.html#dt_CDATA">CDATA</a><a href="#tn4">&#8224;</a></span>
+)</td>
+<td class="RequiredAttribute"><a href="#Y_key"><em title="MUST In RFC 2119 Context" class="RFC2119">MUST</em></a></td>
+</tr>
+
+<tr class="RequiredAttribute">
+<td>label</td>
+<td><span class="collection"><a href="#s_common_collection">Common</a></span>,</td>
+<td>See Collection</td>
+</tr>
+
+<tr>
+<td>label</td>
+<td class="AttributeNotRequired">accesskey (<span class="datatype"><a href="https://www.w3.org/TR/2001/REC-xhtml-modularization-20010410/abstraction.html#dt_Character">Character</a><a href=
+"#tn4">&#8224;</a></span> ),</td>
+<td class="AttributeNotRequired"><a href="#NA_key">N/A</a></td>
+</tr>
+
+<tr>
+<td>label</td>
+<td class="AttributeNotRequired">for (<span class="datatype"><a href="https://www.w3.org/TR/2001/REC-xhtml-modularization-20010410/abstraction.html#dt_IDREF">IDREF</a><a href="#tn4">&#8224;</a></span>
+)</td>
+<td class="AttributeNotRequired"><a href="#NA_key">N/A</a></td>
+</tr>
+
+<tr class="RequiredAttribute">
+<td>select</td>
+<td><span class="collection"><a href="#s_common_collection">Common</a></span>,</td>
+<td>See Collection</td>
+</tr>
+
+<tr>
+<td>select</td>
+<td class="AttributeNotRequired">multiple ("multiple"),</td>
+<td class="AttributeNotRequired"><a href="#NA_key">N/A</a></td>
+</tr>
+
+<tr>
+<td>select</td>
+<td class="AttributeNotRequired">name (<span class="datatype"><a href="https://www.w3.org/TR/2001/REC-xhtml-modularization-20010410/abstraction.html#dt_CDATA">CDATA</a><a href=
+"#tn4">&#8224;</a></span> ),</td>
+<td class="AttributeNotRequired"><a href="#NA_key">N/A</a></td>
+</tr>
+
+<tr class="RequiredAttribute">
+<td>select</td>
+<td class="RequiredAttribute">size (<span class="datatype"><a href="https://www.w3.org/TR/2001/REC-xhtml-modularization-20010410/abstraction.html#dt_Number">Number</a><a href="#tn4">&#8224;</a></span>
+),</td>
+<td class="RequiredAttribute"><a href="#Y_key"><em title="MUST In RFC 2119 Context" class="RFC2119">MUST</em></a></td>
+</tr>
+
+<tr>
+<td>select</td>
+<td class="AttributeNotRequired">tabindex (<span class="datatype"><a href="https://www.w3.org/TR/2001/REC-xhtml-modularization-20010410/abstraction.html#dt_Number">Number</a><a href=
+"#tn4">&#8224;</a></span> )</td>
+<td class="AttributeNotRequired"><a href="#NA_key">N/A</a></td>
+</tr>
+
+<tr class="RequiredAttribute">
+<td>option</td>
+<td><span class="collection"><a href="#s_common_collection">Common</a></span>,</td>
+<td>See Collection</td>
+</tr>
+
+<tr class="RequiredAttribute">
+<td>option</td>
+<td class="RequiredAttribute">selected ("selected"),</td>
+<td class="RequiredAttribute"><a href="#Y_key"><em title="MUST In RFC 2119 Context" class="RFC2119">MUST</em></a></td>
+</tr>
+
+<tr class="AttributeNotRequired">
+<td>option</td>
+<td class="AttributeNotRequired">value (<span class="datatype"><a href="https://www.w3.org/TR/2001/REC-xhtml-modularization-20010410/abstraction.html#dt_CDATA">CDATA</a><a href=
+"#tn4">&#8224;</a></span> )</td>
+<td class="AttributeNotRequired"><a href="#NA_key">N/A</a></td>
+</tr>
+
+<tr class="RequiredAttribute">
+<td>textarea</td>
+<td><span class="collection"><a href="#s_common_collection">Common</a></span>,</td>
+<td>See Collection</td>
+</tr>
+
+<tr>
+<td>textarea</td>
+<td class="AttributeNotRequired">accesskey (<span class="datatype"><a href="https://www.w3.org/TR/2001/REC-xhtml-modularization-20010410/abstraction.html#dt_Character">Character</a><a href=
+"#tn4">&#8224;</a></span> ),</td>
+<td class="AttributeNotRequired"><a href="#NA_key">N/A</a></td>
+</tr>
+
+<tr class="RequiredAttribute">
+<td>textarea</td>
+<td class="RequiredAttribute">cols<a href="#attr_req1">*</a> (<span class="datatype"><a href="https://www.w3.org/TR/2001/REC-xhtml-modularization-20010410/abstraction.html#dt_Number">Number</a><a
+href="#tn4">&#8224;</a></span> ),</td>
+<td class="RequiredAttribute"><a href="#Y_key"><em title="MUST In RFC 2119 Context" class="RFC2119">MUST</em></a></td>
+</tr>
+
+<tr>
+<td>textarea</td>
+<td class="AttributeNotRequired">name (<span class="datatype"><a href="https://www.w3.org/TR/2001/REC-xhtml-modularization-20010410/abstraction.html#dt_CDATA">CDATA</a><a href=
+"#tn4">&#8224;</a></span> ),</td>
+<td class="AttributeNotRequired"><a href="#NA_key">N/A</a></td>
+</tr>
+
+<tr class="RequiredAttribute">
+<td>textarea</td>
+<td class="RequiredAttribute">rows<a href="#attr_req1">*</a> (<span class="datatype"><a href="https://www.w3.org/TR/2001/REC-xhtml-modularization-20010410/abstraction.html#dt_Number">Number</a><a
+href="#tn4">&#8224;</a></span> ),</td>
+<td class="RequiredAttribute"><a href="#Y_key"><em title="MUST In RFC 2119 Context" class="RFC2119">MUST</em></a></td>
+</tr>
+
+<tr>
+<td>textarea</td>
+<td class="AttributeNotRequired">tabindex (<span class="datatype"><a href="https://www.w3.org/TR/2001/REC-xhtml-modularization-20010410/abstraction.html#dt_Number">Number</a><a href=
+"#tn4">&#8224;</a></span> )</td>
+<td class="AttributeNotRequired"><a href="#NA_key">N/A</a></td>
+</tr>
+</tbody>
+</table>
+
+<p class="tableNotes">Table Notes:</p>
+
+<p class="aTableNote" id="tn4">&#8224; See <cite>Modularization of <abbr title="Extensible HyperText Markup Language">XHTML</abbr></cite> ( [<a href="#ref_xhtmlmod">XHTMLMOD</a>], section 4.3 )</p>
+
+<p class="aTableNote" id="attr_req1">* The attribute <em title="MUST in RFC 2119 context" class="RFC2119">MUST</em> be present.</p>
+
+<p class="aTableNote" id="def_val1">** The value is the default.</p>
+
+<p>The <code>src</code> attribute of the <code>input</code> element is not supported since the <code>image</code> type is not part of basic forms.</p>
+
+<p>The <code>hidden</code> type for the <code>input</code> element <em title="MUST in RFC 2119 context" class="RFC2119">MUST</em> be supported even though nothing is printed, so that a printer can
+correctly recognize and ignore the element.</p>
+
+<h2 typeof='bibo:Chapter' about='#s3.8' id='s3.8'>3.8 Basic Tables Module</h2>
+
+<table border="1" width="100%" summary="Elements and Attributes for Basic Tables Module">
+<thead>
+<tr>
+<th>Elements</th>
+<th>Attributes</th>
+<th><em title="REQUIRED In RFC 2119 Context" class="RFC2119">REQUIRED</em> Processing</th>
+</tr>
+</thead>
+
+<tbody>
+<tr class="RequiredAttribute">
+<td>caption</td>
+<td><span class="collection"><a href="#s_common_collection">Common</a></span></td>
+<td>See Collection</td>
+</tr>
+
+<tr class="RequiredAttribute">
+<td>table</td>
+<td><span class="collection"><a href="#s_common_collection">Common,</a></span></td>
+<td>See Collection</td>
+</tr>
+
+<tr>
+<td>table</td>
+<td class="AttributeNotRequired">summary ( <span class="datatype"><a href="https://www.w3.org/TR/2001/REC-xhtml-modularization-20010410/abstraction.html#dt_Text">Text</a><a href=
+"#tn5">&#8224;</a></span> )</td>
+<td class="AttributeNotRequired"><a href="#NA_key">N/A</a></td>
+</tr>
+
+<tr class="RequiredAttribute">
+<td>td, th</td>
+<td><span class="collection"><a href="#s_common_collection">Common</a></span>,</td>
+<td>See Collection</td>
+</tr>
+
+<tr>
+<td>td, th</td>
+<td class="AttributeNotRequired">abbr (<span class="datatype"><a href="https://www.w3.org/TR/2001/REC-xhtml-modularization-20010410/abstraction.html#dt_Text">Text</a><a href="#tn5">&#8224;</a></span>
+),</td>
+<td class="AttributeNotRequired"><a href="#May_key"><em title="MAY In RFC 2119 Context" class="RFC2119">MAY</em></a></td>
+</tr>
+
+<tr class="RequiredAttribute">
+<td>td, th</td>
+<td class="RequiredAttribute">align ("left" | "center" | "right"),</td>
+<td class="RequiredAttribute"><a href="#Y_key"><em title="MUST In RFC 2119 Context" class="RFC2119">MUST</em></a></td>
+</tr>
+
+<tr>
+<td>td, th</td>
+<td class="AttributeNotRequired">axis (<span class="datatype"><a href="https://www.w3.org/TR/2001/REC-xhtml-modularization-20010410/abstraction.html#dt_CDATA">CDATA</a><a href=
+"#tn5">&#8224;</a></span> ),</td>
+<td class="AttributeNotRequired"><a href="#NA_key">N/A</a></td>
+</tr>
+
+<tr class="RequiredAttribute">
+<td>td, th</td>
+<td class="RequiredAttribute">colspan (<span class="datatype"><a href="https://www.w3.org/TR/2001/REC-xhtml-modularization-20010410/abstraction.html#dt_Number">Number</a><a href=
+"#tn5">&#8224;</a></span> ),</td>
+<td class="RequiredAttribute"><a href="#Y_key"><em title="MUST In RFC 2119 Context" class="RFC2119">MUST</em></a></td>
+</tr>
+
+<tr>
+<td>td, th</td>
+<td class="AttributeNotRequired">headers (<span class="datatype"><a href="https://www.w3.org/TR/2001/REC-xhtml-modularization-20010410/abstraction.html#dt_IDREFS">IDREFS</a><a href=
+"#tn5">&#8224;</a></span> ),</td>
+<td class="AttributeNotRequired"><a href="#NA_key">N/A</a></td>
+</tr>
+
+<tr class="RequiredAttribute">
+<td>td, th</td>
+<td class="RequiredAttribute">rowspan (<span class="datatype"><a href="https://www.w3.org/TR/2001/REC-xhtml-modularization-20010410/abstraction.html#dt_Number">Number</a><a href=
+"#tn5">&#8224;</a></span> ),</td>
+<td class="RequiredAttribute"><a href="#Y_key"><em title="MUST In RFC 2119 Context" class="RFC2119">MUST</em></a></td>
+</tr>
+
+<tr>
+<td>td, th</td>
+<td class="AttributeNotRequired">scope ("row" | "col"),</td>
+<td class="AttributeNotRequired"><a href="#NA_key">N/A</a></td>
+</tr>
+
+<tr class="RequiredAttribute">
+<td>td, th</td>
+<td class="RequiredAttribute">valign ("top" | "middle" | "bottom")</td>
+<td class="RequiredAttribute"><a href="#Y_key"><em title="MUST In RFC 2119 Context" class="RFC2119">MUST</em></a></td>
+</tr>
+
+<tr class="RequiredAttribute">
+<td>tr</td>
+<td><span class="collection"><a href="#s_common_collection">Common</a></span>,</td>
+<td>See Collection</td>
+</tr>
+
+<tr class="RequiredAttribute">
+<td>tr</td>
+<td class="RequiredAttribute">align ("left" | "center" | "right"),</td>
+<td class="RequiredAttribute"><a href="#Y_key"><em title="MUST In RFC 2119 Context" class="RFC2119">MUST</em></a></td>
+</tr>
+
+<tr class="RequiredAttribute">
+<td>tr</td>
+<td class="RequiredAttribute">valign ("top" | "middle" | "bottom")</td>
+<td class="RequiredAttribute"><a href="#Y_key"><em title="MUST In RFC 2119 Context" class="RFC2119">MUST</em></a></td>
+</tr>
+</tbody>
+</table>
+
+<p class="tableNotes">Table Note:</p>
+
+<p class="aTableNote" id="tn5">&#8224; See <cite>Modularization of <abbr title="Extensible HyperText Markup Language">XHTML</abbr></cite> ( [<a href="#ref_xhtmlmod">XHTMLMOD</a>], section 4.3 )</p>
+
+<p>If a printer implements a feature to truncate the contents of a cell because of space constraints, it <em title="MUST in RFC 2119 context" class="RFC2119">MUST</em> support the <code>abbr</code>
+attribute and print the value of the <code>abbr</code> attribute (if present) instead of the cell's content.</p>
+
+<p>A printer <em title="MUST in RFC 2119 context" class="RFC2119">MUST</em> support the values <code>left</code>, <code>right</code>, and <code>center</code> for the <code>align</code> attribute of
+the <code>td</code>, <code>th</code>, and <code>tr</code> elements; other values are <em title="OPTIONAL in RFC 2119 context" class="RFC2119">OPTIONAL</em>. If the <code>align</code> attribute is
+missing or has an unsupported value, a printer <em title="MUST in RFC 2119 context" class="RFC2119">MUST</em> act as if the <code>align</code> attribute has the value <code>left</code> for the <code>
+td</code> and <code>tr</code> elements, and as if the <code>align</code> attribute has the value <code>center</code> for the <code>th</code> element.</p>
+
+<p>A printer <em title="MUST in RFC 2119 context" class="RFC2119">MUST</em> support the values <code>top</code>, <code>middle</code>, and <code>bottom</code> for the <code>valign</code> attribute of
+the <code>td</code>, <code>th</code>, and <code>tr</code> elements, other values are <em title="OPTIONAL in RFC 2119 context" class="RFC2119">OPTIONAL</em>. If the <code>valign</code> attribute is
+missing or has unrecognized value, a printer <em title="SHOULD in RFC 2119 context" class="RFC2119">SHOULD</em> act as if the <code>valign</code> attribute has the value <code>middle</code>. Vertical
+alignment is undefined across page boundaries.</p>
+
+<h2 typeof='bibo:Chapter' about='#s3.9' id='s3.9'>3.9 Image Module</h2>
+
+<table border="1" width="100%" summary="Elements and Attributes for Image Module">
+<thead>
+<tr>
+<th>Elements</th>
+<th>Attributes</th>
+<th><em title="REQUIRED In RFC 2119 Context" class="RFC2119">REQUIRED</em> Processing</th>
+</tr>
+</thead>
+
+<tbody>
+<tr class="RequiredAttribute">
+<td>img</td>
+<td><span class="collection"><a href="#s_common_collection">Common</a></span>,</td>
+<td>See Collection</td>
+</tr>
+
+<tr class="RequiredAttribute">
+<td>img</td>
+<td class="RequiredAttribute">alt<a href="#attr_req2">*</a> (<span class="datatype"><a href="https://www.w3.org/TR/2001/REC-xhtml-modularization-20010410/abstraction.html#dt_Text">Text</a><a href=
+"#tn6">&#8224;</a></span> ),</td>
+<td class="RequiredAttribute"><a href="#Y_key"><em title="MUST In RFC 2119 Context" class="RFC2119">MUST</em></a></td>
+</tr>
+
+<tr class="RequiredAttribute">
+<td>img</td>
+<td class="RequiredAttribute">height (<span class="datatype"><a href="https://www.w3.org/TR/2001/REC-xhtml-modularization-20010410/abstraction.html#dt_Length">Length</a><a href=
+"#tn6">&#8224;</a></span> ),</td>
+<td class="RequiredAttribute"><a href="#Y_key"><em title="MUST In RFC 2119 Context" class="RFC2119">MUST</em></a></td>
+</tr>
+
+<tr>
+<td>img</td>
+<td class="AttributeNotRequired">longdesc (<span class="datatype"><a href="https://www.w3.org/TR/2001/REC-xhtml-modularization-20010410/abstraction.html#dt_URI">URI</a><a href=
+"#tn6">&#8224;</a></span> ),</td>
+<td class="AttributeNotRequired"><a href="#NA_key">N/A</a></td>
+</tr>
+
+<tr class="RequiredAttribute">
+<td>img</td>
+<td class="RequiredAttribute">src<a href="#attr_req2">*</a> (<span class="datatype"><a href="https://www.w3.org/TR/2001/REC-xhtml-modularization-20010410/abstraction.html#dt_URI">URI</a><a href=
+"#tn6">&#8224;</a></span> ),</td>
+<td class="RequiredAttribute"><a href="#Y_key"><em title="MUST In RFC 2119 Context" class="RFC2119">MUST</em></a></td>
+</tr>
+
+<tr class="RequiredAttribute">
+<td>img</td>
+<td class="RequiredAttribute">width (<span class="datatype"><a href="https://www.w3.org/TR/2001/REC-xhtml-modularization-20010410/abstraction.html#dt_Length">Length</a><a href=
+"#tn6">&#8224;</a></span> )</td>
+<td class="RequiredAttribute"><a href="#Y_key"><em title="MUST In RFC 2119 Context" class="RFC2119">MUST</em></a></td>
+</tr>
+</tbody>
+</table>
+
+<p class="tableNotes">Table Notes:</p>
+
+<p class="aTableNote" id="tn6">&#8224; See <cite>Modularization of <abbr title="Extensible HyperText Markup Language">XHTML</abbr></cite> ( [<a href="#ref_xhtmlmod">XHTMLMOD</a>], section 4.3 )</p>
+
+<p class="aTableNote" id="attr_req2">* The attribute <em title="MUST in RFC 2119 context" class="RFC2119">MUST</em> be present.</p>
+
+<p>Printers <em title="MUST in RFC 2119 context" class="RFC2119">MUST</em> support the http <a href="#ref_rfc2616">[RFC2616]</a> URI scheme <a href="#ref_rfc3986">[RFC3986]</a>. Support for other
+schemes is <em title="OPTIONAL in RFC 2119 context" class="RFC2119">OPTIONAL</em>. Printers <em title="MUST in RFC 2119 context" class="RFC2119">MUST</em> support the JPEG image format as defined in
+<a href="#a_jpeg">Appendix A</a>.</p>
+
+<p>Conforming documents <em title="SHOULD in RFC 2119 context" class="RFC2119">SHOULD</em> specify the width and height of the image using the <code>width</code> and <code>height</code> attributes or
+equivalent styling instructions. (See <a href="#s2.3.1">2.3.1 Formatting/Rendering Rules</a>).</p>
+
+<h2 typeof='bibo:Chapter' about='#s3.10' id='s3.10'>3.10 Object Module</h2>
+
+<table border="1" width="100%" summary="Elements and Attributes for Object Module">
+<thead>
+<tr>
+<th>Elements</th>
+<th>Attributes</th>
+<th><em title="REQUIRED In RFC 2119 Context" class="RFC2119">REQUIRED</em> Processing</th>
+</tr>
+</thead>
+
+<tbody>
+<tr class="RequiredAttribute">
+<td>object</td>
+<td><span class="collection"><a href="#s_common_collection">Common</a></span>,</td>
+<td>See Collections</td>
+</tr>
+
+<tr>
+<td>object</td>
+<td class="AttributeNotRequired">archive (<span class="datatype"><a href="https://www.w3.org/TR/2001/REC-xhtml-modularization-20010410/abstraction.html#dt_URIs">URIs</a><a href=
+"#tn7">&#8224;</a></span> ),</td>
+<td class="AttributeNotRequired"><a href="#NA_key">N/A</a></td>
+</tr>
+
+<tr>
+<td>object</td>
+<td class="AttributeNotRequired">classid (<span class="datatype"><a href="https://www.w3.org/TR/2001/REC-xhtml-modularization-20010410/abstraction.html#dt_URI">URI</a><a href="#tn7">&#8224;</a></span>
+),</td>
+<td class="AttributeNotRequired"><a href="#NA_key">N/A</a></td>
+</tr>
+
+<tr class="RequiredAttribute">
+<td>object</td>
+<td class="RequiredAttribute">codebase (<span class="datatype"><a href="https://www.w3.org/TR/2001/REC-xhtml-modularization-20010410/abstraction.html#dt_URI">URI</a><a href="#tn7">&#8224;</a></span>
+),</td>
+<td class="RequiredAttribute"><a href="#Y_key"><em title="MUST In RFC 2119 Context" class="RFC2119">MUST</em></a></td>
+</tr>
+
+<tr>
+<td>object</td>
+<td class="AttributeNotRequired">codetype (<span class="datatype"><a href="https://www.w3.org/TR/2001/REC-xhtml-modularization-20010410/abstraction.html#dt_ContentType">ContentType</a><a href=
+"#tn7">&#8224;</a></span> ),</td>
+<td class="AttributeNotRequired"><a href="#NA_key">N/A</a></td>
+</tr>
+
+<tr class="RequiredAttribute">
+<td>object</td>
+<td class="RequiredAttribute">data (<span class="datatype"><a href="https://www.w3.org/TR/2001/REC-xhtml-modularization-20010410/abstraction.html#dt_URI">URI</a><a href="#tn7">&#8224;</a></span>
+),</td>
+<td class="RequiredAttribute"><a href="#Y_key"><em title="MUST In RFC 2119 Context" class="RFC2119">MUST</em></a></td>
+</tr>
+
+<tr>
+<td>object</td>
+<td class="AttributeNotRequired">declare ("declare"),</td>
+<td class="AttributeNotRequired"><a href="#May_key"><em title="MAY In RFC 2119 Context" class="RFC2119">MAY</em></a></td>
+</tr>
+
+<tr class="RequiredAttribute">
+<td>object</td>
+<td class="RequiredAttribute">height (<span class="datatype"><a href="https://www.w3.org/TR/2001/REC-xhtml-modularization-20010410/abstraction.html#dt_Length">Length</a><a href=
+"#tn7">&#8224;</a></span> ),</td>
+<td class="RequiredAttribute"><a href="#Y_key"><em title="MUST In RFC 2119 Context" class="RFC2119">MUST</em></a></td>
+</tr>
+
+<tr>
+<td>object</td>
+<td class="AttributeNotRequired">name (<span class="datatype"><a href="https://www.w3.org/TR/2001/REC-xhtml-modularization-20010410/abstraction.html#dt_CDATA">CDATA</a><a href=
+"#tn7">&#8224;</a></span> ),</td>
+<td class="AttributeNotRequired"><a href="#NA_key">N/A</a></td>
+</tr>
+
+<tr>
+<td>object</td>
+<td class="AttributeNotRequired">standby (<span class="datatype"><a href="https://www.w3.org/TR/2001/REC-xhtml-modularization-20010410/abstraction.html#dt_Text">Text</a><a href=
+"#tn7">&#8224;</a></span> ),</td>
+<td class="AttributeNotRequired"><a href="#NA_key">N/A</a></td>
+</tr>
+
+<tr>
+<td>object</td>
+<td class="AttributeNotRequired">tabindex (<span class="datatype"><a href="https://www.w3.org/TR/2001/REC-xhtml-modularization-20010410/abstraction.html#dt_Number">Number</a><a href=
+"#tn7">&#8224;</a></span> ),</td>
+<td class="AttributeNotRequired"><a href="#NA_key">N/A</a></td>
+</tr>
+
+<tr class="RequiredAttribute">
+<td>object</td>
+<td class="RequiredAttribute">type ("image/jpeg"),</td>
+<td class="RequiredAttribute"><a href="#Y_key"><em title="MUST In RFC 2119 Context" class="RFC2119">MUST</em></a></td>
+</tr>
+
+<tr class="RequiredAttribute">
+<td>object</td>
+<td class="RequiredAttribute">width (<span class="datatype"><a href="https://www.w3.org/TR/2001/REC-xhtml-modularization-20010410/abstraction.html#dt_Length">Length</a><a href=
+"#tn7">&#8224;</a></span> )</td>
+<td class="RequiredAttribute"><a href="#Y_key"><em title="MUST In RFC 2119 Context" class="RFC2119">MUST</em></a></td>
+</tr>
+
+<tr>
+<td>param</td>
+<td class="AttributeNotRequired">id (<span class="datatype"><a href="https://www.w3.org/TR/2001/REC-xhtml-modularization-20010410/abstraction.html#dt_ID">ID</a><a href="#tn7">&#8224;</a></span>
+),</td>
+<td class="AttributeNotRequired"><a href="#NA_key">N/A</a></td>
+</tr>
+
+<tr>
+<td>param</td>
+<td class="AttributeNotRequired">name<a href="#attr_req3">*</a> (<span class="datatype"><a href="https://www.w3.org/TR/2001/REC-xhtml-modularization-20010410/abstraction.html#dt_CDATA">CDATA</a><a
+href="#tn7">&#8224;</a></span> ),</td>
+<td class="AttributeNotRequired"><a href="#NA_key">N/A</a></td>
+</tr>
+
+<tr>
+<td>param</td>
+<td class="AttributeNotRequired">type (<span class="datatype"><a href="https://www.w3.org/TR/2001/REC-xhtml-modularization-20010410/abstraction.html#dt_ContentType">ContentType</a><a href=
+"#tn7">&#8224;</a></span> ),</td>
+<td class="AttributeNotRequired"><a href="#NA_key">N/A</a></td>
+</tr>
+
+<tr>
+<td>param</td>
+<td class="AttributeNotRequired">value (<span class="datatype"><a href="https://www.w3.org/TR/2001/REC-xhtml-modularization-20010410/abstraction.html#dt_CDATA">CDATA</a><a href=
+"#tn7">&#8224;</a></span> ),</td>
+<td class="AttributeNotRequired"><a href="#NA_key">N/A</a></td>
+</tr>
+
+<tr>
+<td>param</td>
+<td class="AttributeNotRequired">valuetype ("data"<a href="#def_val2">**</a> | "ref" | "object")</td>
+<td class="AttributeNotRequired"><a href="#NA_key">N/A</a></td>
+</tr>
+</tbody>
+</table>
+
+<p class="tableNotes">Table Notes:</p>
+
+<p class="aTableNote" id="tn7">&#8224; See <cite>Modularization of <abbr title="Extensible HyperText Markup Language">XHTML</abbr></cite> ( [<a href="#ref_xhtmlmod">XHTMLMOD</a>], section 4.3 )</p>
+
+<p class="aTableNote" id="attr_req3">* The attribute <em title="MUST in RFC 2119 context" class="RFC2119">MUST</em> be present.</p>
+
+<p class="aTableNote" id="def_val2">** The value is the default.</p>
+
+<p>Printers <em title="MUST in RFC 2119 context" class="RFC2119">MUST</em> support the http <a href="#ref_rfc2616">[RFC2616]</a> URI scheme <a href="#ref_rfc3986">[RFC3986]</a>. Support for other
+schemes is <em title="OPTIONAL in RFC 2119 context" class="RFC2119">OPTIONAL</em>.</p>
+
+<p>A printer <em title="MUST in RFC 2119 context" class="RFC2119">MUST</em> support resources of type "image/jpeg." A printer <em title="MAY in RFC 2119 context" class="RFC2119">MAY</em> support
+other types of image formats and therefore other values of the <code>type</code> attribute. A printer <em title="MUST in RFC 2119 context" class="RFC2119">MUST</em> process the content of the <code>
+object</code> element when it does not recognize or support the object type referenced by the value of the <code>type</code> attribute.</p>
+
+<p>Conforming documents <em title="SHOULD in RFC 2119 context" class="RFC2119">SHOULD</em> specify the width and height of the image using the <code>width</code> and <code>height</code> attributes or
+equivalent styling instructions. (See <a href="#s2.3.1">2.3.1 Formatting/Rendering Rules</a>).</p>
+
+<p>The <code>param</code> element's purpose is to pass data to an application specified in the enclosing <code>object</code> element. The <code>param</code> element <em title="MAY in RFC 2119
+Context" class="RFC2119">MAY</em> be completely ignored.</p>
+
+<h2 typeof='bibo:Chapter' about='#s3.11' id='s3.11'>3.11 Metainformation Module</h2>
+
+<table border="1" width="100%" summary="Elements and Attributes for Metainformation Module">
+<thead>
+<tr>
+<th>Elements</th>
+<th>Attributes</th>
+<th><em title="REQUIRED In RFC 2119 Context" class="RFC2119">REQUIRED</em> Processing</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>meta</td>
+<td><span class="collection"><a href="#s_i18n_collection">I18N</a></span>,</td>
+<td>See Collection</td>
+</tr>
+
+<tr>
+<td>meta</td>
+<td class="AttributeNotRequired">content<a href="#attr_req4">*</a> (<span class="datatype"><a href="https://www.w3.org/TR/2001/REC-xhtml-modularization-20010410/abstraction.html#dt_CDATA">CDATA</a><a
+href="#tn8">&#8224;</a></span> ),</td>
+<td class="AttributeNotRequired"><a href="#NA_key">N/A</a></td>
+</tr>
+
+<tr>
+<td>meta</td>
+<td class="AttributeNotRequired">http-equiv (<span class="datatype"><a href="https://www.w3.org/TR/2001/REC-xhtml-modularization-20010410/abstraction.html#dt_NMTOKEN">NMTOKEN</a><a href=
+"#tn8">&#8224;</a></span> ),</td>
+<td class="AttributeNotRequired"><a href="#NA_key">N/A</a></td>
+</tr>
+
+<tr>
+<td>meta</td>
+<td class="AttributeNotRequired">name (<span class="datatype"><a href="https://www.w3.org/TR/2001/REC-xhtml-modularization-20010410/abstraction.html#dt_NMTOKEN">NMTOKEN</a><a href=
+"#tn8">&#8224;</a></span> ),</td>
+<td class="AttributeNotRequired"><a href="#NA_key">N/A</a></td>
+</tr>
+
+<tr>
+<td>meta</td>
+<td class="AttributeNotRequired">scheme (<span class="datatype"><a href="https://www.w3.org/TR/2001/REC-xhtml-modularization-20010410/abstraction.html#dt_CDATA">CDATA</a><a href=
+"#tn8">&#8224;</a></span> )</td>
+<td class="AttributeNotRequired"><a href="#NA_key">N/A</a></td>
+</tr>
+</tbody>
+</table>
+
+<p class="tableNotes">Table Notes:</p>
+
+<p class="aTableNote" id="tn8">&#8224; See <cite>Modularization of <abbr title="Extensible HyperText Markup Language">XHTML</abbr></cite> ( [<a href="#ref_xhtmlmod">XHTMLMOD</a>], section 4.3 )</p>
+
+<p class="aTableNote" id="attr_req4">* The attribute <em title="MUST in RFC 2119 context" class="RFC2119">MUST</em> be present.</p>
+
+<p>A printer <em title="MAY in RFC 2119 context" class="RFC2119">MAY</em> implement support for this element and provide implementation specific processing of the meta-information. However,
+guidelines and/or recommendations for processing a document's meta-information are beyond the scope of this document.</p>
+
+<h2 typeof='bibo:Chapter' about='#s3.12' id='s3.12'>3.12 Scripting Module</h2>
+
+<table border="1" width="100%" summary="Elements and Attributes for the Script Module">
+<thead>
+<tr>
+<th>Elements</th>
+<th>Attributes</th>
+<th><em title="REQUIRED In RFC 2119 Context" class="RFC2119">REQUIRED</em> Processing</th>
+</tr>
+</thead>
+
+<tbody>
+<tr class="RequiredAttribute">
+<td>noscript</td>
+<td><span class="collection"><a href="#s_common_collection">Common</a></span>,</td>
+<td>See Collections</td>
+</tr>
+
+<tr>
+<td>script</td>
+<td class="AttributeNotRequired">charset (<span class="datatype"><a href="https://www.w3.org/TR/2001/REC-xhtml-modularization-20010410/abstraction.html#dt_Charset">Charset</a></span>),</td>
+<td class="AttributeNotRequired"><a href="#NA_key">N/A</a></td>
+</tr>
+
+<tr>
+<td>script</td>
+<td class="AttributeNotRequired">defer ("defer"),</td>
+<td class="AttributeNotRequired"><a href="#NA_key">N/A</a></td>
+</tr>
+
+<tr>
+<td>script</td>
+<td class="AttributeNotRequired">src(<span class="datatype"><a href="https://www.w3.org/TR/2001/REC-xhtml-modularization-20010410/abstraction.html#dt_URI">URI</a>)</span>,</td>
+<td class="AttributeNotRequired"><a href="#NA_key">N/A</a></td>
+</tr>
+
+<tr>
+<td>script</td>
+<td class="AttributeNotRequired">type (<span class="datatype"><a href="https://www.w3.org/TR/2001/REC-xhtml-modularization-20010410/abstraction.html#dt_ContentType">ContentType</a></span>),</td>
+<td class="AttributeNotRequired"><a href="#NA_key">N/A</a></td>
+</tr>
+
+<tr>
+<td>script</td>
+<td class="AttributeNotRequired">scheme (<span class="datatype"><a href="https://www.w3.org/TR/2001/REC-xhtml-modularization-20010410/abstraction.html#dt_CDATA">CDATA</a></span>)</td>
+<td class="AttributeNotRequired"><a href="#NA_key">N/A</a></td>
+</tr>
+</tbody>
+</table>
+
+<p>Scripts, as programs that are executed in conjunction with a document, are not relevant to the printed page and <em title="MUST NOT in RFC 2119 context" class="RFC2119">MUST NOT</em> be executed
+or printed. The <code>noscript</code> element contains alternate content that <em title="MUST in RFC 2119 context" class="RFC2119">MUST</em> be printed in place of the content of the <code>
+script</code> element when present.</p>
+
+<h2 typeof='bibo:Chapter' about='#s3.13' id='s3.13'>3.13 Style Sheet Module</h2>
+
+<table border="1" width="100%" summary="Elements and Attributes for Style Sheet Module">
+<thead>
+<tr>
+<th>Elements</th>
+<th>Attributes</th>
+<th><em title="REQUIRED In RFC 2119 Context" class="RFC2119">REQUIRED</em> Processing</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>style</td>
+<td><span class="collection"><a href="#s_i18n_collection">I18N</a></span>,</td>
+<td>See Collection</td>
+</tr>
+
+<tr class="RequiredAttribute">
+<td>style</td>
+<td class="RequiredAttribute">media (<span class="datatype"><a href="https://www.w3.org/TR/2001/REC-xhtml-modularization-20010410/abstraction.html#dt_MediaDesc">MediaDesc</a><a href=
+"#tn9">&#8224;</a></span> ),</td>
+<td class="RequiredAttribute"><a href="#Should_Key"><em title="SHOULD In RFC 2119 Context" class="RFC2119">SHOULD</em></a></td>
+</tr>
+
+<tr>
+<td>style</td>
+<td class="AttributeNotRequired">title (<span class="datatype"><a href="https://www.w3.org/TR/2001/REC-xhtml-modularization-20010410/abstraction.html#dt_Text">Text</a><a href="#tn9">&#8224;</a></span>
+),</td>
+<td class="AttributeNotRequired"><a href="#NA_key">N/A</a></td>
+</tr>
+
+<tr class="RequiredAttribute">
+<td>style</td>
+<td class="RequiredAttribute">type<a href="#attr_req5">*</a>,</td>
+<td class="RequiredAttribute"><a href="#Y_key"><em title="MUST In RFC 2119 Context" class="RFC2119">MUST</em></a></td>
+</tr>
+
+<tr class="RequiredAttribute">
+<td>style</td>
+<td class="RequiredAttribute">xml:space="preserve"</td>
+<td class="RequiredAttribute"><a href="#Should_Key"><em title="SHOULD In RFC 2119 Context" class="RFC2119">SHOULD</em></a></td>
+</tr>
+</tbody>
+</table>
+
+<p class="tableNotes">Table Notes:</p>
+
+<p class="aTableNote" id="tn9">&#8224; See <cite>Modularization of <abbr title="Extensible HyperText Markup Language">XHTML</abbr></cite> ( [<a href="#ref_xhtmlmod">XHTMLMOD</a>], section 4.3 )</p>
+
+<p class="aTableNote" id="attr_req5">* The attribute <em title="MUST in RFC 2119 context" class="RFC2119">MUST</em> be present.</p>
+
+<p>A printer <em title="MUST in RFC 2119 context" class="RFC2119">MUST</em> read and process the content of <code>style</code> elements where the <code>media</code> attribute has the value <code>
+print</code> or <code>all</code>. A printer <em title="MAY in RFC 2119 context" class="RFC2119">MAY</em> read and process the content of <code>style</code> elements where the <code>media</code>
+attribute has the value <code>projection</code>. A printer <em title="SHOULD in RFC 2119 context" class="RFC2119">SHOULD</em> ignore the content of <code>style</code> elements where the <code>
+media</code> attribute has any other value. The absence of the <code>media</code> attribute <em title="MUST in RFC 2119 context" class="RFC2119">MUST</em> be treated as if the <code>media</code>
+attribute had the value <code>all</code>.</p>
+
+<p>A printer <em title="SHOULD in RFC 2119 context" class="RFC2119">SHOULD</em> read and process the content of <code>style</code> elements where the value of the <code>type</code> attribute is
+"text/css"; a printer <em title="MAY in RFC 2119 context" class="RFC2119">MAY</em> read and process the content of <code>style</code> elements where the value of the <code>type</code> attribute is
+other than "text/css"; all unsupported values for <code>type</code> <em title="MUST in RFC 2119 context" class="RFC2119">MUST</em> cause the content to be ignored. Style elements without a <code>
+type</code> attribute will be treated in an implementation-dependent manner.</p>
+
+<h2 typeof='bibo:Chapter' about='#s3.14' id='s3.14'>3.14 Style Sheet Attribute Module</h2>
+
+<p>This module adds the style attribute to the <span class="collection"><a href="#s_common_collection">Common</a></span> attribute collection (section 3.1).</p>
+
+<h2 typeof='bibo:Chapter' about='#s3.15' id='s3.15'>3.15 Link Module</h2>
+
+<table border="1" width="100%" summary="Elements and Attributes for Link Module">
+<thead>
+<tr>
+<th>Elements</th>
+<th>Attributes</th>
+<th><em title="REQUIRED In RFC 2119 Context" class="RFC2119">REQUIRED</em> Processing</th>
+</tr>
+</thead>
+
+<tbody>
+<tr class="RequiredAttribute">
+<td>link</td>
+<td><span class="collection"><a href="#s_common_collection">Common</a></span>,</td>
+<td>See Collection</td>
+</tr>
+
+<tr class="RequiredAttribute">
+<td>link</td>
+<td class="RequiredAttribute">charset (<span class="datatype"><a href="https://www.w3.org/TR/2001/REC-xhtml-modularization-20010410/abstraction.html#dt_Charset">Charset</a><a href=
+"#tn10">&#8224;</a></span> ),</td>
+<td class="RequiredAttribute"><a href="#Y_key"><em title="MUST In RFC 2119 Context" class="RFC2119">MUST</em></a></td>
+</tr>
+
+<tr class="RequiredAttribute">
+<td>link</td>
+<td class="RequiredAttribute">href (<span class="datatype"><a href="https://www.w3.org/TR/2001/REC-xhtml-modularization-20010410/abstraction.html#dt_URI">URI</a><a href="#tn10">&#8224;</a></span>
+),</td>
+<td class="RequiredAttribute"><a href="#Y_key"><em title="MUST In RFC 2119 Context" class="RFC2119">MUST</em></a></td>
+</tr>
+
+<tr>
+<td>link</td>
+<td class="AttributeNotRequired">hreflang (<span class="datatype"><a href="https://www.w3.org/TR/2001/REC-xhtml-modularization-20010410/abstraction.html#dt_LanguageCode">LanguageCode</a><a href=
+"#tn10">&#8224;</a></span> ),</td>
+<td class="AttributeNotRequired"><a href="#May_key"><em title="MAY In RFC 2119 Context" class="RFC2119">MAY</em></a></td>
+</tr>
+
+<tr class="RequiredAttribute">
+<td>link</td>
+<td class="RequiredAttribute">media (<span class="datatype"><a href="https://www.w3.org/TR/2001/REC-xhtml-modularization-20010410/abstraction.html#dt_MediaDesc">MediaDesc</a><a href=
+"#tn10">&#8224;</a></span> ),</td>
+<td class="RequiredAttribute"><a href="#Y_key"><em title="MUST In RFC 2119 Context" class="RFC2119">MUST</em></a></td>
+</tr>
+
+<tr class="RequiredAttribute">
+<td>link</td>
+<td class="RequiredAttribute">rel ("stylesheet"),</td>
+<td class="RequiredAttribute"><a href="#Y_key"><em title="MUST In RFC 2119 Context" class="RFC2119">MUST</em></a></td>
+</tr>
+
+<tr>
+<td>link</td>
+<td class="AttributeNotRequired">rev (<span class="datatype"><a href="https://www.w3.org/TR/2001/REC-xhtml-modularization-20010410/abstraction.html#dt_LinkTypes">LinkTypes</a><a href=
+"#tn10">&#8224;</a></span> ),</td>
+<td class="AttributeNotRequired"><a href="#NA_key">N/A</a></td>
+</tr>
+
+<tr class="RequiredAttribute">
+<td>link</td>
+<td class="RequiredAttribute">type</td>
+<td class="RequiredAttribute"><a href="#Y_key"><em title="MUST In RFC 2119 Context" class="RFC2119">MUST</em></a></td>
+</tr>
+</tbody>
+</table>
+
+<p class="tableNotes">Table Note:</p>
+
+<p class="aTableNote" id="tn10">&#8224; See <cite>Modularization of <abbr title="Extensible HyperText Markup Language">XHTML</abbr></cite> ( [<a href="#ref_xhtmlmod">XHTMLMOD</a>], section 4.3 )</p>
+
+<p>Printers <em title="MUST in RFC 2119 context" class="RFC2119">MUST</em> support the http <a href="#ref_rfc2616">[RFC2616]</a> URI scheme <a href="#ref_rfc3986">[RFC3986]</a>. Support for other
+schemes is <em title="OPTIONAL in RFC 2119 context" class="RFC2119">OPTIONAL</em>.</p>
+
+<p>If the printer implements processing based on the natural language of the document, then the <code>hreflang</code> attribute <em title="MUST in RFC 2119 context" class="RFC2119">MUST</em> be
+supported.</p>
+
+<p>A printer <em title="SHOULD in RFC 2119 context" class="RFC2119">SHOULD</em> read and process the content of external style sheets where the <code>media</code> attribute has the value <code>
+print</code> or <code>all</code>. A printer <em title="MAY in RFC 2119 context" class="RFC2119">MAY</em> read and process the content of external style sheets where the <code>media</code> attribute
+has the value <code>projection</code>. A printer <em title="SHOULD in RFC 2119 context" class="RFC2119">SHOULD</em> ignore the content of external style sheets where the <code>media</code> attribute
+has any other value. The absence of the <code>media</code> attribute <em title="MUST in RFC 2119 context" class="RFC2119">MUST</em> be treated as if the <code>media</code> attribute had the value
+<code>all</code>.</p>
+
+<p>A printer <em title="SHOULD in RFC 2119 context" class="RFC2119">SHOULD</em> support the value <code>stylesheet</code> for the <code>rel</code> attribute along with the value "text/css" for the
+<code>type</code> attribute; all other values are <em title="OPTIONAL in RFC 2119 context" class="RFC2119">OPTIONAL</em>.</p>
+
+<h2 typeof='bibo:Chapter' about='#s3.16' id='s3.16'>3.16 Base Module</h2>
+
+<table border="1" width="100%" summary="Elements and Attributes for Base Module">
+<thead>
+<tr>
+<th>Elements</th>
+<th>Attributes</th>
+<th><em title="REQUIRED In RFC 2119 Context" class="RFC2119">REQUIRED</em> Processing</th>
+</tr>
+</thead>
+
+<tbody>
+<tr class="RequiredAttribute">
+<td>base</td>
+<td class="RequiredAttribute">href<a href="#attr_req6">*</a> (<span class="datatype"><a href="https://www.w3.org/TR/2001/REC-xhtml-modularization-20010410/abstraction.html#dt_URI">URI</a><a href=
+"#tn11">&#8224;</a></span> )</td>
+<td class="RequiredAttribute"><a href="#Y_key"><em title="MUST In RFC 2119 Context" class="RFC2119">MUST</em></a></td>
+</tr>
+</tbody>
+</table>
+
+<p class="tableNotes">Table Notes:</p>
+
+<p class="aTableNote" id="tn11">&#8224; See <cite>Modularization of <abbr title="Extensible HyperText Markup Language">XHTML</abbr></cite>( [<a href="#ref_xhtmlmod">XHTMLMOD</a>], section 4. 3</p>
+
+<p class="aTableNote" id="attr_req6">* The attribute <em title="MUST in RFC 2119 context" class="RFC2119">MUST</em> be present.</p>
+
+<p>Printers <em title="MUST in RFC 2119 context" class="RFC2119">MUST</em> support the http <a href="#ref_rfc2616">[RFC2616]</a> URI scheme <a href="#ref_rfc3986">[RFC3986]</a>. Support for other
+schemes is <em title="OPTIONAL in RFC 2119 context" class="RFC2119">OPTIONAL</em>.</p>
+
+<!-- #########################  --><!--  End of Doc type definition --><!-- #########################  -->
+<h2 typeof='bibo:Chapter' about='#s_charentities' id='s_charentities'>3.17 Character Entities</h2>
+
+<p>XHTML-Print is in the family of XHTML document types, since it is created by combining XHTML modules. The character entities that are part of XHTML-Print are, therefore, defined in <a href="https://www.w3.org/TR/xhtml-modularization/dtd_module_defs.html#a_dtd_xhtml_character_entities">XHTML Character Entities</a> ([<a href="#ref_xhtmlmod">XHTMLMOD</a>], Section F.1).</p>
+
+<!--OddPage-->
+<h1 typeof='bibo:Chapter' about='#s_howtouse' id="s_howtouse">4. How to Use <abbr title="Extensible HyperText Markup Language for Printing">XHTML-Print</abbr></h1>
+
+<p>XHTML-Print inherits all the structure, encoding and other basic infrastructure specified by <cite>XHTML 1.0</cite> [<a href="#ref_xhtml1">XHTML1</a>]. The following sections describe and clarify
+the application and usage restrictions of XHTML-Print.</p>
+
+<h2 typeof='bibo:Chapter' about='#s.4.1' id='s.4.1'>4.1 Images</h2>
+
+<p>This document specifies only one mandatory image format: baseline JPEG as defined in <cite>JPEG File Interchange Format</cite> [<a href="#ref_jpeg">JPEG</a>]. See <a href="#a_jpeg">Appendix A</a>
+for a description of JPEG decoder requirements. Printers are not <em title="REQUIRED in RFC 2119 context" class="RFC2119">REQUIRED</em> to support:</p>
+
+<ul>
+<li>Embedded thumbnails</li>
+
+<li>Rotation</li>
+
+<li>Progressive rendering</li>
+</ul>
+
+<p>within the JFIF (JPEG File Interchange Format) and EXIF (Exchangeable Image File Format) files.</p>
+
+<h3 typeof='bibo:Chapter' about='#s.4.1.1' id='s.4.1.1'>4.1.1 Recommended Attributes on the <code>img</code> and <code>object</code> Elements</h3>
+
+<p>Because many printers create the page in a serial manner from top to bottom, it is important for the printer to know the size of images before retrieving the image data itself. This information is
+then used to create portions of the page layout.<br />
+</p>
+
+<p>Therefore, the document <em title="SHOULD in RFC 2119 context" class="RFC2119">SHOULD</em> include the <code>height</code> and <code>width</code> attributes within the <code>img</code> or the
+<code>object</code> element (or equivalent styling instructions). These attributes <em title="MAY in RFC 2119 context" class="RFC2119">MAY</em> be expressed as pixels or percentages within the <code>
+img</code> or the <code>object</code> element. Percentages are relative to the parent element and not the page width or printable area.<br />
+</p>
+
+<h3 typeof='bibo:Chapter' about='#s.4.1.2' id='s.4.1.2'>4.1.2 Image Data</h3>
+
+<p>[Informative]</p>
+
+<p>In traditional Web-based applications of XHTML, image data is contained in a separate file on a Web server that the user agent retrieves.</p>
+
+<p>However, there are circumstances where it is desirable to include the image data along with the rest of the print data. For example, some low cost, resource constrained clients might want to
+include images in their print output but cannot afford to include an HTTP server. Furthermore, circumstances could require that all the print data be encapsulated in a single file for
+transportability, avoiding firewall issues, etc. Therefore, conforming XHTML-Print printers <em title="MAY in RFC 2119 context" class="RFC2119">MAY</em> optionally support a format that contains both
+a document and its referenced image data as well as the <em title="REQUIRED in RFC 2119 context" class="REQUIRED">REQUIRED</em> traditional format that contains only the document.</p>
+
+<p>The format recommended for including image data along with xhtml-print markup is defined by <cite>RFC3391 - The MIME Application/Vnd.pwg-multiplexed Content-type</cite>. [<a href=
+"#ref_mimempx">MIMEMPX</a>].</p>
+
+<div>
+<p>Including image data as defined in <cite>RFC2397 - The data URL scheme</cite> [<a href="#ref_rfc2397">RFC2397</a>] may be appropriate for printers capable of buffering large amounts of data, but
+will not achieve the intended results for most cost- and memory-constrained printer UA's. Because this method normally encodes the binary image data using base64 encoding, a significant increase in
+the size of the data transmitted will be experienced. This should be avoided over low speed connections. Printers supporting included data can support base64 encoding using the <code>img</code> or
+<code>object</code> element.</p>
+
+<div class="code" style="BORDER-RIGHT: 1px solid; PADDING-RIGHT: 4px; BORDER-TOP: 1px solid; PADDING-LEFT: 4px; PADDING-BOTTOM: 1px; BORDER-LEFT: 1px solid; PADDING-TOP: 1px; BORDER-BOTTOM: 1px
+solid"><br />
+&lt;object height="20 mm" width="20 mm" type="image/jpeg"<br />
+&#160;&#160; data="data:image/jpeg;base64,aGh67Fghsapa0Hji7dfGSweTa . . ."&gt;<br />
+&#160;&#160; Example Image &lt;/object&gt;<br />
+</div>
+
+or 
+
+<div class="code" style="BORDER-RIGHT: 1px solid; PADDING-RIGHT: 4px; BORDER-TOP: 1px solid; PADDING-LEFT: 4px; PADDING-BOTTOM: 1px; BORDER-LEFT: 1px solid; PADDING-TOP: 1px; BORDER-BOTTOM: 1px
+solid">&lt;img height="20 mm" width="20 mm" alt="Example Image"<br />
+&#160;&#160; src="data:image/jpeg;base64,aGh67Fghsapa0Hji7dfGSweTa . . . " /&gt;</div>
+</div>
+
+<p>Mechanisms for determining whether or not a printer supports either of the above <em title="OPTIONAL in RFC 2119 context" class="RFC2119">OPTIONAL</em> document formats is outside the scope of
+this specification.</p>
+
+<h3 typeof='bibo:Chapter' about='#s.4.1.3' id='s.4.1.3'>4.1.3 Side-by-Side Images</h3>
+
+<p>Low-cost printers today often have very little memory into which page data can be stored before being printed. As such, they may build and print the page in swaths on the fly from the top of the
+page to the bottom. To enable the use of XHTML-Print in these low cost printers, some restrictions on the order of images contained in the XHTML-Print data stream must be added.</p>
+
+<ol>
+<li>If two or more images will be even partially side-by-side on the printed page (<em>i.e.,</em> a line across the short axis of the page will intersect more than one image), they <em title="SHOULD 
+in RFC 2119 context" class="RFC2119">SHOULD</em> be included by reference; for example <code>&lt;img src="http://example.com/example.jpg"&gt;</code>. This allows the printer to get chunks of the
+image, as it needs it, as it prints down the page. Interleaved or included image data, as discussed in <a href="#s.4.1.2">Section 4.1.2</a>, is discouraged.</li>
+
+<li>An XHTML-Print conforming printer lacking sufficient buffer space to hold multiple side-by-side images <em title="MAY in RFC 2119 context" class="RFC2119">MAY</em> choose to reformat the layout
+of the page to preserve content. Printers <em title="SHALL in RFC 2119 context" class="RFC2119">SHALL</em> attempt to preserve content when encountering side-by-side images that <em title="MAY in RFC 
+2119 context" class="RFC2119">MAY</em> be impossible to print as specified within the XHTML-Print. Discarding the second and subsequent of the side-by-side images <em title="SHOULD in RFC 2119
+context" class="RFC2119">SHOULD</em> be avoided unless preservation of content is best achieved by doing so. Other than attempting to best preserve content, this specification does not mandate any
+specific behavior when encountering this situation. Clients providing images <em title="SHOULD in RFC 2119 context" class="RFC2119">SHOULD</em> order them from left-to-right top-to-bottom unless the
+print direction is known to be otherwise.</li>
+</ol>
+
+<h2 typeof='bibo:Chapter' about='#s.4.2' id='s.4.2'>4.2 Style Sheets</h2>
+
+<p>Conforming XHTML-Print printers <em title="SHALL in RFC 2119 context" class="RFC2119">SHALL</em> support both in-line and referenced style sheets within the <code>style</code> element or <code>
+link</code> element in the <code>head</code> element of a document. Conforming XHTML-Print printers <em title="SHALL in RFC 2119 context" class="RFC2119">SHALL</em> also support the <code>
+style</code> attribute (i.e. in-line style) when used within other elements as defined by <cite>XHTML 1.1</cite>[<a href="#ref_xhtml11">XHTML1.1</a>]. Normal cascading rules apply.</p>
+
+<h2 typeof='bibo:Chapter' about='#s.4.3' id='s.4.3'>4.3 Forms Usage</h2>
+
+<p>This section is informative.</p>
+
+<p>An HTML form is a dynamic entity when the document is displayed in a browser: data can be entered into text fields, buttons can be pushed, selections made, and options checked. None of this
+dynamic activity can be rendered on a printed page. However, a printed page can permanently record a particular state of the form. For example, users might wish to print forms that record products
+ordered or payments made.</p>
+
+<p>The following discussion illustrates the activity involved when interacting with and printing forms. Please refer to <a href="#SeqDiag_1">Sequence Diagram 1</a></p>
+
+<p><img id="SeqDiag_1" src="https://www.w3.org/TR/xhtml-print/formsUsageModel.jpg" height="404" width="600" alt="Sequence diagram of user, browser, and printer interactions, refer to the following steps" /><br />
+<span class="Caption">Sequence Diagram 1. Forms Usage</span></p>
+
+<p>Steps:</p>
+
+<ol>
+<li>The User enters a URL into the Browser</li>
+
+<li>The Browser fetches the form from the Server and displays it</li>
+
+<li>The User enters data into the form</li>
+
+<li>The User asks the Browser to print the form</li>
+
+<li>The Browser composes a page with the form and the user data</li>
+
+<li>The Browser sends the newly composed form to the printer</li>
+
+<li>The User selects the Submit button on the form</li>
+
+<li>The Browser sends the user data to the Server</li>
+</ol>
+
+<div>
+<p>Detailed discussion of Steps:</p>
+
+<ol>
+<li>The user interacts with a browser on a mobile device to access a form presented by a server on the network (steps 1 and 2 of <a href="#SeqDiag_1">Sequence Diagram 1</a>). The following fragment
+of an XHTML-Print document shows what the server sends to the browser to present to the user. Please note, that the form is blank when first presented to the user. 
+
+<div class="code">&lt;form action="http://example.com/prog/adduser" method="post"&gt;<br />
+ &lt;label for="firstname"&gt;First name: &lt;/label&gt;<br />
+ &lt;input type="text" id="firstname" /&gt;&lt;br /&gt;<br />
+ &lt;label for="lastname"&gt;Last name: &lt;/label&gt;<br />
+ &lt;input type="text" id="lastname" /&gt;&lt;br /&gt;<br />
+ &lt;label for="email"&gt;email: &lt;/label&gt;<br />
+ &lt;input type="text" id="email" size="40" /&gt;&lt;br /&gt;<br />
+ &lt;input type="checkbox" name="member" value="IEEE" /&gt; IEEE &lt;br /&gt;<br />
+ &lt;input type="checkbox" name="member" value="ACM" /&gt; ACM &lt;br /&gt;<br />
+ &lt;input type="submit" value="Send" /&gt; &lt;input type="reset" /&gt;<br />
+ &lt;/form&gt;<br />
+</div>
+
+<p>Here is an example presentation of the above form as the user would see it:</p>
+
+<form method="post" action="http://example.com/prog/adduser">
+<div><label for="firstname1">First name:</label> <input type="text" size="20" id="firstname1" /><br />
+ <label for="lastname1">Last name:</label> <input type="text" size="20" id="lastname1" /><br />
+ <label for="email1">email:</label> <input type="text" size="20" id="email1" /><br />
+ <input type="checkbox" name="member" value="IEEE" /> IEEE<br />
+ <input type="checkbox" name="member" value="ACM" /> ACM<br />
+ <input type="submit" value="Send" /> <input type="reset" value="Reset" name="Reset" /><br />
+</div>
+</form>
+</li>
+
+<li>The user enters data (step 3 of <a href="#SeqDiag_1">Sequence Diagram 1</a>) into the text fields and checks the IEEE check box so that the form now looks like the following:<br />
+ 
+
+<form method="post" action="http://example.com/prog/adduser">
+<div><label for="firstname">First name:</label> <input type="text" size="20" id="firstname" value="John" /><br />
+ <label for="lastname">Last name:</label> <input type="text" size="20" id="lastname" value="Doe" /><br />
+ <label for="email">email:</label> <input type="text" size="40" id="email" value="johnd@example.org" /><br />
+ <input type="checkbox" checked="checked" name="member" value="IEEE" /> IEEE<br />
+ <input type="checkbox" name="member" value="ACM" /> ACM<br />
+ <input type="submit" value="Send" /> <input type="reset" value="Reset" name="Reset" /><br />
+</div>
+</form>
+</li>
+
+<li>The user then clicks on the browser's print button (step 4 of <a href="#SeqDiag_1">Sequence Diagram 1</a>), to print the form as it currently appears.</li>
+
+<li>The browser then creates a, possibly new, document (step 5 of <a href="#SeqDiag_1">Sequence Diagram 1</a>) containing the original form and the users data. Note in the XHTML-Print document below,
+created by the browser, that the user's data is included either by a value attribute or a checked attribute. 
+
+<div class="code">&lt;form action="http://example.com/prog/adduser" method="post"&gt;<br />
+ &lt;label for="firstname"&gt;First name: &lt;/label&gt;<br />
+ &lt;input type="text" id="firstname" <span style="background: yellow">value="John"</span>/&gt;&lt;br /&gt;<br />
+ &lt;label for="lastname"&gt;Last name: &lt;/label&gt;<br />
+ &lt;input type="text" id="lastname" <span style="background: yellow">value="Doe"</span>/&gt;&lt;br /&gt;<br />
+ &lt;label for="email"&gt;email: &lt;/label&gt;<br />
+ &lt;input type="text" id="email" <span style="background: yellow">value="johnd@example.org"</span> /&gt;&lt;br /&gt;<br />
+ &lt;input type="checkbox" name="member" <span style="background: yellow">checked="checked"</span> value="IEEE" /&gt; IEEE &lt;br /&gt;<br />
+ &lt;input type="checkbox" name="member" value="ACM" /&gt; ACM &lt;br /&gt;<br />
+ &lt;input type="submit" value="Send" /&gt; &lt;input type="reset" /&gt;&lt;br /&gt;<br />
+ &lt;/form&gt;</div>
+</li>
+
+<li>The browser sends (step 6 of <a href="#SeqDiag_1">Sequence Diagram 1</a>) the document created in step 5 to the printer.</li>
+
+<li>Sometime later the user clicks on the submit form button (step 7 of <a href="#SeqDiag_1">Sequence Diagram 1</a>) and the browser submits the form (step 8 of <a href="#SeqDiag_1">Sequence Diagram
+1</a>) using the procedures given in the <cite>HTML 4.01 Specification</cite> ([<a href="#ref_html4">HTML4</a>], <a href="https://www.w3.org/TR/html401/interact/forms.html#h-17.13">Forms
+Submission</a>).</li>
+</ol>
+</div>
+
+<!--OddPage-->
+<h1 typeof='bibo:Chapter' about='#s_acknowledgements' id="s_acknowledgements">5. Acknowledgements</h1>
+
+<p>This section is informative.</p>
+
+<p> This specification was prepared by the W3C HTML Working Group. The participants at the time of publication were:</p>
+
+<div>
+<ul>
+<li>Mark Birbeck</li>
+
+<li>Beth Epperson</li>
+
+<li>Melinda Grant</li>
+
+<li>Luca Mascaro</li>
+
+<li>Shinichi Matsui</li>
+
+<li>Shane McCarron</li>
+
+<li>Steven Pemberton</li>
+
+<li>Brad Petit</li>
+
+<li>Richard Schwerdtfeger</li>
+</ul>
+
+<p>At publication of the second edition, the membership was:</p>
+
+<ul>
+<li>Roland Merrick, <acronym title="International Business Machines">IBM</acronym> (<acronym title="Extensible HyperText Markup Language">XHTML</acronym> 2 Working Group Co-Chair)</li>
+
+<li>Steven Pemberton, <acronym title="Centrum voor Wiskunde en Informatica" xml:lang="nl">CWI</acronym> (<acronym title="Extensible HyperText Markup Language">XHTML</acronym> 2 Working Group
+Co-Chair)</li>
+
+<li>Mark Birbeck, webBackplane (Invited Expert)</li>
+
+<li>Susan Borgrink, Progeny Systems</li>
+
+<li>Christina Bottomley, Society for Technical Communication (STC)</li>
+
+<li>Alessio Cartocci, International Webmasters Association / HTML Writers Guild (IWA-HWG)</li>
+
+<li>Alexander Graf, University of Innsbruck</li>
+
+<li>Markus Gylling, <a href="http://www.daisy.org/">DAISY Consortium</a></li>
+
+<li>Tina Holmboe, Greytower Technologies (Invited Expert)</li>
+
+<li>John Kugelman, Progeny Systems</li>
+
+<li>Luca Mascaro, International Webmasters Association / HTML Writers Guild (IWA-HWG)</li>
+
+<li>Shane McCarron, Applied Testing and Technology, Inc. (Invited Expert)</li>
+
+<li>Michael Rawling, IVIS Group Limited</li>
+
+<li>Gregory Rosmaita, Invited Expert</li>
+
+<li>Sebastian Schnitzenbaumer, Dreamlab Technologies AG</li>
+
+<li>Richard Schwerdtfeger, <acronym title="International Business Machines">IBM</acronym></li>
+
+<li>Elias Torres, <acronym title="International Business Machines">IBM</acronym></li>
+
+<li>Masataka Yakura, Mitsue-Links Co., Ltd.</li>
+
+<li>Toshihiko Yamakami, ACCESS Co., Ltd.</li>
+</ul>
+</div>
+
+<p>This specification is based in large part on the specification of the same name, <cite><abbr title="Extensible HyperText Markup Language for Printing">XHTML&#8482;-Print</abbr></cite> [<a href= 
+"#ref-XHTMLPrint">XHTMLPRINT</a>], from the <a href="http://www.pwg.org/">Printer Working Group</a>, a program of and through the IEEE Industry Standards and Technology Organization, Inc.; and which
+was in turn based in large part upon an earlier work with the same name by Fujisawa, Grant, Wright, and Zehler. <!-- [<a href="#ref-XHP">XHP</a>]. --> The editors wish to express their gratitude to
+all who contributed to this and earlier versions.</p>
+
+<!--OddPage-->
+<h1 about='#a_jpeg' typeof='bibo:Chapter' id="a_jpeg">A. JPEG Decoder Requirements</h1>
+
+<h2 typeof='bibo:Chapter' about='#a_jpeg.1' id='a_jpeg.1'>A.1 Introduction</h2>
+
+<h3 typeof='bibo:Chapter' about='#a_jpeg.1.1' id='a_jpeg.1.1'>A.1.1 Intent</h3>
+
+<p>This appendix describes <em title="REQUIRED in RFC 2119 context" class="RFC2119">REQUIRED</em> behaviors for JPEG decoders in XHTML-Print devices. Many of the behaviors described in this document
+follow directly from language already present in the relevant JPEG standards, but are repeated here to emphasize their importance.</p>
+
+<h3 typeof='bibo:Chapter' about='#a_jpeg.1.2' id='a_jpeg.1.2'>A.1.2 Objectives</h3>
+
+<p>The decoder behaviors described in this document are intended to minimize implementation complexity, while retaining maximum compatibility with existing JPEG files. In particular, these
+recommendations seek to ensure compatibility with both EXIF (Exchangeable Image File Format) and baseline JFIF (JPEG File Interchange Format); i.e., the subset of JFIF files that use only baseline
+JPEG processes. Support for JPEG streams using non-baseline processes, such as arithmetic coding or progressive coding, is not mandated for XHTML-Print compliance.</p>
+
+<h2 typeof='bibo:Chapter' about='#a_jpeg.2' id='a_jpeg.2'>A.2 Printer Behaviors</h2>
+
+<p>This section describes behaviors of JPEG decoders for XHTML-Print conformant implementations.</p>
+
+<h3 typeof='bibo:Chapter' about='#a_jpeg.2.1' id='a_jpeg.2.1'>A.2.1 JPEG Processes</h3>
+
+<p>A JPEG decoder for an XHTML-Print printer <em title="SHALL in RFC 2119 context" class="RFC2119">SHALL</em> support all baseline JPEG processes as defined in [<a href="#ref_ccitt">CCITT</a>],
+except for 2- and 4-component images. These processes include grayscale and 3-component images, 8-bit/component sample depth, Huffman entropy coding, 444, 422, 411, and 400 subsampling modes, and
+sequential (i.e. non-progressive) scan.</p>
+
+<h3 typeof='bibo:Chapter' about='#a_jpeg.2.2' id='a_jpeg.2.2'>A.2.2 Handling of APPx Markers</h3>
+
+<p>Baseline decoders <em title="MAY in RFC 2119 context" class="RFC2119">MAY</em> ignore application-specific markers, such as the JFIF APP0 marker and the EXIF APP1/APP2 markers; rotation fields
+within these markers <em title="SHOULD in RFC 2119 context" class="RFC2119">SHOULD</em> be ignored. (Specifically, conforming printers <em title="SHOULD in RFC 2119 context" class="RFC2119">SHOULD
+NOT</em> decode the TIFF IFDs embedded in the EXIF APP1 and APP2 markers, as described in Section 2.6.4 of [<a href="#ref_jeida">JEIDA</a>].) This implies images will print in the orientation in
+which they are stored, unless style markup indicates otherwise. The image size <em title="SHOULD in RFC 2119 context" class="RFC2119">SHOULD</em> be rendered as specified in the JPEG SOF marker, if
+not overridden by style mark-up. A JPEG decoder for a conforming printer <em title="SHALL NOT in RFC 2119 context" class="RFC2119">SHALL NOT</em> fail as a consequence of encountering an unsupported
+APPx marker (i.e. all such markers <em title="SHALL in RFC 2119 context" class="RFC2119">SHALL</em> be correctly parsed, even if they are ignored).</p>
+
+<h3 typeof='bibo:Chapter' about='#a_jpeg.2.3' id='a_jpeg.2.3'>A.2.3 Color Management</h3>
+
+<p>This section describes a <em title="RECOMMENDED in RFC 2119 context" class="RFC2119">RECOMMENDED</em> color management approach for XHTML-Print printers.</p>
+
+<h4 typeof='bibo:Chapter' about='#a_jpeg.grayscale' id='a_jpeg.grayscale'>Grayscale Images</h4>
+
+<p>Sample values in a grayscale (single-component) JPEG image <em title="MAY in RFC 2119 context" class="RFC2119">MAY</em> be converted to the sRGB color space by setting</p>
+
+<p style="text-align:center">R<sub>out</sub>= G<sub>out</sub>= B<sub>out</sub>= Gray<sub>in</sub></p>
+
+<p>or by other suitable algorithm specific to the XHTML-Print device.</p>
+
+<h4 typeof='bibo:Chapter' about='#a_jpeg.color' id='a_jpeg.color'>Color Images</h4>
+
+<p>Sample values in 3-component JPEG images <em title="SHALL in RFC 2119 context" class="RFC2119">SHALL</em> be interpreted as YCbCr samples, as would be obtained by applying the matrices described
+in ITU BT.601 <strong>[<a href="#ref_bt601">BT601.5</a>]</strong> to sRGB input data.</p>
+
+<!--OddPage-->
+<h1 about='#a_dtd' typeof='bibo:Chapter' id="a_dtd">B. <abbr title="Extensible HyperText Markup Language for Printing">XHTML-Print</abbr> DTD and Modules</h1>
+
+<p>This section contains the pieces of the XHTML-Print DTD that are unique to XHTML-Print. The remaining entities and modules are as specified in reference [<a href="#ref_xhtmlmod">XHTMLMOD</a>].</p>
+
+<p>The following <em title="SHOULD in RFC 2119 context" class="RFC2119">SHOULD</em> be used from Modularization of XHTML [<a href="#ref_xhtmlmod">XHTMLMOD</a>]:</p>
+
+<ol>
+<li>xhtml-attribs-1.mod</li>
+
+<li>xhtml-base-1.mod</li>
+
+<li>xhtml-basic-form-1.mod</li>
+
+<li>xhtml-basic-table-1.mod</li>
+
+<li>xhtml-blkphras-1.mod</li>
+
+<li>xhtml-blkpres-1.mod</li>
+
+<li>xhtml-blkstruct-1.mod</li>
+
+<li>xhtml-charent-1.mod</li>
+
+<li>xhtml-datatypes-1.mod</li>
+
+<li>xhtml-framework-1.mod</li>
+
+<li>xhtml-hypertext-1.mod</li>
+
+<li>xhtml-image-1.mod</li>
+
+<li>xhtml-inlphras-1.mod</li>
+
+<li>xhtml-inlpres-1.mod</li>
+
+<li>xhtml-inlstruct-1.mod</li>
+
+<li>xhtml-inlstyle-1.mod</li>
+
+<li>xhtml-lat1.ent</li>
+
+<li>xhtml-link-1.mod</li>
+
+<li>xhtml-list-1.mod</li>
+
+<li>xhtml-meta-1.mod</li>
+
+<li>xhtml-notations-1.mod</li>
+
+<li>xhtml-object-1.mod</li>
+
+<li>xhtml-param-1.mod</li>
+
+<li>xhtml-pres-1.mod</li>
+
+<li>xhtml-qname-1.mod</li>
+
+<li>xhtml-script-1.mod</li>
+
+<li>xhtml-special.ent</li>
+
+<li>xhtml-struct-1.mod</li>
+
+<li>xhtml-style-1.mod</li>
+
+<li>xhtml-symbol.ent</li>
+
+<li>xhtml-text-1.mod</li>
+</ol>
+
+<h2 typeof='bibo:Chapter' about='#a_dtdDriver' id='a_dtdDriver'>B.1. XHTML-Print 1.0 DTD</h2>
+
+<p>Available for download at <a href="https://www.w3.org/TR/xhtml-print/DTD/xhtml-print10.dtd">xhtml-print10.dtd</a>.</p>
+
+<pre class="dtd">
+&lt;!-- ....................................................................... --&gt;
+&lt;!-- XHTML-Print 1.0 DTD ................................................... --&gt;
+&lt;!-- file: xhtml-print10.dtd
+--&gt;
+
+&lt;!-- XHTML-Print 1.0 DTD
+
+     This is XHTML-Print 1.0, a variant of XHTML Basic for printing.
+
+     Copyright 1998-2003 World Wide Web Consortium
+        (Massachusetts Institute of Technology, European Research
+         Consortium for Informatics and Mathematics, Keio University).
+         All Rights Reserved.
+
+     Permission to use, copy, modify and distribute the XHTML-Print DTD and
+     its accompanying documentation for any purpose and without fee is hereby
+     granted in perpetuity, provided that the above copyright notice and
+     this paragraph appear in all copies.  The copyright holders make no
+     representation about the suitability of the DTD for any purpose.
+
+     It is provided "as is" without expressed or implied warranty.
+
+        Primary Author: Jun Fujisawa &lt;fujisawa.jun@canon.co.jp&gt;
+        Editors: Jim Bigelow &lt;jim.bigelow@hp.com&gt;, 
+                 Shane McCarron &lt;shane@aptest.com&gt;,
+                 Masayasu Ishikawa &lt;mimasa@w3.org&gt;
+        Revision: $Id: Overview.html,v 1.3 2018/10/09 13:16:06 denis Exp $
+
+--&gt;
+&lt;!-- This is the driver file for version 1.0 of the XHTML-Print DTD.
+
+     This DTD is identified by the PUBLIC and SYSTEM identifiers:
+
+        PUBLIC "-//W3C//DTD XHTML-Print 1.0//EN"
+        SYSTEM "http://www.w3.org/MarkUp/DTD/xhtml-print10.dtd"
+--&gt;
+&lt;!ENTITY <span class="entity">% XHTML.version</span> "-//W3C//DTD XHTML-Print 1.0//EN" &gt;
+
+&lt;!-- Use this URI to identify the default namespace:
+
+         "http://www.w3.org/1999/xhtml"
+--&gt;
+&lt;!ENTITY <span class="entity">% NS.prefixed</span> "IGNORE" &gt;
+&lt;!ENTITY <span class="entity">% XHTML.prefix</span> "" &gt;
+
+&lt;!-- Reserved for use with the XLink namespace:
+--&gt;
+&lt;!ENTITY <span class="entity">% XLINK.xmlns</span> "" &gt;
+&lt;!ENTITY <span class="entity">% XLINK.xmlns.attrib</span> "" &gt;
+
+&lt;!-- reserved for future use with document profiles --&gt;
+&lt;!ENTITY <span class="entity">% XHTML.profile</span> "" &gt;
+
+&lt;!-- Bidirectional Text features
+     This feature-test entity is used to declare elements
+     and attributes used for bidirectional text support.
+--&gt;
+&lt;!ENTITY <span class="entity">% XHTML.bidi</span> "IGNORE" &gt;
+
+&lt;!-- ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: --&gt;
+
+&lt;!ENTITY <span class="entity">% xhtml-events.module</span> "IGNORE" &gt;
+&lt;!ENTITY <span class="entity">% xhtml-bdo.module</span> "%XHTML.bidi;" &gt;
+
+&lt;!-- Style Attribute Module ............................ --&gt;
+&lt;!ENTITY <span class="entity">% xhtml-inlstyle.module</span> "INCLUDE" &gt;
+&lt;![%xhtml-inlstyle.module;[
+&lt;!ENTITY <span class="entity">% xhtml-inlstyle.mod</span>
+     PUBLIC "-//W3C//ENTITIES XHTML Inline Style 1.0//EN"
+            "http://www.w3.org/TR/xhtml-modularization/DTD/xhtml-inlstyle-1.mod" &gt;
+%xhtml-inlstyle.mod;]]&gt;
+
+&lt;!-- Document Model Module ............................. --&gt;
+&lt;!ENTITY <span class="entity">% xhtml-model.mod</span>
+     PUBLIC "-//W3C//ENTITIES XHTML-Print 1.0 Document Model 1.0//EN"
+            "xhtml-print10-model-1.mod" &gt;
+
+&lt;!-- Modular Framework Module (required) ............... --&gt;
+&lt;!ENTITY <span class="entity">% xhtml-framework.mod</span>
+     PUBLIC "-//W3C//ENTITIES XHTML Modular Framework 1.0//EN"
+            "http://www.w3.org/TR/xhtml-modularization/DTD/xhtml-framework-1.mod" &gt;
+%xhtml-framework.mod;
+
+&lt;!-- Text Module (required) ............................ --&gt;
+&lt;!ENTITY <span class="entity">% xhtml-text.mod</span>
+     PUBLIC "-//W3C//ELEMENTS XHTML Text 1.0//EN"
+            "http://www.w3.org/TR/xhtml-modularization/DTD/xhtml-text-1.mod" &gt;
+%xhtml-text.mod;
+
+&lt;!-- Hypertext Module (required) ....................... --&gt;
+&lt;!ENTITY <span class="entity">% xhtml-hypertext.mod</span>
+     PUBLIC "-//W3C//ELEMENTS XHTML Hypertext 1.0//EN"
+            "http://www.w3.org/TR/xhtml-modularization/DTD/xhtml-hypertext-1.mod" &gt;
+%xhtml-hypertext.mod;
+
+&lt;!-- Lists Module (required) ........................... --&gt;
+&lt;!ENTITY <span class="entity">% xhtml-list.mod</span>
+     PUBLIC "-//W3C//ELEMENTS XHTML Lists 1.0//EN"
+            "http://www.w3.org/TR/xhtml-modularization/DTD/xhtml-list-1.mod" &gt;
+%xhtml-list.mod;
+
+&lt;!-- ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: --&gt;
+
+&lt;!-- Presentation Module ............................... --&gt;
+&lt;!ENTITY <span class="entity">% xhtml-pres.module</span> "INCLUDE" &gt;
+&lt;![%xhtml-pres.module;[
+&lt;!ENTITY <span class="entity">% xhtml-pres.mod</span>
+     PUBLIC "-//W3C//ELEMENTS XHTML Presentation 1.0//EN"
+            "http://www.w3.org/TR/xhtml-modularization/DTD/xhtml-pres-1.mod" &gt;
+%xhtml-pres.mod;]]&gt;
+
+&lt;!-- Image Module ...................................... --&gt;
+&lt;!ENTITY <span class="entity">% xhtml-image.module</span> "INCLUDE" &gt;
+&lt;![%xhtml-image.module;[
+&lt;!ENTITY <span class="entity">% xhtml-image.mod</span>
+     PUBLIC "-//W3C//ELEMENTS XHTML Images 1.0//EN"
+            "http://www.w3.org/TR/xhtml-modularization/DTD/xhtml-image-1.mod" &gt;
+%xhtml-image.mod;]]&gt;
+
+&lt;!-- Tables Module ..................................... --&gt;
+&lt;!ENTITY <span class="entity">% xhtml-table.module</span> "INCLUDE" &gt;
+&lt;![%xhtml-table.module;[
+&lt;!ENTITY <span class="entity">% xhtml-table.mod</span>
+     PUBLIC "-//W3C//ELEMENTS XHTML Basic Tables 1.0//EN"
+            "http://www.w3.org/TR/xhtml-modularization/DTD/xhtml-basic-table-1.mod" &gt;
+%xhtml-table.mod;]]&gt;
+
+&lt;!-- Forms Module ...................................... --&gt;
+&lt;!ENTITY <span class="entity">% xhtml-form.module</span> "INCLUDE" &gt;
+&lt;![%xhtml-form.module;[
+&lt;!ENTITY <span class="entity">% xhtml-form.mod</span>
+     PUBLIC "-//W3C//ELEMENTS XHTML Basic Forms 1.0//EN"
+            "http://www.w3.org/TR/xhtml-modularization/DTD/xhtml-basic-form-1.mod" &gt;
+%xhtml-form.mod;]]&gt;
+
+&lt;!-- Scripting Module  ................................. --&gt;
+&lt;!ENTITY <span class="entity">% xhtml-script.module</span> "INCLUDE" &gt;
+&lt;![%xhtml-script.module;[
+&lt;!ENTITY <span class="entity">% xhtml-script.mod</span>
+     PUBLIC "-//W3C//ELEMENTS XHTML Scripting 1.0//EN"
+            "http://www.w3.org/TR/xhtml-modularization/DTD/xhtml-script-1.mod" &gt;
+%xhtml-script.mod;]]&gt;
+
+&lt;!-- Style Sheet Module ................................ --&gt;
+&lt;!ENTITY <span class="entity">% xhtml-style.module</span> "INCLUDE" &gt;
+&lt;![%xhtml-style.module;[
+&lt;!ENTITY <span class="entity">% xhtml-style.mod</span>
+     PUBLIC "-//W3C//ELEMENTS XHTML Style Sheets 1.0//EN"
+            "http://www.w3.org/TR/xhtml-modularization/DTD/xhtml-style-1.mod" &gt;
+%xhtml-style.mod;]]&gt;
+
+&lt;!-- Link Module ....................................... --&gt;
+&lt;!ENTITY <span class="entity">% xhtml-link.module</span> "INCLUDE" &gt;
+&lt;![%xhtml-link.module;[
+&lt;!ENTITY <span class="entity">% xhtml-link.mod</span>
+     PUBLIC "-//W3C//ELEMENTS XHTML Link Element 1.0//EN"
+            "http://www.w3.org/TR/xhtml-modularization/DTD/xhtml-link-1.mod" &gt;
+%xhtml-link.mod;]]&gt;
+
+&lt;!-- Metainformation Module ............................ --&gt;
+&lt;!ENTITY <span class="entity">% xhtml-meta.module</span> "INCLUDE" &gt;
+&lt;![%xhtml-meta.module;[
+&lt;!ENTITY <span class="entity">% xhtml-meta.mod</span>
+     PUBLIC "-//W3C//ELEMENTS XHTML Metainformation 1.0//EN"
+            "http://www.w3.org/TR/xhtml-modularization/DTD/xhtml-meta-1.mod" &gt;
+%xhtml-meta.mod;]]&gt;
+
+&lt;!-- Base Module ....................................... --&gt;
+&lt;!ENTITY <span class="entity">% xhtml-base.module</span> "INCLUDE" &gt;
+&lt;![%xhtml-base.module;[
+&lt;!ENTITY <span class="entity">% xhtml-base.mod</span>
+     PUBLIC "-//W3C//ELEMENTS XHTML Base Element 1.0//EN"
+            "http://www.w3.org/TR/xhtml-modularization/DTD/xhtml-base-1.mod" &gt;
+%xhtml-base.mod;]]&gt;
+
+&lt;!-- Param Module ...................................... --&gt;
+&lt;!ENTITY <span class="entity">% xhtml-param.module</span> "INCLUDE" &gt;
+&lt;![%xhtml-param.module;[
+&lt;!ENTITY <span class="entity">% xhtml-param.mod</span>
+     PUBLIC "-//W3C//ELEMENTS XHTML Param Element 1.0//EN"
+            "http://www.w3.org/TR/xhtml-modularization/DTD/xhtml-param-1.mod" &gt;
+%xhtml-param.mod;]]&gt;
+
+&lt;!-- Object Module ..................................... --&gt;
+&lt;!ENTITY <span class="entity">% xhtml-object.module</span> "INCLUDE" &gt;
+&lt;![%xhtml-object.module;[
+&lt;!ENTITY <span class="entity">% xhtml-object.mod</span>
+     PUBLIC "-//W3C//ELEMENTS XHTML Embedded Object 1.0//EN"
+            "http://www.w3.org/TR/xhtml-modularization/DTD/xhtml-object-1.mod" &gt;
+%xhtml-object.mod;]]&gt;
+
+&lt;!-- Structure Module (required) ....................... --&gt;
+&lt;!ENTITY <span class="entity">% xhtml-struct.mod</span>
+     PUBLIC "-//W3C//ELEMENTS XHTML Document Structure 1.0//EN"
+            "http://www.w3.org/TR/xhtml-modularization/DTD/xhtml-struct-1.mod" &gt;
+%xhtml-struct.mod;
+
+&lt;!-- end of XHTML-Print 1.0 DTD ............................................ --&gt;
+&lt;!-- ....................................................................... --&gt;
+
+</pre>
+
+<h2 typeof='bibo:Chapter' about='#a_dtdModel' id='a_dtdModel'>B.2. <abbr title="Extensible HyperText Markup Language for Printing">XHTML-Print</abbr> 1.0 Document Model Module</h2>
+
+<p>Available for download at <a href="https://www.w3.org/TR/xhtml-print/DTD/xhtml-print10-model-1.mod">xhtml-print10-model-1.mod</a>.</p>
+
+<pre class="dtd">
+&lt;!-- ....................................................................... --&gt;
+&lt;!-- XHTML-Print 1.0 Document Model Module ................................. --&gt;
+&lt;!-- file: xhtml-print10-model-1.mod
+
+     This is XHTML-Print 1.0, a variant of XHTML Basic for printing.
+     Copyright 1998-2003 W3C (MIT, ERCIM, Keio), All Rights Reserved.
+     Revision: $Id: Overview.html,v 1.3 2018/10/09 13:16:06 denis Exp $
+
+     This DTD module is identified by the PUBLIC and SYSTEM identifiers:
+
+        PUBLIC "-//W3C//ENTITIES XHTML-Print 1.0 Document Model 1.0//EN"
+        SYSTEM "http://www.w3.org/MarkUp/DTD/xhtml-print10-model-1.mod"
+
+     ....................................................................... --&gt;
+
+&lt;!-- XHTML-Print 1.0 Document Model
+
+     This module describes the groupings of elements that make up
+     common content models for XHTML-Print elements.
+--&gt;
+
+&lt;!-- Optional Elements in head ......................... --&gt;
+
+&lt;!ENTITY <span class="entity">% HeadOpts.mix</span>
+     "( %script.qname; | %style.qname; | %meta.qname; | %link.qname;
+      | %object.qname; )*" &gt;
+
+&lt;!-- Miscellaneous Elements ............................ --&gt;
+
+&lt;!ENTITY <span class="entity">% Script.class</span> "| %script.qname; | %noscript.qname;" &gt;
+
+&lt;!ENTITY <span class="entity">% Misc.extra</span> "" &gt;
+
+&lt;!ENTITY <span class="entity">% Misc.class</span>
+     "%Script.class;
+      %Misc.extra;"
+&gt;
+
+&lt;!-- Inline Elements ................................... --&gt;
+
+&lt;!ENTITY <span class="entity">% InlStruct.class</span> "%br.qname; | %span.qname;" &gt;
+
+&lt;!ENTITY <span class="entity">% InlPhras.class</span>
+     "| %em.qname; | %strong.qname; | %dfn.qname; | %code.qname;
+      | %samp.qname; | %kbd.qname; | %var.qname; | %cite.qname;
+      | %abbr.qname; | %acronym.qname; | %q.qname;" &gt;
+
+&lt;!ENTITY <span class="entity">% InlPres.class</span>
+     "| %tt.qname; | %i.qname; | %b.qname; | %big.qname;
+      | %small.qname; | %sub.qname; | %sup.qname; " &gt;
+
+&lt;!ENTITY <span class="entity">% I18n.class</span> "" &gt;
+
+&lt;!ENTITY <span class="entity">% Anchor.class</span> "| %a.qname;" &gt;
+
+&lt;!ENTITY <span class="entity">% InlSpecial.class</span> "| %img.qname; | %object.qname;" &gt;
+
+&lt;!ENTITY <span class="entity">% InlForm.class</span>
+     "| %input.qname; | %select.qname; | %textarea.qname;
+      | %label.qname;"
+&gt;
+
+&lt;!ENTITY <span class="entity">% Inline.extra</span> "" &gt;
+
+&lt;!ENTITY <span class="entity">% Inline.class</span>
+     "%InlStruct.class;
+      %InlPhras.class;
+      %InlPres.class;
+      %Anchor.class;
+      %InlSpecial.class;
+      %InlForm.class;
+      %Inline.extra;"
+&gt;
+
+&lt;!ENTITY <span class="entity">% InlNoAnchor.class</span>
+     "%InlStruct.class;
+      %InlPhras.class;
+      %InlPres.class;
+      %InlSpecial.class;
+      %InlForm.class;
+      %Inline.extra;"
+&gt;
+
+&lt;!ENTITY <span class="entity">% InlNoAnchor.mix</span>
+     "%InlNoAnchor.class;
+      %Misc.class;"
+&gt;
+
+&lt;!ENTITY <span class="entity">% Inline.mix</span>
+     "%Inline.class;
+      %Misc.class;"
+&gt;
+
+&lt;!-- Block Elements .................................... --&gt;
+
+&lt;!ENTITY <span class="entity">% Heading.class</span>
+     "%h1.qname; | %h2.qname; | %h3.qname;
+      | %h4.qname; | %h5.qname; | %h6.qname;"
+&gt;
+&lt;!ENTITY <span class="entity">% List.class</span>  "%ul.qname; | %ol.qname; | %dl.qname;" &gt;
+
+&lt;!ENTITY <span class="entity">% Table.class</span> "| %table.qname;" &gt;
+
+&lt;!ENTITY <span class="entity">% Form.class</span>  "| %form.qname;" &gt;
+
+&lt;!ENTITY <span class="entity">% BlkStruct.class</span> "%p.qname; | %div.qname;" &gt;
+
+&lt;!ENTITY <span class="entity">% BlkPhras.class</span>
+     "| %pre.qname; | %blockquote.qname; | %address.qname;"
+&gt;
+
+&lt;!ENTITY <span class="entity">% BlkPres.class</span> "| %hr.qname;" &gt;
+
+&lt;!ENTITY <span class="entity">% BlkSpecial.class</span>
+     "%Table.class;
+      %Form.class;"
+&gt;
+
+&lt;!ENTITY <span class="entity">% Block.extra</span> "" &gt;
+
+&lt;!ENTITY <span class="entity">% Block.class</span>
+     "%BlkStruct.class;
+      %BlkPhras.class;
+      %BlkPres.class;
+      %BlkSpecial.class;
+      %Block.extra;"
+&gt;
+
+&lt;!ENTITY <span class="entity">% Block.mix</span>
+     "%Heading.class;
+      | %List.class;
+      | %Block.class;
+      %Misc.class;"
+&gt;
+
+&lt;!-- All Content Elements .............................. --&gt;
+
+&lt;!ENTITY <span class="entity">% FlowNoTable.mix</span>
+     "%Heading.class;
+      | %List.class;
+      | %BlkStruct.class;
+      %BlkPhras.class;
+      %BlkPres.class;
+      %Form.class;
+      %Block.extra;
+      | %Inline.class;
+      %Misc.class;"
+&gt;
+
+&lt;!ENTITY <span class="entity">% Flow.mix</span>
+     "%Heading.class;
+      | %List.class;
+      | %Block.class;
+      | %Inline.class;
+      %Misc.class;"
+&gt;
+
+&lt;!-- end of xhtml-print10-model-1.mod --&gt;
+
+</pre>
+
+<!--OddPage-->
+<h1 about='#a_schema' typeof='bibo:Chapter' id="a_schema">C. <abbr title="Extensible HyperText Markup Language for Printing">XHTML-Print</abbr> Schema and Modules</h1>
+
+<p>This section contains the pieces of the XHTML-Print XML Schema implementation that are unique to XHTML-Print. The remaining entities and modules are as specified in reference [<a href= 
+"#ref_xhtmlmod">XHTMLMOD</a>].</p>
+
+<p>The following <em title="SHOULD in RFC 2119 context" class="RFC2119">SHOULD</em> be used from Modularization of XHTML [<a href="#ref_xhtmlmod">XHTMLMOD</a>]:</p>
+
+<ol>
+<li>xhtml-attribs-1.xsd</li>
+
+<li>xhtml-base-1.xsd</li>
+
+<li>xhtml-basic-form-1.xsd</li>
+
+<li>xhtml-basic-table-1.xsd</li>
+
+<li>xhtml-blkphras-1.xsd</li>
+
+<li>xhtml-blkpres-1.xsd</li>
+
+<li>xhtml-blkstruct-1.xsd</li>
+
+<li>xhtml-charent-1.xsd</li>
+
+<li>xhtml-datatypes-1.xsd</li>
+
+<li>xhtml-framework-1.xsd</li>
+
+<li>xhtml-hypertext-1.xsd</li>
+
+<li>xhtml-image-1.xsd</li>
+
+<li>xhtml-inlphras-1.xsd</li>
+
+<li>xhtml-inlpres-1.xsd</li>
+
+<li>xhtml-inlstruct-1.xsd</li>
+
+<li>xhtml-inlstyle-1.xsd</li>
+
+<li>xhtml-lat1.ent</li>
+
+<li>xhtml-link-1.xsd</li>
+
+<li>xhtml-list-1.xsd</li>
+
+<li>xhtml-meta-1.xsd</li>
+
+<li>xhtml-notations-1.xsd</li>
+
+<li>xhtml-object-1.xsd</li>
+
+<li>xhtml-param-1.xsd</li>
+
+<li>xhtml-pres-1.xsd</li>
+
+<li>xhtml-script-1.xsd</li>
+
+<li>xhtml-special.ent</li>
+
+<li>xhtml-struct-1.xsd</li>
+
+<li>xhtml-style-1.xsd</li>
+
+<li>xhtml-symbol.ent</li>
+
+<li>xhtml-text-1.xsd</li>
+</ol>
+
+<h2 typeof='bibo:Chapter' about='#a_schemaDriver' id='a_schemaDriver'>C.1. XHTML-Print 1.0 XML Schema</h2>
+
+<p>Available for download at <a href="https://www.w3.org/TR/xhtml-print/SCHEMA/xhtml-print-1.xsd">xhtml-print-1.xsd</a>.</p>
+
+<!-- INCLUDING SCHEMA SCHEMA/xhtml-print-1.xsd.mhtml -->
+<pre class="dtd">
+&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;xs:schema
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    targetNamespace="http://www.w3.org/1999/xhtml"
+    xmlns:xh11d="http://www.w3.org/1999/xhtml/datatypes/"
+    xmlns="http://www.w3.org/1999/xhtml"
+    elementFormDefault="qualified" &gt;
+    &lt;xs:annotation&gt;
+        &lt;xs:documentation&gt;
+      This is the XML Schema driver for XHTML Print 1.0
+      Please use this namespace for XHTML elements:
+
+         "http://www.w3.org/1999/xhtml"
+
+      $Id: Overview.html,v 1.3 2018/10/09 13:16:06 denis Exp $
+    &lt;/xs:documentation&gt;
+        &lt;xs:documentation source="xhtml-copyright-1.xsd"/&gt;
+    &lt;/xs:annotation&gt;
+    &lt;xs:annotation&gt;
+        &lt;xs:documentation&gt;
+      This is the Schema Driver file for XHTML Print 1.0
+      Document Type
+
+     This schema
+        + imports external schemas (xml.xsd)
+        + refedines (and include)s schema modules for XHTML1.1 Document Type.
+        + includes Schema for Named content model for the
+          XHTML Print 1.0 Document Type
+
+        XHTML Print 1.0 Document Type includes the following Modules
+           XHTML Core modules (Required for XHTML Family Conformance)
+            +  text
+            +  hypertext
+            +  lists
+            +  structure
+           Other XHTML modules
+            +  Edit
+            +  Bdo
+            +  Presentational
+            +  Link
+            +  Meta
+            +  Base
+            +  Scripting
+            +  Style
+            +  Image
+            +  Applet
+            +  Object
+            +  Param (Applet/Object modules require Param Module)
+            +  Basic Tables
+            +  Basic Forms
+    &lt;/xs:documentation&gt;
+    &lt;/xs:annotation&gt;
+    &lt;xs:import
+        namespace="http://www.w3.org/XML/1998/namespace"
+        schemaLocation="http://www.w3.org/2001/xml.xsd"&gt;
+        &lt;xs:annotation&gt;
+            &lt;xs:documentation&gt;
+         This import brings in the XML namespace attributes
+         The XML attributes are used by various modules.
+       &lt;/xs:documentation&gt;
+        &lt;/xs:annotation&gt;
+    &lt;/xs:import&gt;
+    &lt;xs:include
+        schemaLocation="xhtml-print-model-1.xsd"&gt;
+        &lt;xs:annotation&gt;
+            &lt;xs:documentation&gt;
+        Document Model module for the XHTML Print 1.0 Document Type.
+        This schema file defines all named models used by XHTML
+        Modularization Framework for XHTML Print 1.0 Document Type
+      &lt;/xs:documentation&gt;
+        &lt;/xs:annotation&gt;
+    &lt;/xs:include&gt;
+    &lt;xs:import
+        namespace="http://www.w3.org/1999/xhtml/datatypes/"
+        schemaLocation="xhtml-datatypes-1.xsd"/&gt;
+    &lt;xs:include
+        schemaLocation="xhtml-print-modules-1.xsd"&gt;
+        &lt;xs:annotation&gt;
+            &lt;xs:documentation&gt;
+        Schema that includes all modules (and redefinitions)
+        for XHTML Print Document Type.                
+           &lt;/xs:documentation&gt;
+        &lt;/xs:annotation&gt;
+    &lt;/xs:include&gt;
+&lt;/xs:schema&gt;
+
+</pre>
+
+<!-- END OF FILE SCHEMA/xhtml-print-1.xsd.mhtml -->
+<h2 typeof='bibo:Chapter' about='#a_schemaModel' id='a_schemaModel'>C.2. <abbr title="Extensible HyperText Markup Language for Printing">XHTML-Print</abbr> 1.0 XML Schema Content Model Module</h2>
+
+<p>Available for download at <a href="https://www.w3.org/TR/xhtml-print/SCHEMA/xhtml-print-model-1.xsd">xhtml-print-model-1.xsd</a>.</p>
+
+<!-- INCLUDING SCHEMA SCHEMA/xhtml-print-model-1.xsd.mhtml -->
+<pre class="dtd">
+&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;xs:schema
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    xmlns:xh11d="http://www.w3.org/1999/xhtml/datatypes/"
+    elementFormDefault="qualified" &gt;
+    &lt;xs:import
+        namespace="http://www.w3.org/1999/xhtml/datatypes/"
+        schemaLocation="xhtml-datatypes-1.xsd"/&gt;
+    &lt;xs:annotation&gt;
+        &lt;xs:documentation&gt; 
+            This is the XML Schema module of common content models for XHTML Print 1.0 
+            
+            $Id: Overview.html,v 1.3 2018/10/09 13:16:06 denis Exp $ 
+        &lt;/xs:documentation&gt;
+        &lt;xs:documentation source="xhtml-copyright-1.xsd"/&gt;
+    &lt;/xs:annotation&gt;
+    &lt;xs:annotation&gt;
+        &lt;xs:documentation&gt; 
+            XHTML Document Model 
+            This module describes the groupings of elements/attributes 
+            that make up common content models for XHTML elements. 
+            XHTML has following basic content models: 
+               xhtml.Inline.mix; character-level elements
+               xhtml.Block.mix; block-like elements, e.g., paragraphs and lists
+               xhtml.Flow.mix; any block or inline elements 
+               xhtml.HeadOpts.mix; Head Elements 
+               xhtml.InlinePre.mix; Special class for pre content model 
+               xhtml.InlineNoAnchor.mix; Content model for Anchor 
+            
+            Any groups declared in this module may be used to create 
+            element content models, but the above are considered 'global' 
+            (insofar as that term applies here). XHTML has the
+            following Attribute Groups 
+               xhtml.Core.extra.attrib 
+               xhtml.I18n.extra.attrib
+               xhtml.Common.extra 
+            
+            The above attribute Groups are considered Global 
+        &lt;/xs:documentation&gt;
+    &lt;/xs:annotation&gt;
+    &lt;xs:attributeGroup
+        name="xhtml.I18n.extra.attrib"&gt;
+        &lt;xs:annotation&gt;
+            &lt;xs:documentation&gt; Extended I18n attribute &lt;/xs:documentation&gt;
+        &lt;/xs:annotation&gt;
+    &lt;/xs:attributeGroup&gt;
+    &lt;xs:attributeGroup
+        name="xhtml.Common.extra"&gt;
+        &lt;xs:annotation&gt;
+            &lt;xs:documentation&gt; Extended Common Attributes &lt;/xs:documentation&gt;
+        &lt;/xs:annotation&gt;
+        &lt;xs:attributeGroup
+            ref="xhtml.style.attrib"&gt;
+            &lt;xs:annotation&gt;
+                &lt;xs:documentation&gt; 
+                "style" attribute from Inline Style Module 
+                &lt;/xs:documentation&gt;
+            &lt;/xs:annotation&gt;
+        &lt;/xs:attributeGroup&gt;
+    &lt;/xs:attributeGroup&gt;
+    &lt;xs:attributeGroup
+        name="xhtml.Core.extra.attrib"&gt;
+        &lt;xs:annotation&gt;
+            &lt;xs:documentation&gt; Extend Core Attributes &lt;/xs:documentation&gt;
+        &lt;/xs:annotation&gt;
+    &lt;/xs:attributeGroup&gt;
+    &lt;xs:attributeGroup
+        name="xhtml.Global.core.extra.attrib"&gt;
+        &lt;xs:annotation&gt;
+            &lt;xs:documentation&gt; Extended Global Core Attributes &lt;/xs:documentation&gt;
+        &lt;/xs:annotation&gt;
+    &lt;/xs:attributeGroup&gt;
+    &lt;xs:attributeGroup
+        name="xhtml.Global.I18n.extra.attrib"&gt;
+        &lt;xs:annotation&gt;
+            &lt;xs:documentation&gt; Extended Global I18n attributes &lt;/xs:documentation&gt;
+        &lt;/xs:annotation&gt;
+    &lt;/xs:attributeGroup&gt;
+    &lt;xs:attributeGroup
+        name="xhtml.Global.Common.extra"&gt;
+        &lt;xs:annotation&gt;
+            &lt;xs:documentation&gt; Extended Global Common Attributes &lt;/xs:documentation&gt;
+        &lt;/xs:annotation&gt;
+    &lt;/xs:attributeGroup&gt;
+    &lt;xs:group
+        name="xhtml.Head.extra"&gt;
+        &lt;xs:sequence/&gt;
+    &lt;/xs:group&gt;
+    &lt;xs:group
+        name="xhtml.HeadOpts.mix"&gt;
+        &lt;xs:choice&gt;
+            &lt;xs:element
+                name="script"
+                type="xhtml.script.type"/&gt;
+            &lt;xs:element
+                name="style"
+                type="xhtml.style.type"/&gt;
+            &lt;xs:element
+                name="meta"
+                type="xhtml.meta.type"/&gt;
+            &lt;xs:element
+                name="link"
+                type="xhtml.link.type"/&gt;
+            &lt;xs:element
+                name="object"
+                type="xhtml.object.type"/&gt;
+            &lt;xs:group
+                ref="xhtml.Head.extra"/&gt;
+        &lt;/xs:choice&gt;
+    &lt;/xs:group&gt;
+    &lt;xs:group
+        name="xhtml.head.content"&gt;
+        &lt;xs:sequence&gt;
+            &lt;xs:group
+                ref="xhtml.HeadOpts.mix"
+                minOccurs="0"
+                maxOccurs="unbounded"/&gt;
+            &lt;xs:choice&gt;
+                &lt;xs:sequence&gt;
+                    &lt;xs:element
+                        name="title"
+                        minOccurs="1"
+                        maxOccurs="1"
+                        type="xhtml.title.type"/&gt;
+                    &lt;xs:group
+                        ref="xhtml.HeadOpts.mix"
+                        minOccurs="0"
+                        maxOccurs="unbounded"/&gt;
+                    &lt;xs:sequence
+                        minOccurs="0"&gt;
+                        &lt;xs:element
+                            name="base"
+                            type="xhtml.base.type"/&gt;
+                        &lt;xs:group
+                            ref="xhtml.HeadOpts.mix"
+                            minOccurs="0"
+                            maxOccurs="unbounded"/&gt;
+                    &lt;/xs:sequence&gt;
+                &lt;/xs:sequence&gt;
+                &lt;xs:sequence&gt;
+                    &lt;xs:element
+                        name="base"
+                        type="xhtml.base.type"
+                        minOccurs="1"
+                        maxOccurs="1"/&gt;
+                    &lt;xs:group
+                        ref="xhtml.HeadOpts.mix"
+                        minOccurs="0"
+                        maxOccurs="unbounded"/&gt;
+                    &lt;xs:element
+                        name="title"
+                        minOccurs="1"
+                        maxOccurs="1"
+                        type="xhtml.title.type"/&gt;
+                    &lt;xs:group
+                        ref="xhtml.HeadOpts.mix"
+                        minOccurs="0"
+                        maxOccurs="unbounded"/&gt;
+                &lt;/xs:sequence&gt;
+            &lt;/xs:choice&gt;
+        &lt;/xs:sequence&gt;
+    &lt;/xs:group&gt;
+    &lt;!--
+    script and noscript are used to contain scripts
+    and alternative content
+  --&gt;
+    &lt;xs:group
+        name="xhtml.Script.class"&gt;
+        &lt;xs:choice&gt;
+            &lt;xs:element
+                name="script"
+                type="xhtml.script.type"/&gt;
+            &lt;xs:element
+                name="noscript"
+                type="xhtml.noscript.type"/&gt;
+        &lt;/xs:choice&gt;
+    &lt;/xs:group&gt;
+    &lt;xs:group
+        name="xhtml.Misc.extra"&gt;
+        &lt;xs:sequence/&gt;
+    &lt;/xs:group&gt;
+    &lt;!--
+    These elements are neither block nor inline, and can
+    essentially be used anywhere in the document body.
+  --&gt;
+    &lt;xs:group
+        name="xhtml.Misc.class"&gt;
+        &lt;xs:choice&gt;
+            &lt;xs:group
+                ref="xhtml.Script.class"/&gt;
+            &lt;xs:group
+                ref="xhtml.Misc.extra"/&gt;
+        &lt;/xs:choice&gt;
+    &lt;/xs:group&gt;
+    &lt;!-- Inline Elements --&gt;
+    &lt;xs:group
+        name="xhtml.InlStruct.class"&gt;
+        &lt;xs:choice&gt;
+            &lt;xs:element
+                name="br"
+                type="xhtml.br.type"/&gt;
+            &lt;xs:element
+                name="span"
+                type="xhtml.span.type"/&gt;
+        &lt;/xs:choice&gt;
+    &lt;/xs:group&gt;
+    &lt;xs:group
+        name="xhtml.InlPhras.class"&gt;
+        &lt;xs:choice&gt;
+            &lt;xs:element
+                name="em"
+                type="xhtml.em.type"/&gt;
+            &lt;xs:element
+                name="strong"
+                type="xhtml.strong.type"/&gt;
+            &lt;xs:element
+                name="dfn"
+                type="xhtml.dfn.type"/&gt;
+            &lt;xs:element
+                name="code"
+                type="xhtml.code.type"/&gt;
+            &lt;xs:element
+                name="samp"
+                type="xhtml.samp.type"/&gt;
+            &lt;xs:element
+                name="kbd"
+                type="xhtml.kbd.type"/&gt;
+            &lt;xs:element
+                name="var"
+                type="xhtml.var.type"/&gt;
+            &lt;xs:element
+                name="cite"
+                type="xhtml.cite.type"/&gt;
+            &lt;xs:element
+                name="abbr"
+                type="xhtml.abbr.type"/&gt;
+            &lt;xs:element
+                name="acronym"
+                type="xhtml.acronym.type"/&gt;
+            &lt;xs:element
+                name="q"
+                type="xhtml.q.type"/&gt;
+        &lt;/xs:choice&gt;
+    &lt;/xs:group&gt;
+    &lt;xs:group
+        name="xhtml.InlPres.class"&gt;
+        &lt;xs:choice&gt;
+            &lt;xs:element
+                name="tt"
+                type="xhtml.InlPres.type"/&gt;
+            &lt;xs:element
+                name="i"
+                type="xhtml.InlPres.type"/&gt;
+            &lt;xs:element
+                name="b"
+                type="xhtml.InlPres.type"/&gt;
+            &lt;xs:element
+                name="big"
+                type="xhtml.InlPres.type"/&gt;
+            &lt;xs:element
+                name="small"
+                type="xhtml.InlPres.type"/&gt;
+            &lt;xs:element
+                name="sub"
+                type="xhtml.InlPres.type"/&gt;
+            &lt;xs:element
+                name="sup"
+                type="xhtml.InlPres.type"/&gt;
+        &lt;/xs:choice&gt;
+    &lt;/xs:group&gt;
+    &lt;xs:group
+        name="xhtml.I18n.class" &gt;
+        &lt;xs:sequence/&gt;
+    &lt;/xs:group&gt;
+    &lt;xs:group
+        name="xhtml.Anchor.class"&gt;
+        &lt;xs:sequence&gt;
+            &lt;xs:element
+                name="a"
+                type="xhtml.a.type"/&gt;
+        &lt;/xs:sequence&gt;
+    &lt;/xs:group&gt;
+    &lt;xs:group
+        name="xhtml.InlSpecial.class"&gt;
+        &lt;xs:choice&gt;
+            &lt;xs:element
+                name="img"
+                type="xhtml.img.type"/&gt;
+            &lt;xs:element
+                name="object"
+                type="xhtml.object.type"/&gt;
+        &lt;/xs:choice&gt;
+    &lt;/xs:group&gt;
+    &lt;xs:group
+        name="xhtml.InlForm.class"&gt;
+        &lt;xs:choice&gt;
+            &lt;xs:element
+                name="input"
+                type="xhtml.input.type"/&gt;
+            &lt;xs:element
+                name="select"
+                type="xhtml.select.type"/&gt;
+            &lt;xs:element
+                name="textarea"
+                type="xhtml.textarea.type"/&gt;
+            &lt;xs:element
+                name="label"
+                type="xhtml.label.type"/&gt;
+        &lt;/xs:choice&gt;
+    &lt;/xs:group&gt;
+    &lt;xs:group
+        name="xhtml.Inline.extra"&gt;
+        &lt;xs:sequence/&gt;
+    &lt;/xs:group&gt;
+    &lt;!--
+    Inline.class includes all inline elements,
+    used as a component in mixes
+  --&gt;
+    &lt;xs:group
+        name="xhtml.Inline.class"&gt;
+        &lt;xs:choice&gt;
+            &lt;xs:group
+                ref="xhtml.InlStruct.class"/&gt;
+            &lt;xs:group
+                ref="xhtml.InlPhras.class"/&gt;
+            &lt;xs:group
+                ref="xhtml.InlPres.class"/&gt;
+            &lt;xs:group
+                ref="xhtml.Anchor.class"/&gt;
+            &lt;xs:group
+                ref="xhtml.InlSpecial.class"/&gt;
+            &lt;xs:group
+                ref="xhtml.InlForm.class"/&gt;
+            &lt;xs:group
+                ref="xhtml.Inline.extra"/&gt;
+        &lt;/xs:choice&gt;
+    &lt;/xs:group&gt;
+    &lt;!--
+    InlinePre.mix
+    Used as a component in pre model
+  --&gt;
+    &lt;xs:group
+        name="xhtml.InlinePre.mix"&gt;
+        &lt;xs:choice&gt;
+            &lt;xs:group
+                ref="xhtml.InlStruct.class"/&gt;
+            &lt;xs:group
+                ref="xhtml.InlPhras.class"/&gt;
+            &lt;xs:element
+                name="tt"
+                type="xhtml.InlPres.type"/&gt;
+            &lt;xs:element
+                name="i"
+                type="xhtml.InlPres.type"/&gt;
+            &lt;xs:element
+                name="b"
+                type="xhtml.InlPres.type"/&gt;
+            &lt;xs:group
+                ref="xhtml.Anchor.class"/&gt;
+            &lt;xs:group
+                ref="xhtml.Misc.class"/&gt;
+            &lt;xs:group
+                ref="xhtml.Inline.extra"/&gt;
+        &lt;/xs:choice&gt;
+    &lt;/xs:group&gt;
+    &lt;!--
+    InlNoAnchor.class includes all non-anchor inlines,
+    used as a component in mixes
+  --&gt;
+    &lt;xs:group
+        name="xhtml.InlNoAnchor.class"&gt;
+        &lt;xs:choice&gt;
+            &lt;xs:group
+                ref="xhtml.InlStruct.class"/&gt;
+            &lt;xs:group
+                ref="xhtml.InlPhras.class"/&gt;
+            &lt;xs:group
+                ref="xhtml.InlPres.class"/&gt;
+            &lt;xs:group
+                ref="xhtml.InlSpecial.class"/&gt;
+            &lt;xs:group
+                ref="xhtml.InlForm.class"/&gt;
+            &lt;xs:group
+                ref="xhtml.Inline.extra"/&gt;
+        &lt;/xs:choice&gt;
+    &lt;/xs:group&gt;
+    &lt;!--
+    InlNoAnchor.mix includes all non-anchor inlines
+  --&gt;
+    &lt;xs:group
+        name="xhtml.InlNoAnchor.mix"&gt;
+        &lt;xs:choice&gt;
+            &lt;xs:group
+                ref="xhtml.InlNoAnchor.class"/&gt;
+            &lt;xs:group
+                ref="xhtml.Misc.class"/&gt;
+        &lt;/xs:choice&gt;
+    &lt;/xs:group&gt;
+    &lt;!--
+    Inline.mix includes all inline elements, including Misc.class
+  --&gt;
+    &lt;xs:group
+        name="xhtml.Inline.mix"&gt;
+        &lt;xs:choice&gt;
+            &lt;xs:group
+                ref="xhtml.Inline.class"/&gt;
+            &lt;xs:group
+                ref="xhtml.Misc.class"/&gt;
+        &lt;/xs:choice&gt;
+    &lt;/xs:group&gt;
+    &lt;!--
+    In the HTML 4 DTD, heading and list elements were included
+    in the block group. The Heading.class and
+    List.class groups must now be included explicitly
+    on element declarations where desired.
+  --&gt;
+    &lt;xs:group
+        name="xhtml.Heading.class"&gt;
+        &lt;xs:choice&gt;
+            &lt;xs:element
+                name="h1"
+                type="xhtml.h1.type"/&gt;
+            &lt;xs:element
+                name="h2"
+                type="xhtml.h2.type"/&gt;
+            &lt;xs:element
+                name="h3"
+                type="xhtml.h3.type"/&gt;
+            &lt;xs:element
+                name="h4"
+                type="xhtml.h4.type"/&gt;
+            &lt;xs:element
+                name="h5"
+                type="xhtml.h5.type"/&gt;
+            &lt;xs:element
+                name="h6"
+                type="xhtml.h6.type"/&gt;
+        &lt;/xs:choice&gt;
+    &lt;/xs:group&gt;
+    &lt;xs:group
+        name="xhtml.List.class"&gt;
+        &lt;xs:choice&gt;
+            &lt;xs:element
+                name="ul"
+                type="xhtml.ul.type"/&gt;
+            &lt;xs:element
+                name="ol"
+                type="xhtml.ol.type"/&gt;
+            &lt;xs:element
+                name="dl"
+                type="xhtml.dl.type"/&gt;
+        &lt;/xs:choice&gt;
+    &lt;/xs:group&gt;
+    &lt;xs:group
+        name="xhtml.Table.class"&gt;
+        &lt;xs:choice&gt;
+            &lt;xs:element
+                name="table"
+                type="xhtml.table.type"/&gt;
+        &lt;/xs:choice&gt;
+    &lt;/xs:group&gt;
+    &lt;xs:group
+        name="xhtml.Form.class"&gt;
+        &lt;xs:choice&gt;
+            &lt;xs:element
+                name="form"
+                type="xhtml.form.type"/&gt;
+        &lt;/xs:choice&gt;
+    &lt;/xs:group&gt;
+    &lt;xs:group
+        name="xhtml.BlkStruct.class"&gt;
+        &lt;xs:choice&gt;
+            &lt;xs:element
+                name="p"
+                type="xhtml.p.type"/&gt;
+            &lt;xs:element
+                name="div"
+                type="xhtml.div.type"/&gt;
+        &lt;/xs:choice&gt;
+    &lt;/xs:group&gt;
+    &lt;xs:group
+        name="xhtml.BlkPhras.class"&gt;
+        &lt;xs:choice&gt;
+            &lt;xs:element
+                name="pre"
+                type="xhtml.pre.type"/&gt;
+            &lt;xs:element
+                name="blockquote"
+                type="xhtml.blockquote.type"/&gt;
+            &lt;xs:element
+                name="address"
+                type="xhtml.address.type"/&gt;
+        &lt;/xs:choice&gt;
+    &lt;/xs:group&gt;
+    &lt;xs:group
+        name="xhtml.BlkPres.class"&gt;
+        &lt;xs:sequence&gt;
+            &lt;xs:element
+                name="hr"
+                type="xhtml.hr.type"/&gt;
+        &lt;/xs:sequence&gt;
+    &lt;/xs:group&gt;
+    &lt;xs:group
+        name="xhtml.BlkSpecial.class"&gt;
+        &lt;xs:choice&gt;
+            &lt;xs:group
+                ref="xhtml.Table.class"/&gt;
+            &lt;xs:group
+                ref="xhtml.Form.class"/&gt;
+        &lt;/xs:choice&gt;
+    &lt;/xs:group&gt;
+    &lt;xs:group
+        name="xhtml.Block.extra"&gt;
+        &lt;xs:sequence/&gt;
+    &lt;/xs:group&gt;
+    &lt;!--
+    Block.class includes all block elements,
+    used as an component in mixes
+  --&gt;
+    &lt;xs:group
+        name="xhtml.Block.class"&gt;
+        &lt;xs:choice&gt;
+            &lt;xs:group
+                ref="xhtml.BlkStruct.class"/&gt;
+            &lt;xs:group
+                ref="xhtml.BlkPhras.class"/&gt;
+            &lt;xs:group
+                ref="xhtml.BlkPres.class"/&gt;
+            &lt;xs:group
+                ref="xhtml.BlkSpecial.class"/&gt;
+            &lt;xs:group
+                ref="xhtml.Block.extra"/&gt;
+        &lt;/xs:choice&gt;
+    &lt;/xs:group&gt;
+    &lt;!--
+   Block.mix includes all block elements plus %Misc.class;
+  --&gt;
+    &lt;xs:group
+        name="xhtml.Block.mix"&gt;
+        &lt;xs:choice&gt;
+            &lt;xs:group
+                ref="xhtml.Heading.class"/&gt;
+            &lt;xs:group
+                ref="xhtml.List.class"/&gt;
+            &lt;xs:group
+                ref="xhtml.Block.class"/&gt;
+            &lt;xs:group
+                ref="xhtml.Misc.class"/&gt;
+        &lt;/xs:choice&gt;
+    &lt;/xs:group&gt;
+    &lt;!--
+    All Content Elements
+    Flow.mix includes all text content, block and inline
+    Note that the "any" element included here allows us
+    to add data from any other namespace, a necessity
+    for compound document creation.
+    Note however that it is not possible to add
+    to any head level element without further
+    modification. To add RDF metadata to the head
+    of a document, modify the structure module.
+  --&gt;
+    &lt;xs:group
+        name="xhtml.Flow.mix"&gt;
+        &lt;xs:choice&gt;
+            &lt;xs:group
+                ref="xhtml.Heading.class"/&gt;
+            &lt;xs:group
+                ref="xhtml.List.class"/&gt;
+            &lt;xs:group
+                ref="xhtml.Block.class"/&gt;
+            &lt;xs:group
+                ref="xhtml.Inline.class"/&gt;
+            &lt;xs:group
+                ref="xhtml.Misc.class"/&gt;
+        &lt;/xs:choice&gt;
+    &lt;/xs:group&gt;
+    &lt;xs:group name="xhtml.FlowNoTable.mix"&gt;
+        &lt;xs:choice&gt;
+          &lt;xs:group ref="xhtml.Heading.class"/&gt;
+          &lt;xs:group ref="xhtml.List.class"/&gt;
+          &lt;xs:group ref="xhtml.BlkStruct.class"/&gt;
+          &lt;xs:group ref="xhtml.BlkPhras.class"/&gt;
+          &lt;xs:group ref="xhtml.Form.class"/&gt;
+          &lt;xs:group ref="xhtml.Inline.class"/&gt;
+          &lt;xs:group ref="xhtml.Misc.class"/&gt;
+        &lt;/xs:choice&gt;
+    &lt;/xs:group&gt;
+    &lt;!--
+    BlkNoForm.mix includes all non-form block elements,
+    plus Misc.class
+  --&gt;
+    &lt;xs:group
+        name="xhtml.BlkNoForm.mix"&gt;
+        &lt;xs:choice&gt;
+            &lt;xs:group
+                ref="xhtml.Heading.class"/&gt;
+            &lt;xs:group
+                ref="xhtml.List.class"/&gt;
+            &lt;xs:group
+                ref="xhtml.BlkStruct.class"/&gt;
+            &lt;xs:group
+                ref="xhtml.BlkPhras.class"/&gt;
+            &lt;xs:group
+                ref="xhtml.BlkPres.class"/&gt;
+            &lt;xs:group
+                ref="xhtml.Table.class"/&gt;
+            &lt;xs:group
+                ref="xhtml.Block.extra"/&gt;
+            &lt;xs:group
+                ref="xhtml.Misc.class"/&gt;
+        &lt;/xs:choice&gt;
+    &lt;/xs:group&gt;
+    &lt;xs:element
+        name="html"
+        type="xhtml.html.type"/&gt;
+&lt;/xs:schema&gt;
+
+</pre>
+
+<!-- END OF FILE SCHEMA/xhtml-print-model-1.xsd.mhtml -->
+<h2 typeof='bibo:Chapter' about='#a_schemaModules' id='a_schemaModules'>C.3. <abbr title="Extensible HyperText Markup Language for Printing">XHTML-Print</abbr> 1.0 XML Schema Modules</h2>
+
+<p>Available for download at <a href="https://www.w3.org/TR/xhtml-print/SCHEMA/xhtml-print-modules-1.xsd">xhtml-print-modules-1.xsd</a>.</p>
+
+<!-- INCLUDING SCHEMA SCHEMA/xhtml-print-modules-1.xsd.mhtml -->
+<pre class="dtd">
+&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+           elementFormDefault="qualified" 
+           xmlns:xh11d="http://www.w3.org/1999/xhtml/datatypes/" &gt;
+    &lt;xs:import namespace="http://www.w3.org/1999/xhtml/datatypes/" 
+               schemaLocation="xhtml-datatypes-1.xsd" /&gt;
+
+    &lt;xs:annotation&gt;
+        &lt;xs:documentation&gt;
+      This schema includes all modules for XHTML1.1 Document Type.
+      $Id: Overview.html,v 1.3 2018/10/09 13:16:06 denis Exp $
+    &lt;/xs:documentation&gt;
+        &lt;xs:documentation source="xhtml-copyright-1.xsd"/&gt;
+    &lt;/xs:annotation&gt;
+    &lt;xs:annotation&gt;
+        &lt;xs:documentation&gt;
+     This schema includes all modules (and redefinitions)
+     for XHTML1.1 Document Type.
+     XHTML1.1 Document Type includes the following Modules
+
+       XHTML Core modules (Required for XHTML Family Conformance)
+            +  text
+            +  hypertext
+            +  lists
+            +  structure
+
+       Other XHTML modules
+            +  Edit
+            +  Presentational
+            +  Link
+            +  Meta
+            +  Base
+            +  Scripting
+            +  Style
+            +  Image
+            +  Object
+            +  Param (Applet/Object modules require Param Module)
+            +  Basic Tables
+            +  Target
+            +  Basic Forms
+
+    &lt;/xs:documentation&gt;
+    &lt;/xs:annotation&gt;
+    &lt;xs:include schemaLocation="xhtml-framework-1.xsd"&gt;
+        &lt;xs:annotation&gt;
+            &lt;xs:documentation&gt;
+        Schema Framework Component Modules:
+            +  notations
+            +  datatypes
+            +  common attributes
+            +  character entities
+      &lt;/xs:documentation&gt;
+            &lt;xs:documentation source="http://www.w3.org/TR/xhtml-modularization/abstract_modules.html#s_commonatts"/&gt;
+        &lt;/xs:annotation&gt;
+    &lt;/xs:include&gt;
+    &lt;xs:include schemaLocation="xhtml-text-1.xsd"&gt;
+        &lt;xs:annotation&gt;
+            &lt;xs:documentation&gt;
+        Text module
+
+        The Text module includes declarations for all core
+        text container elements and their attributes.
+
+            +  block phrasal
+            +  block structural
+            +  inline phrasal
+            +  inline structural
+
+        Elements defined here:
+          * address, blockquote, pre, h1, h2, h3, h4, h5, h6
+          * div, p
+          * abbr, acronym, cite, code, dfn, em, kbd, q, samp, strong, var
+          * br, span
+      &lt;/xs:documentation&gt;
+            &lt;xs:documentation source="http://www.w3.org/TR/2001/REC-xhtml-modularization-20010410/abstract_modules.html#s_textmodule"/&gt;
+        &lt;/xs:annotation&gt;
+    &lt;/xs:include&gt;
+    &lt;xs:redefine schemaLocation="xhtml-hypertext-1.xsd"&gt;
+        &lt;xs:annotation&gt;
+            &lt;xs:documentation&gt;
+         Hypertext module
+
+         Elements defined here:
+          * a
+      &lt;/xs:documentation&gt;
+            &lt;xs:documentation source="http://www.w3.org/TR/2001/REC-xhtml-modularization-20010410/abstract_modules.html#s_hypertextmodule"/&gt;
+        &lt;/xs:annotation&gt;
+        &lt;xs:attributeGroup name="xhtml.a.attlist"&gt;
+            &lt;xs:attributeGroup ref="xhtml.a.attlist"/&gt;
+        &lt;/xs:attributeGroup&gt;
+    &lt;/xs:redefine&gt;
+    &lt;xs:include schemaLocation="xhtml-list-1.xsd"&gt;
+        &lt;xs:annotation&gt;
+            &lt;xs:documentation&gt;
+        Lists module
+
+        Elements defined here:
+          * dt, dd, dl, ol, ul, li
+      &lt;/xs:documentation&gt;
+            &lt;xs:documentation source="http://www.w3.org/TR/2001/REC-xhtml-modularization-20010410/abstract_modules.html#s_listmodule"/&gt;
+        &lt;/xs:annotation&gt;
+    &lt;/xs:include&gt;
+    &lt;xs:redefine schemaLocation="xhtml-struct-1.xsd"&gt;
+        &lt;xs:annotation&gt;
+            &lt;xs:documentation&gt;
+        Structural module
+
+        Elements defined here:
+          * title, head, body, html
+      &lt;/xs:documentation&gt;
+            &lt;xs:documentation source="http://www.w3.org/TR/2001/REC-xhtml-modularization-20010410/abstract_modules.html#s_structuremodule"/&gt;
+        &lt;/xs:annotation&gt;
+        &lt;xs:attributeGroup name="xhtml.version.attrib"&gt;
+            &lt;xs:annotation&gt;
+                &lt;xs:documentation&gt;
+            Redefinition by the XHTML Print 1.0 Markup (for value of version attr)
+         &lt;/xs:documentation&gt;
+            &lt;/xs:annotation&gt;
+            &lt;xs:attribute name="version" type="xh11d:CDATA" fixed="-//W3C//DTD XHTML 1.1//EN"/&gt;
+        &lt;/xs:attributeGroup&gt;
+        &lt;xs:attributeGroup name="xhtml.body.attlist"&gt;
+            &lt;xs:attributeGroup ref="xhtml.body.attlist"&gt;
+                &lt;xs:annotation&gt;
+                    &lt;xs:documentation&gt;
+              Original Body Attlist
+            &lt;/xs:documentation&gt;
+                &lt;/xs:annotation&gt;
+            &lt;/xs:attributeGroup&gt;
+        &lt;/xs:attributeGroup&gt;
+    &lt;/xs:redefine&gt;
+    &lt;xs:include schemaLocation="xhtml-pres-1.xsd"&gt;
+        &lt;xs:annotation&gt;
+            &lt;xs:documentation&gt;
+        Presentational module
+
+         Elements defined here:
+           * hr, b, big, i, small,sub, sup, tt
+      &lt;/xs:documentation&gt;
+            &lt;xs:documentation source="http://www.w3.org/TR/xhtml-modularization/abstract_modules.html#s_presentationmodule"/&gt;
+        &lt;/xs:annotation&gt;
+    &lt;/xs:include&gt;
+    &lt;xs:redefine schemaLocation="xhtml-link-1.xsd"&gt;
+        &lt;xs:annotation&gt;
+            &lt;xs:documentation&gt;
+                Link module
+
+                Elements defined here:
+                   * link
+            &lt;/xs:documentation&gt;
+            &lt;xs:documentation source="http://www.w3.org/TR/xhtml-modularization/abstract_modules.html#s_linkmodule"/&gt;
+        &lt;/xs:annotation&gt;
+        &lt;xs:attributeGroup name="xhtml.link.attlist"&gt;
+            &lt;xs:annotation&gt;
+                &lt;xs:documentation&gt;
+            Changes to XHTML Link Attlist
+          &lt;/xs:documentation&gt;
+            &lt;/xs:annotation&gt;
+            &lt;xs:attributeGroup ref="xhtml.link.attlist"&gt;
+                &lt;xs:annotation&gt;
+                    &lt;xs:documentation&gt;
+                Original Link Attributes (declared in Link Module)
+             &lt;/xs:documentation&gt;
+                &lt;/xs:annotation&gt;
+            &lt;/xs:attributeGroup&gt;
+        &lt;/xs:attributeGroup&gt;
+    &lt;/xs:redefine&gt;
+    &lt;xs:include schemaLocation="xhtml-meta-1.xsd"&gt;
+        &lt;xs:annotation&gt;
+            &lt;xs:documentation&gt;
+        Meta module
+
+        Elements defined here:
+        * meta
+      &lt;/xs:documentation&gt;
+            &lt;xs:documentation source="http://www.w3.org/TR/xhtml-modularization/abstract_modules.html#s_metamodule"/&gt;
+        &lt;/xs:annotation&gt;
+    &lt;/xs:include&gt;
+    &lt;xs:redefine schemaLocation="xhtml-base-1.xsd"&gt;
+        &lt;xs:annotation&gt;
+            &lt;xs:documentation&gt;
+        Base module
+
+        Elements defined here:
+          * base
+      &lt;/xs:documentation&gt;
+            &lt;xs:documentation source="http://www.w3.org/TR/xhtml-modularization/abstract_modules.html#s_basemodule"/&gt;
+        &lt;/xs:annotation&gt;
+        &lt;xs:attributeGroup name="xhtml.base.attlist"&gt;
+            &lt;xs:annotation&gt;
+                &lt;xs:documentation&gt;
+            Changes to XHTML base Attlist
+          &lt;/xs:documentation&gt;
+            &lt;/xs:annotation&gt;
+            &lt;xs:attributeGroup ref="xhtml.base.attlist"&gt;
+                &lt;xs:annotation&gt;
+                    &lt;xs:documentation&gt;
+                Original Base Attributes (declared in Base Module)
+             &lt;/xs:documentation&gt;
+                &lt;/xs:annotation&gt;
+            &lt;/xs:attributeGroup&gt;
+        &lt;/xs:attributeGroup&gt;
+    &lt;/xs:redefine&gt;
+    &lt;xs:include schemaLocation="xhtml-script-1.xsd"&gt;
+        &lt;xs:annotation&gt;
+            &lt;xs:documentation&gt;
+        Scripting module
+
+        Elements defined here:
+          * script, noscript
+      &lt;/xs:documentation&gt;
+            &lt;xs:documentation source="http://www.w3.org/TR/xhtml-modularization/abstract_modules.html#s_scriptmodule"/&gt;
+        &lt;/xs:annotation&gt;
+    &lt;/xs:include&gt;
+    &lt;xs:include schemaLocation="xhtml-style-1.xsd"&gt;
+        &lt;xs:annotation&gt;
+            &lt;xs:documentation&gt;
+        Style module
+
+        Elements defined here:
+          * style
+      &lt;/xs:documentation&gt;
+            &lt;xs:documentation source="http://www.w3.org/TR/xhtml-modularization/abstract_modules.html#s_stylemodule"/&gt;
+        &lt;/xs:annotation&gt;
+    &lt;/xs:include&gt;
+    &lt;xs:include schemaLocation="xhtml-inlstyle-1.xsd"&gt;
+        &lt;xs:annotation&gt;
+            &lt;xs:documentation&gt;
+        Style attribute module
+
+        Attribute defined here:
+          * style
+      &lt;/xs:documentation&gt;
+            &lt;xs:documentation source="http://www.w3.org/TR/xhtml-modularization/abstract_modules.html#s_styleattributemodule"/&gt;
+        &lt;/xs:annotation&gt;
+    &lt;/xs:include&gt;
+    &lt;xs:redefine schemaLocation="xhtml-image-1.xsd"&gt;
+        &lt;xs:annotation&gt;
+            &lt;xs:documentation&gt;
+        Image module
+
+        Elements defined here:
+          * img
+      &lt;/xs:documentation&gt;
+            &lt;xs:documentation source="http://www.w3.org/TR/xhtml-modularization/abstract_modules.html#s_imagemodule"/&gt;
+        &lt;/xs:annotation&gt;
+        &lt;xs:attributeGroup name="xhtml.img.attlist"&gt;
+            &lt;xs:attributeGroup ref="xhtml.img.attlist"&gt;
+                &lt;xs:annotation&gt;
+                    &lt;xs:documentation&gt;
+                Original Image Attributes (in Image Module)
+             &lt;/xs:documentation&gt;
+                &lt;/xs:annotation&gt;
+            &lt;/xs:attributeGroup&gt;
+        &lt;/xs:attributeGroup&gt;
+    &lt;/xs:redefine&gt;
+    &lt;xs:redefine schemaLocation="xhtml-object-1.xsd"&gt;
+        &lt;xs:annotation&gt;
+            &lt;xs:documentation&gt;
+        Object module
+
+        Elements defined here:
+          * object
+      &lt;/xs:documentation&gt;
+            &lt;xs:documentation source="http://www.w3.org/TR/xhtml-modularization/abstract_modules.html#s_objectmodule"/&gt;
+        &lt;/xs:annotation&gt;
+        &lt;xs:attributeGroup name="xhtml.object.attlist"&gt;
+            &lt;xs:attributeGroup ref="xhtml.object.attlist"&gt;
+                &lt;xs:annotation&gt;
+                    &lt;xs:documentation&gt;
+                Original Object Attlist
+              &lt;/xs:documentation&gt;
+                &lt;/xs:annotation&gt;
+            &lt;/xs:attributeGroup&gt;
+        &lt;/xs:attributeGroup&gt;
+    &lt;/xs:redefine&gt;
+    &lt;xs:include schemaLocation="xhtml-param-1.xsd"&gt;
+        &lt;xs:annotation&gt;
+            &lt;xs:documentation&gt;
+        Param module
+
+        Elements defined here:
+          * param
+      &lt;/xs:documentation&gt;
+        &lt;/xs:annotation&gt;
+    &lt;/xs:include&gt;
+    &lt;xs:include schemaLocation="xhtml-basic-table-1.xsd"&gt;
+        &lt;xs:annotation&gt;
+            &lt;xs:documentation&gt;
+        Tables module
+
+        Elements defined here:
+          * table, caption, tr, th, td
+      &lt;/xs:documentation&gt;
+            &lt;xs:documentation source="http://www.w3.org/TR/xhtml-modularization/abstract_modules.html#s_basictablemodule"/&gt;
+        &lt;/xs:annotation&gt;
+    &lt;/xs:include&gt;
+    &lt;xs:redefine schemaLocation="xhtml-basic-form-1.xsd"&gt;
+        &lt;xs:annotation&gt;
+            &lt;xs:documentation&gt;
+            Forms module
+
+            Elements defined here:
+              * form, label, input, select, option,
+              * textarea
+          &lt;/xs:documentation&gt;
+            &lt;xs:documentation source="http://www.w3.org/TR/xhtml-modularization/abstract_modules.html#s_extformsmodule"/&gt;
+        &lt;/xs:annotation&gt;
+        &lt;xs:attributeGroup name="xhtml.form.attlist"&gt;
+            &lt;xs:annotation&gt;
+                &lt;xs:documentation&gt;
+            Changes to XHTML Form Attlist
+          &lt;/xs:documentation&gt;
+            &lt;/xs:annotation&gt;
+            &lt;xs:attributeGroup ref="xhtml.form.attlist"&gt;
+                &lt;xs:annotation&gt;
+                    &lt;xs:documentation&gt;
+                Original Form Attributes (declared in Forms Module)
+             &lt;/xs:documentation&gt;
+                &lt;/xs:annotation&gt;
+            &lt;/xs:attributeGroup&gt;
+        &lt;/xs:attributeGroup&gt;
+        &lt;xs:attributeGroup name="xhtml.input.attlist"&gt;
+            &lt;xs:annotation&gt;
+                &lt;xs:documentation&gt;
+            Changes to XHTML Form Input Element
+          &lt;/xs:documentation&gt;
+            &lt;/xs:annotation&gt;
+            &lt;xs:attributeGroup ref="xhtml.input.attlist"&gt;
+                &lt;xs:annotation&gt;
+                    &lt;xs:documentation&gt;
+                Original Input Attributes (in Forms Module)
+             &lt;/xs:documentation&gt;
+                &lt;/xs:annotation&gt;
+            &lt;/xs:attributeGroup&gt;
+        &lt;/xs:attributeGroup&gt;
+        &lt;xs:attributeGroup name="xhtml.label.attlist"&gt;
+            &lt;xs:attributeGroup ref="xhtml.label.attlist"&gt;
+                &lt;xs:annotation&gt;
+                    &lt;xs:documentation&gt;
+                Original Label Attributes (in Forms Module)
+             &lt;/xs:documentation&gt;
+                &lt;/xs:annotation&gt;
+            &lt;/xs:attributeGroup&gt;
+        &lt;/xs:attributeGroup&gt;
+        &lt;xs:attributeGroup name="xhtml.select.attlist"&gt;
+            &lt;xs:attributeGroup ref="xhtml.select.attlist"&gt;
+                &lt;xs:annotation&gt;
+                    &lt;xs:documentation&gt;
+                Original Select Attributes (in Forms Module)
+             &lt;/xs:documentation&gt;
+                &lt;/xs:annotation&gt;
+            &lt;/xs:attributeGroup&gt;
+        &lt;/xs:attributeGroup&gt;
+        &lt;xs:attributeGroup name="xhtml.textarea.attlist"&gt;
+            &lt;xs:attributeGroup ref="xhtml.textarea.attlist"&gt;
+                &lt;xs:annotation&gt;
+                    &lt;xs:documentation&gt;
+                Original TextArea Attributes (in Forms Module)
+             &lt;/xs:documentation&gt;
+                &lt;/xs:annotation&gt;
+            &lt;/xs:attributeGroup&gt;
+        &lt;/xs:attributeGroup&gt;
+    &lt;/xs:redefine&gt;
+&lt;/xs:schema&gt;
+
+</pre>
+
+<!-- END OF FILE SCHEMA/xhtml-print-modules-1.xsd.mhtml --><!--OddPage-->
+<h1 about='#a_refs' typeof='bibo:Chapter' id="a_refs">D. References</h1>
+
+<h2 typeof='bibo:Chapter' about='#a_normrefs' id='a_normrefs'>D.1. Normative References</h2>
+
+<dl>
+<dt class="normref" id="ref_charmod">[CHARMOD]</dt>
+
+<dd><cite><a rel='dc:requires' href="https://www.w3.org/TR/2005/REC-charmod-20050215/">Character Model for the World Wide Web 1.0: Fundamentals</a></cite>, W3C Recommendation, M. D&#252;rst, F.
+Yergeau, R. Ishida, M. Wolf. T. Texin, eds., World Wide Web Consortium, 15 February 2005. Available at: http://www.w3.org/TR/2005/REC-charmod-20050215/. The <a href="https://www.w3.org/TR/charmod/">
+latest version</a> is available at: http://www.w3.org/TR/charmod/</dd>
+
+<dt class="normref" id="ref_html4">[HTML4]</dt>
+
+<dd><cite><a rel='dc:requires' href="https://www.w3.org/TR/1999/REC-html401-19991224/">HTML 4.01 Specification</a></cite>, W3C Recommendation, D. Raggett, A. Le&#160;Hors, I. Jacobs, eds., World Wide
+Web Consortium, 24 December 1999. Available at: http://www.w3.org/TR/1999/REC-html401-19991224. The <a href="https://www.w3.org/TR/html4/">latest version</a> is available at:
+http://www.w3.org/TR/html4</dd>
+
+<dt class="normref" id="ref_xhtml1">[XHTML1]</dt>
+
+<dd><cite><a rel='dc:requires' href="https://www.w3.org/TR/2002/REC-xhtml1-20020801/">XHTML 1.0: The Extensible HyperText Markup Language (Second Edition) - A Reformulation of HTML 4 in XML
+1.0</a></cite>, W3C Recommendation, Steven Pemberton, <i>et al.</i>, World Wide Web Consortium, 26 January 2000, revised 1 August 2002. Available at: http://www.w3.org/TR/2002/REC-xhtml1-20020801.
+The <a href="../xhtml1/index.html">latest version</a> is available at: http://www.w3.org/TR/xhtml1</dd>
+
+<dt class="normref" id="ref_xhtml11">[XHTML1.1]</dt>
+
+<dd><cite><a rel='dc:requires' href="https://www.w3.org/TR/2010/PER-xhtml11-20101007/">XHTML 1.1 Second Edition - Module-based XHTML</a></cite>, W3C Proposed Edited Recommendation, S. McCarron, ed.,
+World Wide Web Consortium, 7 October 2010. Available at: http://www.w3.org/TR/2010/PER-xhtml11-20101007. The <a href="../xhtml11/index.html">latest version</a> is available at:
+http://www.w3.org/TR/xhtml11</dd>
+
+<dt class="normref" id="ref_xhtmlmod">[XHTMLMOD]</dt>
+
+<dd>"<cite><a rel='dc:requires' href="https://www.w3.org/TR/2010/REC-xhtml-modularization-20100729">Modularization of XHTML 1.1 Second Edition</a></cite>", W3C Recommendation, S. McCarron, <i><abbr
+title="editor">ed.</abbr></i>, 29 July 2010.<br />
+ Available at: http://www.w3.org/TR/2010/REC-xhtml-modularization-20100729<br />
+ The <a href="https://www.w3.org/TR/xhtml-modularization">latest version</a> is available at: http://www.w3.org/TR/xhtml-modularization</dd>
+
+<dt class="normref" id="ref_xml">[XML]</dt>
+
+<dd><cite><a rel='dc:requires' href="https://www.w3.org/TR/2006/REC-xml-20060816/">Extensible Markup Language (XML) 1.0 (Fourth Edition)</a></cite>, W3C Recommendation, T. Bray, J. Paoli, C. M.
+Sperberg-McQueen, E. Maler, F. Yergeau, eds., World Wide Web Consortium, 16 August 2006. Available at: http://www.w3.org/TR/2006/REC-xml-20060816. The <a href="https://www.w3.org/TR/REC-xml/">latest
+version</a> is available at: http://www.w3.org/TR/REC-xml</dd>
+
+<dt class="normref" id="ref_xmlschema">[XMLSCHEMA]</dt>
+
+<dd>"<cite><a rel='dc:requires' href="https://www.w3.org/TR/2004/REC-xmlschema-1-20041028/">XML Schema Part 1: Structures Second Edition</a></cite>", W3C Recommendation, H. S. Thompson <i xml:lang=
+"la">et al.</i>, <i><abbr title="editors">eds.</abbr></i>, 28 October 2004.<br />
+Available at: http://www.w3.org/TR/2004/REC-xmlschema-1-20041028/<br />
+"<cite><a rel='dc:requires' href="https://www.w3.org/TR/2004/REC-xmlschema-2-20041028/">XML Schema Part 2: Datatypes Second Edition</a></cite>", W3C Recommendation, P. V. Biron, A. Malhotra, <i><abbr
+title="editors">eds.</abbr></i>, 28 October 2004.<br />
+Available at: http://www.w3.org/TR/2004/REC-xmlschema-2-20041028/</dd>
+
+<dt class="normref" id="ref_rfc2119">[RFC2119]</dt>
+
+<dd><cite><a rel='dc:requires' href="http://www.ietf.org/rfc/rfc2119.txt">RFC2119 - Key words for use in RFCs to Indicate Requirement Levels</a></cite>, S. Bradner, The Internet Engineering Task
+Force, March 1997. It is available from http://www.ietf.org/rfc/rfc2119.txt</dd>
+
+<dt class="normref" id="ref_jpeg">[JPEG]</dt>
+
+<dd><cite>JPEG File Interchange Format, version 1.02, September 1, 1992</cite>, Eric Hamilton, C-Cube Microsystems, 1 September 1992. Available from <a rel='dc:requires' href= 
+"ftp://ftp.uu.net/graphics/jpeg/jfif.ps.gz">ftp://ftp.uu.net/graphics/jpeg/jfif.ps.gz</a> or <a rel='dc:requires' href="ftp://ftp.uu.net/graphics/jpeg/jfif.txt.gz">
+ftp://ftp.uu.net/graphics/jpeg/jfif.txt.gz</a></dd>
+
+<dt class="normref" id="ref_ccitt">[CCITT]</dt>
+
+<dd><cite>CCITT Recommendation T.81 | ISO/IEC 10918-1, Digital Compression and Coding of Continuous-tone Still Images: Requirements and Guidelines</cite>, ISO, 21 January 2000. Available from <a rel= 
+'dc:requires' href="http://www.iso.org/iso/search.htm">http://www.iso.org/iso/search.htm</a></dd>
+
+<dt class="normref" id="ref_jeida">[JEIDA]</dt>
+
+<dd><cite>JEIDA-49-1998 Digital still camera image file format standard(exif)</cite>, Japan Electronics and Information Technology Industries Association (JEITA). Available from <a rel='dc:requires'
+href="http://www.jeita.or.jp/">http://www.jeita.or.jp/</a></dd>
+
+<dt class="normref" id="ref_rfc3986">[RFC3986]</dt>
+
+<dd><cite><a rel='dc:requires' href="http://www.ietf.org/rfc/rfc3986.txt">Uniform Resource Identifier (URI): Generic Syntax</a></cite>, T. Berners-Lee, R. Fielding, L. Masinter, Network Working
+Group, January 2005. It is available from http://www.ietf.org/rfc/rfc3986.txt</dd>
+
+<dt class="normref" id="ref_rfc2616">[RFC2616]</dt>
+
+<dd><cite><a rel='dc:requires' href="http://www.ietf.org/rfc/rfc2616.txt">Hypertext Transfer Protocol -- HTTP/1.1</a></cite>, T. Fielding, J. Gettys, J. Mogul, H. Frystyk, L. Masinter, P. Leach, T.
+Berners-Lee, The Internet Engineering Task Force, June 1999. It is available from http://www.ietf.org/rfc/rfc2616.txt</dd>
+
+<dt id="ref_rfc3023">[RFC3023]</dt>
+
+<dd><cite><a rel='dc:requires' href="http://www.ietf.org/rfc/rfc3023.txt">RFC3023 - XML Media Types</a></cite>, M. Murata, S. St.Laurent, and D. Kohn, The Internet Engineering Task Force, January
+2001. It is available from http://www.ietf.org/rfc/rfc3023.txt.</dd>
+
+<dt class="normref" id="ref_rfc3236">[RFC3236]</dt>
+
+<dd><cite><a rel='dc:requires' href="http://www.ietf.org/rfc/rfc3236.txt">RFC3236 - The 'application/xhtml+xml' Media Type</a></cite>, M. Baker, The Internet Engineering Task Force, January 2002. It
+is available from http://www.ietf.org/rfc/rfc3236.txt.</dd>
+
+<dt class="normref" id="ref_bt601">[BT601.5]</dt>
+
+<dd><cite><a rel='dc:requires' href="http://www.itu.int/ITU-R/">ITU-R Recommendation BT.601-5</a></cite>, "Studio Encoding Parameters of Digital Television for Standard 4:3 and Wide-Screen 16:9
+Aspect Ratios", International Telecommunications Union, October 1995. It is available from http://www.itu.int/ITU-R</dd>
+</dl>
+
+<h2 typeof='bibo:Chapter' about='#a_inforefs' id='a_inforefs'>D.2. Informative References</h2>
+
+<dl>
+<dt class="inforef" id="ref_css_pp">[CSSPP]</dt>
+
+<dd><cite><a rel='dc:references' href="https://www.w3.org/TR/2004/CR-css-print-20040225/">CSS Print Profile</a></cite>, W3C Candidate Recommendation, Jim Bigelow, ed., World Wide Web Consortium, 18
+December 2003. Available at: http://www.w3.org/TR/2004/CR-css-print-20040225/. The <a href="https://www.w3.org/TR/css-print/">latest version</a> is available at: http://www.w3.org/TR/css-print/</dd>
+
+<dt class="inforef" id="ref_mimempx">[MIMEMPX]</dt>
+
+<dd><cite><a rel='dc:references' href="http://www.ietf.org/rfc/rfc3391.txt">RFC3391 - The MIME Application/Vnd.pwg-multiplexed Content-Type</a></cite>, R. Herriot, The Internet Engineering Task
+Force, December 2002. It is available from http://www.ietf.org/rfc/rfc3391.txt</dd>
+
+<dt class="inforef" id="ref_rfc2392">[RFC2392]</dt>
+
+<dd><cite><a rel='dc:references' href="http://www.ietf.org/rfc/rfc2392.txt">Content-ID and Message-ID Uniform Resource Locators</a></cite>, E.Levinson, The Internet Engineering Task Force, August
+1998. It is available from http://www.ietf.org/rfc/rfc2392.txt</dd>
+
+<dt class="inforef" id="ref_rfc2397">[RFC2397]</dt>
+
+<dd><cite><a rel='dc:references' href="http://www.ietf.org/rfc/rfc2397.txt">RFC2397 - The "data" URL scheme</a></cite>, L. Masinter, The Internet Engineering Task Force, August 1998. It is available
+from http://www.ietf.org/rfc/rfc2397.txt</dd>
+
+<dt class="inforef" id="ref_rfc2557">[RFC2557]</dt>
+
+<dd><cite><a rel='dc:references' href="http://www.ietf.org/rfc/rfc2557.txt">RFC2557 - MIME Encapsulation of Aggregate Documents, such as HTML (MHTML)</a></cite>, J.Palme, A. Hopmann, N. Shelness, The
+Internet Engineering Task Force, March 1999. It is available from http://www.ietf.org/rfc/rfc2557.txt.</dd>
+
+<dt class="inforef" id="ref_xhtmlbasic">[XHTMLBASIC]</dt>
+
+<dd><cite><a rel='dc:references' href="https://www.w3.org/TR/2000/REC-xhtml-basic-20001219/">XHTML Basic</a></cite>, W3C Recommendation, M. Baker, M. Ishikawa, <i>et al.</i>, eds., World Wide Web
+Consortium, 19 December 2000. Available at: http://www.w3.org/TR/2000/REC-xhtml-basic-20001219. The <a href="../xhtml-basic/index.html">latest version</a> is available at:
+http://www.w3.org/TR/xhtml-basic</dd>
+
+<!--
+        <dt class="inforef" id="ref-XHP">[XHP]</dt>
+    <dd><cite><a href="ftp://ftp.xhtml-print.org/pub/pwg/xhtml-print/drafts/xhtml-print-draft-095.pdf">XHTML-Print</a>
+    </cite>, Don Wright, Melinda Grant, Peter Zehler, and Jun Fujisawa, eds. 7 March 2002. Available
+      at: "ftp://ftp.xhtml-print.org/pub/pwg/xhtml-print/drafts/xhtml-print-draft-095.pdf".</dd>
+    -->
+<dt class="inforef" id="ref-XHTMLPrint">[XHTMLPRINT]</dt>
+
+<dd><cite><a rel='dc:references' href="http://www.pwg.org/xhtml-print/HTML-Version/XHTML-Print.html">XHTML-Print</a></cite>, Printer Working Group Proposed Standard 5102.1, Don Wright, Melinda Grant,
+Peter Zehler, Jun Fujisawa, and Jim Bigelow, eds. Printer Working Group, 31 March 2003. Available at: http://www.pwg.org/xhtml-print/HTML-Version/XHTML-Print.html.</dd>
+</dl>
+<script type="application/javascript" src="https://www.w3.org/scripts/TR/fixup.js"></script></body>
+
+<!-- Mirrored from www.w3.org/TR/xhtml-print/ by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 21 Oct 2024 18:38:30 GMT -->
+</html>
+
