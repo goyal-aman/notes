@@ -1,0 +1,8 @@
+-v https://home.amgoyal.com/trilium/share/ -O /app MyWebsite_2 -%P *.* -A *amgoyal* -r5
+File generated automatically on Mon, 21 Oct 2024 14:39:34, do NOT edit
+
+To update a mirror, just launch httrack without any parameters
+The existing cache will be used (and modified)
+To have other options, retype all parameters and launch HTTrack
+To continue an interrupted mirror, just launch httrack without any parameters
+
