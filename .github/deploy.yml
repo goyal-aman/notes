@@ -1,0 +1,32 @@
+name: Deploy GitHub Pages
+
+on:
+  push:
+    branches:
+      - main  # Or the branch you use to deploy GitHub Pages
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    - name: Remove existing robots.txt
+      run: |
+        if [ -f docs/robots.txt ]; then
+          rm docs/robots.txt
+        fi
+
+    - name: Create or update robots.txt
+      run: |
+        echo "User-agent: *" > robots.txt
+        echo "Disallow:" >> robots.txt
+
+    - name: Commit and push robots.txt
+      run: |
+        git config --local user.email "github-actions[bot]@users.noreply.github.com"
+        git config --local user.name "github-actions[bot]"
+        git add robots.txt
+        git commit -m "[GH workflow] Add/update robots.txt"
+        git push
