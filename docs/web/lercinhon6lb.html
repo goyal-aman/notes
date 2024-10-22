@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from 192.168.1.100:8082/share/LERcINhON6LB by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 22 Oct 2024 12:57:15 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+    <meta charset="utf-8">
+    
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <link rel="shortcut icon" href="ico/favicon.ico">
+    
+    <script src="js/share.js"></script>
+    
+        <link href="css/normalize.min.css" rel="stylesheet">
+        <link href="css/share.css" rel="stylesheet">
+    
+    
+        <link href="css/ckeditor-content.css" rel="stylesheet">
+    
+    
+    
+    
+    
+    <title>RabbitMQ: Message Broker for Distributed Systems</title>
+</head>
+<body data-note-id="LERcINhON6LB" data-ancestor-note-id="v04XSX9lUnRC">
+<div id="layout">
+    <div id="main">
+        
+            <nav id="parentLink">
+                parent: <a href="#"
+                           class="type-text">Notes</a>
+            </nav>
+        
+
+        <h1 id="title">RabbitMQ: Message Broker for Distributed Systems</h1>
+
+        
+
+        
+            <div id="content" class="type-text ck-content">
+                <p>RabbitMQ is a powerful message broker that can handle communication between microservices, decoupling systems and enabling scalability. Here's a step-by-step guide on how to set up RabbitMQ using Docker and write simple producer and consumer services in Go.</p><h2>What is RabbitMQ?</h2><p>RabbitMQ handles the flow of messages between different services or components using the following concepts:</p><ul><li><strong>Queue</strong>: Buffers where messages wait to be processed.</li><li><strong>Producer</strong>: The sender of the message.</li><li><strong>Consumer</strong>: The recipient of the message.</li><li><strong>Exchange</strong>: Decides which queue the message should go to.</li></ul><h3>Diagram of the Flow</h3><p>Let's visualize how RabbitMQ works. A producer sends a message to an exchange, and the exchange routes it to the appropriate queue. Consumers then pick up the message from the queue.</p><figure class="image image_resized" style="width:88.9%;"><img style="aspect-ratio:300/35;" src="svg/message%20flow.svg" width="300" height="35"></figure><p>&nbsp;</p><h2>Setting Up RabbitMQ with Docker</h2><p><strong>Spin up RabbitMQ</strong>: Running RabbitMQ with Docker is simple and doesn't require much configuration.</p><pre><code class="language-text-plain">docker run -d --name rabbitmq -p 5672:5672 -p 15672:15672 rabbitmq:3-management</code></pre><ul><li><strong>5672</strong>: The port RabbitMQ uses for message traffic.</li><li><strong>15672</strong>: The web interface for monitoring RabbitMQ.</li></ul><p><strong>Accessing the Management Interface</strong>: Go to <code>http://localhost:15672</code> in the browser. Log in with the default credentials:</p><ul><li>Username: <code>guest</code></li><li>Password: <code>guest</code></li></ul><h3>Testing with Go</h3><p>Once RabbitMQ is up and running, it's time to write some Go code. Here's a simple producer and consumer example using RabbitMQ.</p><h4>Step 1: Install RabbitMQ Go Client</h4><pre><code class="language-text-plain">go get github.com/streadway/amqp
+</code></pre><h4>Step 2: Producer Code</h4><p>The producer sends a message to RabbitMQ. Here's how:</p><pre><code class="language-text-x-go">package main
+
+import (
+    "log"
+    "github.com/streadway/amqp"
+)
+
+func failOnError(err error, msg string) {
+    if err != nil {
+        log.Fatalf("%s: %s", msg, err)
+    }
+}
+
+func main() {
+    conn, err := amqp.Dial("amqp://guest:guest@localhost:5672/")
+    failOnError(err, "Failed to connect to RabbitMQ")
+    defer conn.Close()
+
+    ch, err := conn.Channel()
+    failOnError(err, "Failed to open a channel")
+    defer ch.Close()
+
+    q, err := ch.QueueDeclare(
+        "hello", // name
+        false,   // durable
+        false,   // delete when unused
+        false,   // exclusive
+        false,   // no-wait
+        nil,     // arguments
+    )
+    failOnError(err, "Failed to declare a queue")
+
+    body := "Hello, RabbitMQ!"
+    err = ch.Publish(
+        "",     // exchange
+        q.Name, // routing key
+        false,  // mandatory
+        false,  // immediate
+        amqp.Publishing{
+            ContentType: "text/plain",
+            Body:        []byte(body),
+        })
+    failOnError(err, "Failed to publish a message")
+    log.Printf(" [x] Sent %s", body)
+}
+
+</code></pre><h4>Step 3: Consumer Code</h4><p>The consumer listens for messages from RabbitMQ:</p><pre><code class="language-text-x-go">package main
+
+import (
+    "log"
+    "github.com/streadway/amqp"
+)
+
+func failOnError(err error, msg string) {
+    if err != nil {
+        log.Fatalf("%s: %s", msg, err)
+    }
+}
+
+func main() {
+    conn, err := amqp.Dial("amqp://guest:guest@localhost:5672/")
+    failOnError(err, "Failed to connect to RabbitMQ")
+    defer conn.Close()
+
+    ch, err := conn.Channel()
+    failOnError(err, "Failed to open a channel")
+    defer ch.Close()
+
+    q, err := ch.QueueDeclare(
+        "hello", // name
+        false,   // durable
+        false,   // delete when unused
+        false,   // exclusive
+        false,   // no-wait
+        nil,     // arguments
+    )
+    failOnError(err, "Failed to declare a queue")
+
+    msgs, err := ch.Consume(
+        q.Name, // queue
+        "",     // consumer
+        true,   // auto-ack
+        false,  // exclusive
+        false,  // no-local
+        false,  // no-wait
+        nil,    // args
+    )
+    failOnError(err, "Failed to register a consumer")
+
+    forever := make(chan bool)
+
+    go func() {
+        for d := range msgs {
+            log.Printf("Received a message: %s", d.Body)
+        }
+    }()
+
+    log.Printf("Waiting for messages. To exit press CTRL+C")
+    &lt;-forever
+}
+
+</code></pre><h3>Step 4: Run the Code</h3><ol><li><p>Start the consumer first:</p><pre><code class="language-text-x-go">go run consumer.go
+</code></pre><p>It will wait for messages.</p></li><li><p>Run the producer:</p><pre><code class="language-text-x-go">go run producer.go</code></pre><p>The message will be sent, and the consumer will print it out.</p></li></ol><h3>Advanced Concepts</h3><p>RabbitMQ offers more advanced features like exchanges, routing, and persistence. Here’s a quick overview:</p><ul><li><strong>Exchange Types</strong>:<ul><li><strong>Direct</strong>: Routes messages to queues by matching a routing key.</li><li><strong>Fanout</strong>: Broadcasts messages to all queues.</li><li><strong>Topic</strong>: Routes messages to queues based on a pattern.</li></ul></li></ul><p>You can start by using the <strong>direct</strong> exchange, which simply sends messages to a specific queue.</p><hr><h2>Conclusion</h2><p>This guide covered the basics of setting up RabbitMQ with Docker and writing simple producer and consumer services in Go. It's a solid starting point for integrating RabbitMQ into any microservices architecture.</p>
+            </div>
+        
+
+        
+            <nav id="childLinks" class="list">
+                
+                    <hr>
+                    <span>Child notes: </span>
+                
+
+                <ul>
+                    
+                        <li>
+                            <a href="cqrordzeeal4.html" 
+                               class="type-mermaid">Message Flow</a>
+                        </li>
+                    
+                </ul>
+            </nav>
+        
+    </div>
+
+    
+        <button id="toggleMenuButton"></button>
+
+        <nav id="menu">
+            
+<p>
+    
+
+    
+    <a class="type-text" href="index.html">Notes</a>
+    
+</p>
+
+
+<ul>
+    
+        <li>
+            
+<p>
+    
+
+    
+    <a class="type-text" href="load-balancer-vs-api-gateway.html">Load Balancer vs. API Gateway: Understanding the Differences</a>
+    
+</p>
+
+
+
+        </li>
+    
+        <li>
+            
+<p>
+    
+
+    
+    <strong>RabbitMQ: Message Broker for Distributed Systems</strong>
+    
+</p>
+
+
+<ul>
+    
+        <li>
+            
+<p>
+    
+
+    
+    <a class="type-mermaid" href="cqrordzeeal4.html">Message Flow</a>
+    
+</p>
+
+
+
+        </li>
+    
+</ul>
+
+
+        </li>
+    
+        <li>
+            
+<p>
+    
+
+    
+    <a class="type-text" href="bnm1ek2gu3wy.html">Reading Data Intensive Application</a>
+    
+</p>
+
+
+<ul>
+    
+        <li>
+            
+<p>
+    
+
+    
+    <a class="type-file" href="pxxvnkkj8seg.html">Designing Data Intensive Applications.pdf</a>
+    
+</p>
+
+
+
+        </li>
+    
+</ul>
+
+
+        </li>
+    
+</ul>
+
+
+        </nav>
+    
+</div>
+</body>
+
+<!-- Mirrored from 192.168.1.100:8082/share/LERcINhON6LB by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 22 Oct 2024 12:57:16 GMT -->
+</html>

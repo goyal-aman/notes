@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from 192.168.1.100:8082/share/load-balancer-vs-api-gateway by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 22 Oct 2024 12:57:12 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+    <meta charset="utf-8">
+    
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <link rel="shortcut icon" href="ico/favicon.ico">
+    
+    <script src="js/share.js"></script>
+    
+        <link href="css/normalize.min.css" rel="stylesheet">
+        <link href="css/share.css" rel="stylesheet">
+    
+    
+        <link href="css/ckeditor-content.css" rel="stylesheet">
+    
+    
+    
+    
+    
+    <title>Load Balancer vs. API Gateway: Understanding the Differences</title>
+</head>
+<body data-note-id="V9HejWXJRleM" data-ancestor-note-id="v04XSX9lUnRC">
+<div id="layout">
+    <div id="main">
+        
+            <nav id="parentLink">
+                parent: <a href="#"
+                           class="type-text">Notes</a>
+            </nav>
+        
+
+        <h1 id="title">Load Balancer vs. API Gateway: Understanding the Differences</h1>
+
+        
+
+        
+            <div id="content" class="type-text ck-content">
+                <p>TLDR; API Gateway can provide caching, logging auth and load balancer distributes traffic between 2 or more servers for high-availability and horizontal scalling.</p><p>Both load balancer and api gateways are used between web clients and web servers. But they have serve different purpose, that is to say, they are not interchangeable.</p><h2>Load Balancers</h2><p>Core function of load balancer is to distribute traffic. They receive traffic from web client's and distribute them between 2 or more web servers.&nbsp;</p><figure class="image image_resized" style="width:50%;"><img style="aspect-ratio:3140/2486;" src="png/xd7j-loadbalancerdiagram.png" alt="Load balancer" width="3140" height="2486"><figcaption>Load Balancer</figcaption></figure><p>When the volume of requests increase and one server is not enough to handle the traffic, more servers are added to distribute the load. All web clients send request to load balancer and load balancer distributes traffic to 2 or more web servers. Most common algorithm to distribute traffic between web servers is round robin. By adding more servers during increased traffic <span style="background-color:hsl(60,75%,60%);">load balancers help to achieve horizontal scaling</span>.</p><p>&nbsp;</p><p>It also happens from time to time that web servers can get into some trouble which prevent them from serving traffic. This can be because hardware or software reasons. When that happens, load balancer directs any future traffic away from web server which is experiencing problem. In this way, <span style="background-color:hsl(60,75%,60%);">load balancer help to achieve high availability</span>.</p><h2>API Gateway</h2><p>Web clients often need to interact with more than 1 &nbsp;service, for example, youtube may need to interact with trending-videos service, notification-service, upload-service. Core function of API gateway is to provide a single entry point for all the different services. <span style="background-color:hsl(60,75%,60%);">API Gateway looks at the request from web client and forwards it to appropriate service, this is called routing</span></p><figure class="image image_resized" style="width:52.99%;"><img style="aspect-ratio:2860/2614;" src="png/zdyf-apigatewayflowdiagram.png" alt="How requests and responses flow through an API gateway" width="2860" height="2614"><figcaption>API Gateway</figcaption></figure><p>In addition, API Gateway also provides additional features</p><ul><li>routing</li><li>logging</li><li>rate limiting</li><li>caching</li><li>authentication</li><li>authorization</li></ul><h2>Brining it together</h2><p>Load balancers and API Gateway have different use and purpose. They can be used together to combine their features.<br>API Gateway can provide caching, logging auth and load balancer distributes traffic between 2 or more servers for high-availability and horizontal scalling.</p><figure class="image image_resized" style="width:69.23%;"><img style="aspect-ratio:3742/2892;" src="png/owkg-apigatewaylbcombined.png" alt="API gateway and a load balancer combined" width="3742" height="2892"></figure><p>source: https://deploy.equinix.com/blog/how-api-gateways-differ-from-load-balancers-and-which-to-use/</p>
+            </div>
+        
+
+        
+    </div>
+
+    
+        <button id="toggleMenuButton"></button>
+
+        <nav id="menu">
+            
+<p>
+    
+
+    
+    <a class="type-text" href="index.html">Notes</a>
+    
+</p>
+
+
+<ul>
+    
+        <li>
+            
+<p>
+    
+
+    
+    <strong>Load Balancer vs. API Gateway: Understanding the Differences</strong>
+    
+</p>
+
+
+
+        </li>
+    
+        <li>
+            
+<p>
+    
+
+    
+    <a class="type-text" href="lercinhon6lb.html">RabbitMQ: Message Broker for Distributed Systems</a>
+    
+</p>
+
+
+<ul>
+    
+        <li>
+            
+<p>
+    
+
+    
+    <a class="type-mermaid" href="cqrordzeeal4.html">Message Flow</a>
+    
+</p>
+
+
+
+        </li>
+    
+</ul>
+
+
+        </li>
+    
+        <li>
+            
+<p>
+    
+
+    
+    <a class="type-text" href="bnm1ek2gu3wy.html">Reading Data Intensive Application</a>
+    
+</p>
+
+
+<ul>
+    
+        <li>
+            
+<p>
+    
+
+    
+    <a class="type-file" href="pxxvnkkj8seg.html">Designing Data Intensive Applications.pdf</a>
+    
+</p>
+
+
+
+        </li>
+    
+</ul>
+
+
+        </li>
+    
+</ul>
+
+
+        </nav>
+    
+</div>
+</body>
+
+<!-- Mirrored from 192.168.1.100:8082/share/load-balancer-vs-api-gateway by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 22 Oct 2024 12:57:15 GMT -->
+</html>
