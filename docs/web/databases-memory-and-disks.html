@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from 192.168.1.100:8082/share/databases-memory-and-disks by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 23 Oct 2024 12:50:54 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+    <meta charset="utf-8">
+    
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <link rel="shortcut icon" href="ico/favicon.ico">
+    
+    <script src="js/share.js"></script>
+    
+        <link href="css/normalize.min.css" rel="stylesheet">
+        <link href="css/share.css" rel="stylesheet">
+    
+    
+        <link href="css/ckeditor-content.css" rel="stylesheet">
+    
+    
+    
+    
+    
+    <title>Databases: Memory and Disks</title>
+</head>
+<body data-note-id="rzsYWMHNBQP4" data-ancestor-note-id="v04XSX9lUnRC">
+<div id="layout">
+    <div id="main">
+        
+            <nav id="parentLink">
+                parent: <a href="#"
+                           class="type-text">Read</a>
+            </nav>
+        
+
+        <h1 id="title">Databases: Memory and Disks</h1>
+
+        
+
+        
+            <div id="content" class="type-text ck-content">
+                <p>Most databases rely on disks and ssd's to store both data and data structures like table, rows, indexes. There are primarily two reasons for this: disk's and ssd's are persistent (or durable) that means data is not lost in case of power loss and they are much cheaper than ram for per gb cost. Relying on persistent storage devices though comes with challenges. Data in memory needs to be encoded into certain format before it can be written on to them which is slow and cpu intensive.&nbsp;</p><p>There is emerging set of new databases that rely on memory serve read and writes. Memcached is a key-value store, which solely uses ram. It is intended for caching purposes where data loss is acceptable. There are certain in-memory databases which provide durability guarantees to some degree. Durability guarantees is result of maintaining a write ahead log for writes that happen on database and making periodic snapshots, incase of power loss or crash, state of database can be restored from previous snapshot and redoing writes from write ahead log. In-memory stores like reddis provides weak durability guarantees by maintaining snapshots at every seconds, in case of power loss or crash writes that happened after last snapshots are lost.</p><p>In-memory databases are also capable of providing data structure which are not easily implemented in disk based databases. Redis, for example, provides sorted-set, priority queue, set, list etc.</p><p>Contrary to popular belief, the performance of in-memory databases is not entirely attributed to the fact that writes/reads on disk based storage is slow. It is possible that disk based databases never reads from disk if memory is large enough. This happens because OS caches the recently used pages and serves pages from cache. The <span style="background-color:hsl(60,75%,60%);">advantage of in-memory databases comes from the fact that they do not need to encode and decode data structures into formats compatible with disk storage before writing</span>.</p>
+            </div>
+        
+
+        
+    </div>
+
+    
+        <button id="toggleMenuButton"></button>
+
+        <nav id="menu">
+            
+<p>
+    
+
+    
+    <a class="type-text" href="index.html">Read</a>
+    
+</p>
+
+
+<ul>
+    
+        <li>
+            
+<p>
+    
+
+    
+    <a class="type-text" href="load-balancer-vs-api-gateway.html">Load Balancer vs. API Gateway: Understanding the Differences</a>
+    
+</p>
+
+
+
+        </li>
+    
+        <li>
+            
+<p>
+    
+
+    
+    <a class="type-text" href="lercinhon6lb.html">RabbitMQ: Message Broker for Distributed Systems</a>
+    
+</p>
+
+
+
+        </li>
+    
+        <li>
+            
+<p>
+    
+
+    
+    <a class="type-text" href="storing-values-within-index.html">Storing Values within Index</a>
+    
+</p>
+
+
+
+        </li>
+    
+        <li>
+            
+<p>
+    
+
+    
+    <a class="type-text" href="sxdz0fb3dopm.html">Multi-Column Index</a>
+    
+</p>
+
+
+
+        </li>
+    
+        <li>
+            
+<p>
+    
+
+    
+    <strong>Databases: Memory and Disks</strong>
+    
+</p>
+
+
+
+        </li>
+    
+        <li>
+            
+<p>
+    
+
+    
+    <a class="type-text" href="read-book.html">Reading Data Intensive Application</a>
+    
+</p>
+
+
+<ul>
+    
+        <li>
+            
+<p>
+    
+
+    
+    <a class="type-file" href="pxxvnkkj8seg.html">Designing Data Intensive Applications</a>
+    
+</p>
+
+
+
+        </li>
+    
+</ul>
+
+
+        </li>
+    
+</ul>
+
+
+        </nav>
+    
+</div>
+</body>
+
+<!-- Mirrored from 192.168.1.100:8082/share/databases-memory-and-disks by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 23 Oct 2024 12:50:54 GMT -->
+</html>
