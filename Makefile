@@ -3,17 +3,19 @@ start:
 	sudo cp ./robots.txt ./docs
 	sudo cp -r  ~/../../../DATA/AppData/trilium/data/backup/ .
 	sudo echo $(TZ='Asia/Kolkata' date) >> 'run.logs'
-	@make commit
+	@make commit-add
+	@make commit-push
 	@make log-run
 build:
 	sudo docker build -t httrack-downloader .
 nest:
 	make log-run
-commit:
+commit-add:
 	sudo git add ./docs
 	sudo git add ./backup
 	sudo git add run.logs
 	sudo git commit  -m "updated"
-	sudo git push origin main
+commit-push:
+	git push origin main
 log-run:
 	@sudo sh -c "echo $$(TZ='Asia/Kolkata' date) >> run.logs" 
