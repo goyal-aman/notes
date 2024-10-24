@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from 192.168.1.100:8082/share/understanding-olap-and-oltp by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 24 Oct 2024 08:20:48 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+    <meta charset="utf-8">
+    
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <link rel="shortcut icon" href="ico/favicon.ico">
+    
+    <script src="js/share.js"></script>
+    
+        <link href="css/normalize.min.css" rel="stylesheet">
+        <link href="css/share.css" rel="stylesheet">
+    
+    
+        <link href="css/ckeditor-content.css" rel="stylesheet">
+    
+    
+    
+    
+    
+    <title>Understanding OLAP and OLTP</title>
+</head>
+<body data-note-id="JAsQdG4qjNnm" data-ancestor-note-id="v04XSX9lUnRC">
+<div id="layout">
+    <div id="main">
+        
+            <nav id="parentLink">
+                parent: <a href="#"
+                           class="type-text">Read</a>
+            </nav>
+        
+
+        <h1 id="title">Understanding OLAP and OLTP</h1>
+
+        
+
+        
+            <div id="content" class="type-text ck-content">
+                <p>TLDR; Any database falls into one of two category OLAP or OLTP - depending on the access pattern for which it is optimised</p><h2 style="margin-left:0px;">Key differences: OLAP vs. OLTP</h2><p>The primary purpose of online analytical processing (OLAP) is to analyze aggregated data, while the primary purpose of online transaction processing (OLTP) is to process database transactions.</p><p>You use OLAP systems to generate reports, perform complex data analysis, and identify trends. In contrast, you use OLTP systems to process orders, update inventory, and manage customer accounts.</p><p>Other major differences include data formatting, data architecture, performance, and requirements. We’ll also discuss an example of when an organization might use OLAP or OLTP.</p><p>&nbsp;</p><p>Loosely speaking, database uses can be broadly categories into two types</p><ol><li>Analytical</li><li>Real time</li></ol><p>Real time database have large number of transactions which have short life spans (generally in order of ms) such as&nbsp;</p><ul><li>add contact in contacts table</li><li>updating inventory in inventory table</li><li>deleting comments</li><li>getting post for user</li></ul><p>Analytical databases have large queries over huge datasets where transactions have large life spans and have uses like</p><ul><li>aggregating dataset of multiple columns</li><li>reporting</li></ul><p><span style="background-color:hsl(60,75%,60%);">Database systems which are optimised for real time uses are OLTP and databases which are used for purpose for analytics, reporting are OLAP</span></p><h2>Summary</h2><figure class="table"><table><thead><tr><th><strong>Aspect</strong></th><th><strong>OLTP</strong></th><th><strong>OLAP</strong></th></tr></thead><tbody><tr><td><strong>Access Type</strong></td><td>Frequent, short transactions (read/write)</td><td>Complex queries, mostly read-heavy</td></tr><tr><td><strong>Query Focus</strong></td><td>Individual records (row-level)</td><td>Aggregate data (column-level or bulk read)</td></tr><tr><td><strong>Access Pattern</strong></td><td>Random read/write</td><td>Sequential, large-scale reads</td></tr><tr><td><strong>Concurrency</strong></td><td>High concurrency, many simultaneous users</td><td>Lower concurrency, fewer complex queries</td></tr><tr><td><strong>Query Latency</strong></td><td>Low-latency, quick response time</td><td>High-latency, complex processing</td></tr><tr><td><strong>Updates</strong></td><td>Frequent updates to data</td><td>Rare updates, mostly read-only</td></tr></tbody></table></figure><p>&nbsp;</p><p>sources: <a href="https://aws.amazon.com/compare/the-difference-between-olap-and-oltp/">https://aws.amazon.com/compare/the-difference-between-olap-and-oltp/</a></p>
+            </div>
+        
+
+        
+    </div>
+
+    
+        <button id="toggleMenuButton"></button>
+
+        <nav id="menu">
+            
+<p>
+    
+
+    
+    <a class="type-text" href="index.html">Read</a>
+    
+</p>
+
+
+<ul>
+    
+        <li>
+            
+<p>
+    
+
+    
+    <strong>Understanding OLAP and OLTP</strong>
+    
+</p>
+
+
+
+        </li>
+    
+        <li>
+            
+<p>
+    
+
+    
+    <a class="type-text" href="load-balancer-vs-api-gateway.html">Load Balancer vs. API Gateway: Understanding the Differences</a>
+    
+</p>
+
+
+
+        </li>
+    
+        <li>
+            
+<p>
+    
+
+    
+    <a class="type-text" href="storing-values-within-index.html">Storing Values within Index</a>
+    
+</p>
+
+
+
+        </li>
+    
+        <li>
+            
+<p>
+    
+
+    
+    <a class="type-text" href="sxdz0fb3dopm.html">Multi-Column Index</a>
+    
+</p>
+
+
+
+        </li>
+    
+        <li>
+            
+<p>
+    
+
+    
+    <a class="type-text" href="databases-memory-and-disks.html">Databases: Memory and Disks</a>
+    
+</p>
+
+
+
+        </li>
+    
+        <li>
+            
+<p>
+    
+
+    
+    <a class="type-text" href="lercinhon6lb.html">RabbitMQ: Message Broker for Distributed Systems</a>
+    
+</p>
+
+
+
+        </li>
+    
+        <li>
+            
+<p>
+    
+
+    
+    <a class="type-text" href="read-book.html">Reading Data Intensive Application</a>
+    
+</p>
+
+
+
+        </li>
+    
+</ul>
+
+
+        </nav>
+    
+</div>
+</body>
+
+<!-- Mirrored from 192.168.1.100:8082/share/understanding-olap-and-oltp by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 24 Oct 2024 08:20:48 GMT -->
+</html>
