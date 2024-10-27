@@ -2,6 +2,7 @@ start:
 	sudo docker run --rm -v ./docs:/app httrack-downloader "http://192.168.1.100:8082/share/" -v -I -c100 -N4 -O /app -%P "*.*"  --robots=0 "-*www.w3.org*" "-*aws*"
 	sudo cp ./robots.txt ./docs
 	sudo cp -r  ~/../../../DATA/AppData/trilium/data/backup/ .
+	@make make-backup
 	sudo echo $(TZ='Asia/Kolkata' date) >> 'run.logs'
 	@make commit-add
 	@make commit-push
@@ -17,5 +18,7 @@ commit-add:
 	sudo git commit  -m "updated"
 commit-push:
 	git push origin main
+make-backup:
+	python3 generate_backup/generate_backup.py
 log-run:
 	@sudo sh -c "echo $$(TZ='Asia/Kolkata' date) >> run.logs" 
