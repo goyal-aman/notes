@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from 192.168.1.100:8082/share/FzacAiUFUJh2 by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 28 Nov 2024 12:00:34 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+    <meta charset="utf-8">
+    
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <link rel="shortcut icon" href="ico/favicon.ico">
+    
+    <script src="js/share.js"></script>
+    
+        <link href="css/normalize.min.css" rel="stylesheet">
+        <link href="css/share.css" rel="stylesheet">
+    
+    
+        <link href="css/ckeditor-content.css" rel="stylesheet">
+    
+    
+    
+    
+    
+    <title>Quorum Read Writes</title>
+</head>
+<body data-note-id="FzacAiUFUJh2" data-ancestor-note-id="v04XSX9lUnRC">
+<div id="layout">
+    <div id="main">
+        
+            <nav id="parentLink">
+                parent: <a href="#"
+                           class="type-text">Read</a>
+            </nav>
+        
+
+        <h1 id="title">Quorum Read Writes</h1>
+
+        
+
+        
+            <div id="content" class="type-text ck-content">
+                <p>In leaderless architecture's any node can take write or read requests. Let's say we decide the replication factor to be N, here N would mean that at least N nodes will have copy of each value.&nbsp;</p><p>For every write that a node gets it, asynchronously sends the value to all the known replicas, whether in same location physically or not, then it waits for success response from w different replicas - when it receives at least W success, it then and then only it sends write success to client.&nbsp;</p><p>When a node receives read request it reads from R nodes. It is guaranteed that the one of the R nodes will have latest value for sure.<br><br>The value for W and R is chosen such that <code>W + R &gt; N</code>. This works because of the fact that at least one of the read and write replica will overlap.</p><p>There is a concept of slopy quorum. Let's say node A receives a write but due to a network partition its not able to get success from W nodes. In this scenario there are two options either fail the write or access the write in the hope that when network partition fixes, latest value will replicate to al replicas. This second option is called sloppy quorum. In sloppy quorum reading for R values still doesn't guarantees latest values.</p><p>&nbsp;</p><p>The value of R and W can be configured to optimize for many use cases. For read heavy use cases R can be small and W can be increased.<br>&nbsp;</p><p>Problems</p><ol><li>Node which receives the writes, send write to all different nodes. but doesn't receive W successes, then it has to reverse write from different nodes (maybe solution is distributed transaction - not sure, I haven't received this part of DDIA book)</li><li>This solution works only when read and write happens on same N nodes.</li></ol>
+            </div>
+        
+
+        
+    </div>
+
+    
+        <button id="toggleMenuButton"></button>
+
+        <nav id="menu">
+            
+<p>
+    
+
+    
+    <a class="type-text" href="index.html">Read</a>
+    
+</p>
+
+
+<ul>
+    
+        <li>
+            
+<p>
+    
+
+    
+    <strong>Quorum Read Writes</strong>
+    
+</p>
+
+
+
+        </li>
+    
+        <li>
+            
+<p>
+    
+
+    
+    <a class="type-text" href="databases-memory-and-disks.html">Databases: Memory and Disks</a>
+    
+</p>
+
+
+
+        </li>
+    
+        <li>
+            
+<p>
+    
+
+    
+    <a class="type-text" href="understanding-olap-and-oltp.html">Understanding OLAP and OLTP</a>
+    
+</p>
+
+
+
+        </li>
+    
+        <li>
+            
+<p>
+    
+
+    
+    <a class="type-text" href="load-balancer-vs-api-gateway.html">Load Balancer vs. API Gateway: Understanding the Differences</a>
+    
+</p>
+
+
+
+        </li>
+    
+        <li>
+            
+<p>
+    
+
+    
+    <a class="type-text" href="storing-values-within-index.html">Storing Values within Index</a>
+    
+</p>
+
+
+<ul>
+    
+        <li>
+            
+<p>
+    
+
+    
+    <a class="type-mermaid" href="laon4yjqbtig.html">Mindmap</a>
+    
+</p>
+
+
+
+        </li>
+    
+</ul>
+
+
+        </li>
+    
+        <li>
+            
+<p>
+    
+
+    
+    <a class="type-text" href="multi-column-index.html">Multi-Column Index</a>
+    
+</p>
+
+
+
+        </li>
+    
+        <li>
+            
+<p>
+    
+
+    
+    <a class="type-text" href="lercinhon6lb.html">RabbitMQ: Message Broker for Distributed Systems</a>
+    
+</p>
+
+
+
+        </li>
+    
+        <li>
+            
+<p>
+    
+
+    
+    <a class="type-text" href="pzj3uowxw48j.html">Replication Lag</a>
+    
+</p>
+
+
+
+        </li>
+    
+        <li>
+            
+<p>
+    
+
+    
+    <a class="type-text" href="read-book.html">Reading Data Intensive Application</a>
+    
+</p>
+
+
+
+        </li>
+    
+        <li>
+            
+<p>
+    
+
+    
+    <a class="type-text" href="rfwmc4njlbij.html">Replication Strategy</a>
+    
+</p>
+
+
+
+        </li>
+    
+        <li>
+            
+<p>
+    
+
+    
+    <a class="type-text" href="vxqcxquooxdg.html">5 Steps for Successful Delegation</a>
+    
+</p>
+
+
+
+        </li>
+    
+</ul>
+
+
+        </nav>
+    
+</div>
+</body>
+
+<!-- Mirrored from 192.168.1.100:8082/share/FzacAiUFUJh2 by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 28 Nov 2024 12:00:34 GMT -->
+</html>
