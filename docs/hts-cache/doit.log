@@ -1,5 +1,5 @@
 -v http://192.168.1.100:8082/share/ -v -I -c100 -N4 -O /app -%P *.* -s0 -*www.w3.org* -*aws*
-File generated automatically on Thu, 28 Nov 2024 12:03:48, do NOT edit
+File generated automatically on Mon, 09 Dec 2024 08:08:01, do NOT edit
 
 To update a mirror, just launch httrack without any parameters
 The existing cache will be used (and modified)
