@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from 192.168.1.100:8082/share/distributed-locks by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 09 Dec 2024 10:34:53 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+    <meta charset="utf-8">
+    
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <link rel="shortcut icon" href="ico/favicon.ico">
+    
+    <script src="js/share.js"></script>
+    
+        <link href="css/normalize.min.css" rel="stylesheet">
+        <link href="css/share.css" rel="stylesheet">
+    
+    
+        <link href="css/ckeditor-content.css" rel="stylesheet">
+    
+    
+    
+    
+    
+    <title>Distributed Locks</title>
+</head>
+<body data-note-id="1mkl0MSV8Qzq" data-ancestor-note-id="v04XSX9lUnRC">
+<div id="layout">
+    <div id="main">
+        
+            <nav id="parentLink">
+                parent: <a href="#"
+                           class="type-text">Read</a>
+            </nav>
+        
+
+        <h1 id="title">Distributed Locks</h1>
+
+        
+
+        
+            <div id="content" class="type-text ck-content">
+                <p>TLDR; Use unique and ttl indexes on databases to enable exclusive access to resources.</p><p>Locks are used by processes to acquire exclusive access to resource which are shared among many processes. Exclusive access is required to prevent race conditions which hard debug and nightmare to detect.</p><p>Imagine scenario of an admin is updating an email group by uploading a file. The process works like this:</p><ol><li>All existing users in the group are removed.</li><li>New users listed in the file are added in batches (e.g., 10,000 at a time).</li></ol><p>Seems straightforward, right? But now, consider what happens if another file is uploaded while the first one is still being processed.</p><ol><li><strong>Processing File 1</strong>:<ul><li>Existing users are removed.</li><li>New users from File 1 are being added.</li></ul></li><li><strong>File 2 is uploaded mid-way</strong>:<ul><li>A new process starts.</li><li>It removes the current users in the email-group, which now includes users from File 1 that are being added by file1 process.</li><li>Then, it starts adding users from File 2.</li></ul></li></ol><p>At this point, both processes are running:</p><ul><li>File 1 is still adding its users.</li><li>File 2 is also adding its users.</li></ul><p>By the end, the email group will contain users from both files, which is incorrect because only the users from the second file should be in the group.</p><p>In our simple example - solution is simple for admin upload file2 again when issue is detected. But this is unacceptable since problem might go unnoticed for long time and in more likely scenario the problem might not be as simple to fix.<br><br>Solution? Don't let multiple processes to start at the same time which work on same email-group. This is done by distributed locks.&nbsp;</p><p><br>Efficient and easy way to implement distributed lock requires using db such as mongo or Postgres which supports unique index. Create a collection say <code>locks</code>. The documents in the collection will have this schema</p><pre><code class="language-text-plain">{
+  "resource_name": "resource_name",  // Unique identifier for the lock
+  "lock_owner": "instance_id", // Identifier for the process holding the lock
+  "expires_at": "ISODate" // Time when the lock expires
+}</code></pre><p>Fields above are self-explanatory.</p><p>Indexes give this collection is actual behaviour. <span style="background-color:hsl(60,75%,60%);"><code>resource_name</code> field will have unique index so that atmost only single document (and thus process) will have access to resource and ttl-index on <code>expires_at</code> so that in the event process fails to unlock (delete the document in this case) then document will be removed after certain time and thus prevent permanent lock on resource</span>.</p><p>When any process wants to act on any resource say email-group it will first acquire lock on the resource, if successful continue otherwise fail gracefully.</p>
+            </div>
+        
+
+        
+    </div>
+
+    
+        <button id="toggleMenuButton"></button>
+
+        <nav id="menu">
+            
+<p>
+    
+
+    
+    <a class="type-text" href="index.html">Read</a>
+    
+</p>
+
+
+<ul>
+    
+        <li>
+            
+<p>
+    
+
+    
+    <strong>Distributed Locks</strong>
+    
+</p>
+
+
+
+        </li>
+    
+        <li>
+            
+<p>
+    
+
+    
+    <a class="type-text" href="fzacaiufujh2.html">Quorum Read Writes</a>
+    
+</p>
+
+
+
+        </li>
+    
+        <li>
+            
+<p>
+    
+
+    
+    <a class="type-text" href="pzj3uowxw48j.html">Replication Lag</a>
+    
+</p>
+
+
+
+        </li>
+    
+        <li>
+            
+<p>
+    
+
+    
+    <a class="type-text" href="rfwmc4njlbij.html">Replication Strategy</a>
+    
+</p>
+
+
+
+        </li>
+    
+        <li>
+            
+<p>
+    
+
+    
+    <a class="type-text" href="databases-memory-and-disks.html">Databases: Memory and Disks</a>
+    
+</p>
+
+
+
+        </li>
+    
+        <li>
+            
+<p>
+    
+
+    
+    <a class="type-text" href="understanding-olap-and-oltp.html">Understanding OLAP and OLTP</a>
+    
+</p>
+
+
+
+        </li>
+    
+        <li>
+            
+<p>
+    
+
+    
+    <a class="type-text" href="load-balancer-vs-api-gateway.html">Load Balancer vs. API Gateway: Understanding the Differences</a>
+    
+</p>
+
+
+
+        </li>
+    
+        <li>
+            
+<p>
+    
+
+    
+    <a class="type-text" href="storing-values-within-index.html">Storing Values within Index</a>
+    
+</p>
+
+
+<ul>
+    
+        <li>
+            
+<p>
+    
+
+    
+    <a class="type-mermaid" href="laon4yjqbtig.html">Mindmap</a>
+    
+</p>
+
+
+
+        </li>
+    
+</ul>
+
+
+        </li>
+    
+        <li>
+            
+<p>
+    
+
+    
+    <a class="type-text" href="multi-column-index.html">Multi-Column Index</a>
+    
+</p>
+
+
+
+        </li>
+    
+        <li>
+            
+<p>
+    
+
+    
+    <a class="type-text" href="lercinhon6lb.html">RabbitMQ: Message Broker for Distributed Systems</a>
+    
+</p>
+
+
+
+        </li>
+    
+        <li>
+            
+<p>
+    
+
+    
+    <a class="type-text" href="read-book.html">Reading Data Intensive Application</a>
+    
+</p>
+
+
+
+        </li>
+    
+        <li>
+            
+<p>
+    
+
+    
+    <a class="type-text" href="vxqcxquooxdg.html">5 Steps for Successful Delegation</a>
+    
+</p>
+
+
+
+        </li>
+    
+        <li>
+            
+<p>
+    
+
+    
+    <a class="type-text" href="building-second-brain.html">Building Second Brain - Tiago Forte</a>
+    
+</p>
+
+
+
+        </li>
+    
+</ul>
+
+
+        </nav>
+    
+</div>
+</body>
+
+<!-- Mirrored from 192.168.1.100:8082/share/distributed-locks by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 09 Dec 2024 10:34:53 GMT -->
+</html>
